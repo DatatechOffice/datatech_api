@@ -9,7 +9,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 |-Leonardo Adler da Silva| (Dev);|
 |:--|:--|
 |-Vitor|(Dev);|
-|-Machado|(Dev);|
+|-João Vitor Machado|(Dev);|
 |-Eduardo Pedro A dos Reis|(Dev);|
 |-Danilo Verginio|(Dev);|
 |-Gabriel Depiro|(Dev);|

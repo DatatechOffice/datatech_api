@@ -1,5 +1,10 @@
 # datatech_api
 
+## 🛠️ Tecnologias utilizadas:
+AS Tecnologias abaixo foram utilizadas na construção do projeto.
+- [GitHub](https://github.com/)
+- [Discord](https://discord.com/)
+
 ## :busts_in_silhouette: Equipe	
 |-Leonardo Adler da Silva| (Dev);|
 |:--|:--|

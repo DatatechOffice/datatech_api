@@ -11,12 +11,12 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [MySQL](https://www.mysql.com/)
 
 ## :busts_in_silhouette: Equipe	
-|-Leonardo Adler da Silva|Master (Dev);|
+|-Leonardo Adler da Silva|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md "><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
 |:--|:--|
-|-Vitor|(Dev);|
-|-João Vitor Machado|(Dev);|
-|-Eduardo Pedro A dos Reis|(Dev);|
-|-Danilo Verginio|(Dev);|
-|-Gabriel Depiro|(Dev);|
+|-Vitor|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
+|-João Vitor Machado|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
+|-Eduardo Pedro A dos Reis|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
+|-Danilo Verginio|<a href="https://github.com/Daniloel/Bertoti/blob/main/Engenharia%20de%20Software/CasodeUso.png"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
+|-Gabriel Depiro|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">Git</button></a>;|
 </td>	
 

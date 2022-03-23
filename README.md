@@ -34,7 +34,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
  
-<img src="https://avatars.githubusercontent.com/u/88751032?v=4" width = "40%">            
+<img src="https://avatars.githubusercontent.com/u/88751032?v=4" width = "30%">            
 <br />
 <sub><b>Leonardo Adler da Silva</b></sub>
 <br />

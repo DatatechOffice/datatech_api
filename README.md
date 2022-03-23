@@ -13,6 +13,8 @@
 Este projeto tem como desafio, a construção de uma interface para facilitar a ativação dos clientes e dados no sistema.
 
 <h2>🎯Objetivo do Projeto</h2>
+Construir interfaces para a ativação dos clientes visando a facilidade e agilidade dos usúarios
+
 <h2>📄Backlog do Produto</h2>
 
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|

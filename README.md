@@ -20,7 +20,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
 |Crucial            |Wireframe|
-|Importante|Criação da pagina no GitHub|
+|Importante|
 |Relevante|
 |Opcional| 
 

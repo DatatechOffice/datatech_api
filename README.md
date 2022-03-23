@@ -6,7 +6,7 @@
 - [Backlog do Produto](#backlog-do-produto)
 - [Branches de cada Sprint](#branches-de-cada-Sprint)
 - [Wireframes do projeto](#wireframes-do-projeto)
-- [Tecnologias utilizadas](#Tecnologias-utilizadas)
+- [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Equipe Datatech ](#equipe-Datatech)
 
 <h2>📝Descrição</h2>

@@ -19,9 +19,9 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
-|Crucial            |Wireframe|Seleção dos dados e tratamento (Estado de SP)|Correção de bugs e Criação de filtros das cidades e range das datas|Adição de comparações através de gráficos dos dados disponíveis|
-|Importante|Criação da pagina no GitHub|Desenvolvimento e teste do programa que mostra os dados listados nessa sprint|Adição de artifícios visuais como gráficos para melhor vizualização dos dados||
-|Relevante||Aprimoramento do GitHub|||
+|Crucial            |Wireframe|
+|Importante|Criação da pagina no GitHub|
+|Relevante|
 |Opcional| 
 
 <h2>📑Branches de cada Sprint</h2>

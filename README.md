@@ -17,12 +17,12 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <h2>📄Backlog do Produto</h2>
 
-|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
-|:------------------|:-------|:-------|:-------|
-|Crucial            |Wireframe|
-|Importante|
-|Relevante|
-|Opcional| 
+|Sprint 1|Sprint 2|Sprint 3|
+|:-------|:-------|:-------|
+|Wireframe|
+
+
+
 
 <h2>📑Branches de cada Sprint</h2>
 <h2>🖼️Wireframes do Projeto</h2>

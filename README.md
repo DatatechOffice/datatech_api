@@ -40,7 +40,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </a>
 <sub><b>Scrum Master</b></sub>
-<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
+<sub><b><a href="https://github.com/LeoAdlerr"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <td align="center">
 <a href="https://github.com">
  

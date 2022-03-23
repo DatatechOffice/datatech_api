@@ -96,7 +96,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
  
  <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
-<sub><b>Gabriel DEpiro</b></sub>
+<sub><b>Gabriel D'Epiro</b></sub>
 <br /> 
 </a>
 <sub><b>Developer</b></sub>

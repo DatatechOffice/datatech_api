@@ -1,8 +1,23 @@
 # datatech
 
-## Backlog do Produto
+- [Descrição](#descrição)
+- [Objetivo do Projeto](#objetivo-do-projeto)
+- [Backlog do Produto](#backlog-do-produto)
+- [Branches de cada Sprint](#branches-de-cada-Sprint)
+- [Wireframes do projeto](#wireframes-do-projeto)
+- [Tecnologias utilizadas](#Tecnologias-utilizadas)
+- [Equipe datatech ](#equipe-datatech)
 
-## 🛠️ Tecnologias utilizadas:
+<h2>📝Descrição</h2>
+<h2>🎯Objetivo do Projeto</h2>
+<h2>📄Backlog do Produto</h2>
+<h2>📑Branches de cada Sprint</h2>
+<h2>🖼️ Wireframes do projeto</h2>
+
+
+
+<h2>🛠️ Tecnologias utilizadas</h2>
+
 AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [GitHub](https://github.com/)
 - [Git](https://github.com/)
@@ -12,7 +27,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 
 
 </table>
-<h2>Integrantes da equipe :man_technologist::boy:</h2>
+<h2>Equipe datatech :man_technologist::boy:</h2>
 <table>
 <tr>
 <td align="center">

@@ -46,7 +46,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
  
  <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
-<sub><b>Vitor</b></sub>
+<sub><b>Vitor R. de Lima</b></sub>
 <br />
 </a>
 <sub><b>Product Owner</b></sub>
@@ -54,7 +54,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
+<a href="https://github.com/VilRL">
 
  <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />

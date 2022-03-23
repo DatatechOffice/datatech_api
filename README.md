@@ -10,6 +10,8 @@
 - [Equipe Datatech ](#equipe-datatech)
 
 <h2>📝Descrição</h2>
+Este projeto tem como desafio, a construção de uma interface para facilitar a ativação dos clientes e dados no sistema.
+
 <h2>🎯Objetivo do Projeto</h2>
 <h2>📄Backlog do Produto</h2>
 

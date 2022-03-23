@@ -25,7 +25,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 
 <h2>Branches de cada Sprint</h2>
-<h2>🖼Wireframes do Projeto</h2>
+<h2>Wireframes do Projeto</h2>
 
 
 

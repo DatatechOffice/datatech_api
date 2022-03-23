@@ -28,7 +28,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 
 
 </table>
-<h2>Equipe datatech :man_technologist::boy:</h2>
+<h2>Equipe Datatech :man_technologist::boy:</h2>
 <table>
 <tr>
 <td align="center">

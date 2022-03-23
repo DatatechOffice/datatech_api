@@ -13,7 +13,7 @@
 <h2>🎯Objetivo do Projeto</h2>
 <h2>📄Backlog do Produto</h2>
 <h2>📑Branches de cada Sprint</h2>
-<h2>🖼️Wireframes do projeto</h2>
+<h2>🖼️Wireframes do Projeto</h2>
 
 
 

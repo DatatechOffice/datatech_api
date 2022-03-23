@@ -50,11 +50,11 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </a>
 <sub><b>Product Owner</b></sub>
-<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
+<sub><b><a href="https://github.com/VilRL"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <br />
 </td>
 <td align="center">
-<a href="https://github.com/VilRL">
+<a href="https://github.com">
 
  <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />

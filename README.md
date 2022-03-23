@@ -34,28 +34,31 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <a href="https://github.com">
  
 <br />
-<sub><b>DEV_01</b></sub>
+<sub><b>Leonardo Adler da Silva</b></sub>
 <br />
 </a>
-<sub><b>Scrum Master</b></sub></td>
+<sub><b>Scrum Master</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <td align="center">
 <a href="https://github.com">
       
 <br />
-<sub><b>DEV_02</b></sub>
+<sub><b>Vitor</b></sub>
 <br />
 </a>
 <sub><b>Product Owner</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <br />
 </td>
 <td align="center">
 <a href="https://github.com">
                
 <br />
-<sub><b>DEV_03</b></sub>
+<sub><b>João Vitor Machado</b></sub>
 <br />
 </a>
 <sub><b>Developer</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <br />
 </td>
 </tr>
@@ -63,51 +66,37 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
                    
-<sub><b>DEV_04</b></sub>
+<br />
+<sub><b>Eduardo Pedro A dos Reis</b></sub>
 <br />
 </a>
-<sub><b>Developer</b></sub></td>
+<sub><b>Developer</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub>
+<br />
+</td>
 <td align="center">
 <a href="https://github.com">
                    
 <br />
-<sub><b>DEV_05</b></sub>
+<sub><b>Danilo Verginio</b></sub>
 <br />
 </a>
 <sub><b>Developer</b></sub>
+<sub><b><a href="https://github.com/Daniloel"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub>
 <br />
 </td>
 <td align="center">
 <a href="https://github.com">
                   
 <br />
-<sub><b>DEV_06</b></sub>
-<br />
+<sub><b>Gabriel DEpiro</b></sub>
+<br /> 
 </a>
 <sub><b>Developer</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub>
 <br />
 </td>
 </tr>
 </table>
 
-
-
-
-
-
-
-
-
-
-
-
-
-|-Leonardo Adler da Silva|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md "><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-|:--|:--|
-|-Vitor|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-|-João Vitor Machado|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-|-Eduardo Pedro A dos Reis|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-|-Danilo Verginio|<a href="https://github.com/Daniloel/Bertoti/blob/main/Engenharia%20de%20Software/CasodeUso.png"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-|-Gabriel DEpiro|<a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">github</button></a>|
-</td>	
 

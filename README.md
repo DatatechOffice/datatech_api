@@ -34,7 +34,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
  
-<img src="" width = "40%">            
+<img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%">            
 <br />
 <sub><b>Leonardo Adler da Silva</b></sub>
 <br />
@@ -43,7 +43,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <sub><b><a href="https://github.com/DatatechOffice/datatech_api/edit/main/README.md"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <td align="center">
 <a href="https://github.com">
-      
+ 
+ <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
 <sub><b>Vitor</b></sub>
 <br />
@@ -54,7 +55,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 </td>
 <td align="center">
 <a href="https://github.com">
-               
+
+ <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
 <sub><b>João Vitor Machado</b></sub>
 <br />
@@ -67,7 +69,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <tr>
 <td align="center">
 <a href="https://github.com">
-                   
+ 
+ <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
 <sub><b>Eduardo Pedro A dos Reis</b></sub>
 <br />
@@ -78,7 +81,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 </td>
 <td align="center">
 <a href="https://github.com">
-                   
+  
+ <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
 <sub><b>Danilo Verginio</b></sub>
 <br />
@@ -89,7 +93,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 </td>
 <td align="center">
 <a href="https://github.com">
-                  
+ 
+ <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
 <br />
 <sub><b>Gabriel DEpiro</b></sub>
 <br /> 

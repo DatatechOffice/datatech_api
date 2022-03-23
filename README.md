@@ -1,4 +1,4 @@
-# datatech
+# Datatech
 <h2>📜Menu de Navegação</h2>
 
 - [Descrição](#descrição)
@@ -7,7 +7,7 @@
 - [Branches de cada Sprint](#branches-de-cada-Sprint)
 - [Wireframes do projeto](#wireframes-do-projeto)
 - [Tecnologias utilizadas](#Tecnologias-utilizadas)
-- [Equipe datatech ](#equipe-datatech)
+- [Equipe Datatech ](#equipe-Datatech)
 
 <h2>📝Descrição</h2>
 <h2>🎯Objetivo do Projeto</h2>

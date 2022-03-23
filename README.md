@@ -24,12 +24,12 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 
 
-<h2>📑Branches de cada Sprint</h2>
-<h2>🖼️Wireframes do Projeto</h2>
+<h2>Branches de cada Sprint</h2>
+<h2>🖼Wireframes do Projeto</h2>
 
 
 
-<h2>🛠️ Tecnologias utilizadas</h2>
+<h2>🛠Tecnologias utilizadas</h2>
 
 AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [GitHub](https://github.com/)
@@ -40,7 +40,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 
 
 </table>
-<h2>Equipe Datatech :man_technologist::boy:</h2>
+<h2>Equipe Datatech</h2>
 <table>
 <tr>
 <td align="center">

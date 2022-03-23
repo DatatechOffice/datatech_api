@@ -82,7 +82,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
   
- <img src="https://github.com/DatatechOffice/datatech_api/blob/main/IMG/idea-gde9a97bf5_1280.jpg" width = "40%"> 
+ <img src="https://avatars.githubusercontent.com/u/88066389?v=4" width = "40%"> 
 <br />
 <sub><b>Danilo Verginio</b></sub>
 <br />

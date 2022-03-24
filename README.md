@@ -42,7 +42,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
-|Crucial|           |  Teste |
+|Crucial|    Teste  |  Teste |
 |Importante|
 |Relevante|
 

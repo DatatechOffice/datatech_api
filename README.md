@@ -18,7 +18,7 @@ principalmente, tenha a base de dados modelada adequadamente para futuras integr
 outros sistemas.
 
 <h2>🎯Objetivo do Projeto</h2>
-Construir interfaces para a ativação dos clientes visando a facilidade e agilidade dos usúarios
+Criação de interfaces para cada etapa do programa visando facilitar a ativação delas e dos cadastros posteriormente, além de tornar o processo visível aos clientes.
 
 <h2>📄Backlog do Produto</h2>
 

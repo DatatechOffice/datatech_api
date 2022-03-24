@@ -22,6 +22,24 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <h2>📄Backlog do Produto</h2>
 
+<table border="1">
+    <tr>
+        <td>Nome</td>
+        <td>Idade</td>
+        <td>Profissão</td>
+    </tr>
+    <tr>
+        <td>Ted</td>
+        <td>22</td>
+        <td>Estudante</td>
+    </tr>
+    <tr>
+        <td>Ralf</td>
+        <td>26</td>
+        <td>Designer</td>
+    </tr>
+</table>
+
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
 |Crucial|

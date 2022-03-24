@@ -24,10 +24,10 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 
 <table border="1">
     <tr>
-        <td>Nivel de Importância</td>
-        <td>Sprint 1</td>
-        <td>Sprint 2</td>
-        <td>Sprint 3</td>
+        <td><b>Nivel de Importância</b></td>
+        <td><b>Sprint 1</b></td>
+        <td><b>Sprint 2</b></td>
+        <td><b>Sprint 3<b></td>
     </tr>
     <tr>
         <td>Crucial</td>

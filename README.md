@@ -24,27 +24,30 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <table border="1">
     <tr>
-        <td>Nome</td>
-        <td>Idade</td>
-        <td>Profissão</td>
+        <td>Nivel de Importância</td>
+        <td>Sprint 1</td>
+        <td>Sprint 2</td>
+        <td>Sprint 3</td>
     </tr>
     <tr>
-        <td>Ted</td>
-        <td>22</td>
-        <td>Estudante</td>
+        <td>Crucial</td>
+        <td>Protótipo com input dos dados(Escopo e bronze)</td>
+        <td>Interação programa e Banco de dados</td>
+        <td>Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)</td>
     </tr>
     <tr>
-        <td>Ralf</td>
-        <td>26</td>
-        <td>Designer</td>
+        <td>Importante</td>
+        <td>Wireframe</td>
+        <td> Criação das interfaces restantes e a posterior interação com o Banco r</td>
+        <td></td>
     </tr>
+    <tr>
+       <td>Relevante</td>
+       <td>Adição de uma Interface</td>
+       <td>Adição de mecanismo que reporta erros </td>
+       <td></td> 
+    </tr>    
 </table>
-
-|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
-|:------------------|:-------|:-------|:-------|
-|Crucial| Protótipo com input dos dados(Escopo e bronze) | Interação programa e Banco de dados | Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)  |  
-|Importante| Wireframe        | Criação das interfaces restantes e a posterior interação com o Banco       |        |        
-|Relevante| Adição de uma Interface | Adição de mecanismo que reporta erros    |        |        
 
 <h2>📄Branches de cada Sprint</h2>
 <h2>🖼Wireframes do Projeto</h2>

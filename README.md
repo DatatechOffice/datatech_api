@@ -42,9 +42,9 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
-|Crucial| Protótipo |  Teste |Teste2  |  
+|Crucial| Protótipo com input dos dados |  Teste |Teste2  |  
 |Importante|        |        |        |        
-|Relevante|         |        |        |        
+|Relevante| Interface |        |        |        
 
 <h2>📄Branches de cada Sprint</h2>
 <h2>🖼Wireframes do Projeto</h2>

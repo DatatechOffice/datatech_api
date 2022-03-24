@@ -66,11 +66,11 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
     </tr>
 </table>
 
-|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
-|:------------------|:-------|:-------|:-------|
-|Crucial| Protótipo com input dos dados(Escopo e bronze) | Interação programa e Banco de dados | Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)  |  
-|Importante| Wireframe        | Criação das interfaces restantes e a posterior interação com o Banco       |        |        
-|Relevante| Adição de uma Interface | Adição de mecanismo que reporta erros    |        |
+|Nível de impotância|Sprint 1|
+|:------------------|:-------|
+|Crucial| Protótipo com input dos dados(Escopo e bronze) | 
+|Importante| Wireframe        |     
+|Relevante| Adição de uma Interface | 
 
 <h2>📄Branches de cada Sprint</h2>
 <h2>🖼Wireframes do Projeto</h2>

@@ -22,8 +22,8 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <h2>📄Backlog do Produto</h2>
 
-|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|Sprint 4|
-|:------------------|:-------|:-------|:-------|---------|
+|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
+|:------------------|:-------|:-------|:-------|
 |Crucial|
 |Importante|
 |Relevante|

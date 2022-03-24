@@ -110,7 +110,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
  
-<img src="https://avatars.githubusercontent.com/u/56142288?v=4" width = "40%"> 
+<img src="https://avatars.githubusercontent.com/u/90358435?v=4" width = "40%"> 
 <br />
 <sub><b>Gabriel D'Epiro</b></sub>
 <br /> 

@@ -39,7 +39,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 
 
 </table>
-<h2>Equipe Datatech</h2>
+<h2>🎲Equipe Datatech</h2>
 <table>
 <tr>
 <td align="center">

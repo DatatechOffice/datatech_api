@@ -165,5 +165,5 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 </td>
 </tr>
 </table>
-.
+;
 

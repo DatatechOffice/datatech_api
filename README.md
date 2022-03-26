@@ -26,7 +26,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     <tr>
         <td><b>Nivel de Importância</b></td>
         <td><b>Sprint 1</b></td>
-        <td><b>Sprint 2</b></td>
+        <td><b>Sprint 2</b></td>nbdjdjdj
         <td><b>Sprint 3<b></td>
     </tr>
     <tr>

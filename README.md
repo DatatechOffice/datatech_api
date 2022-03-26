@@ -9,7 +9,7 @@
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Equipe Datatech ](#equipe-datatech)
 
-<h2>📝Descrição</h2>
+<h2>📝Descrição</h2>ggggggggggggggggg
 O desafio consiste na gestão de ativação de clientes na plataforma Dom Rock. Precisamos de uma 
 solução que seja orientada a entrada de dados de parâmetros e variáveis de cada cliente para alocar 
 recursos na plataforma Dom Rock, entrada de dados e estimativa de consumo de recursos (baseado 

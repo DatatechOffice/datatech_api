@@ -58,7 +58,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
         <td>Como</td>
     </tr>
     <tr>
-        <td>Ted</td>
+        <td>Desenvolver um protótipo da interface para entendimento</td>
         <td>22</td>
         <td>Estudante</td>
     </tr>

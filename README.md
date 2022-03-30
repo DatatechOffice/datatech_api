@@ -59,14 +59,20 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
     </tr>
     <tr>
         <td>Desenvolver um protótipo da interface</td>
-        <td></td>
-        <td>Estudante</td>
+        <td>para o cliente verificar a interface do produto</td>
+        <td>criando wireframe para demostração</td>
     </tr>
     <tr>
-        <td>Ralf</td>
-        <td>26</td>
-        <td>Designer</td>
+        <td>Desenvolver integração de banco de dados com o programa desenvolvido no backend </td>
+        <td>para realizar o CRUd do projeto</td>
+        <td>Criando o banco de dados e utilizando a ferramenta SGBD juntamente com a ferramenta java para cominucação</td>
+     </tr>
+     <tr>
+        <td></td>
+        <td>O que?</td>
+        <td>Por que?</td>
     </tr>
+    
 </table>
 
 |Nível de impotância|Sprint 1|

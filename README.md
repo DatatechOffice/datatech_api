@@ -9,7 +9,7 @@
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Equipe Datatech ](#equipe-datatech)
 
-<h2>📝Descrição</h2>ggggggggggggggggg
+<h2>📝Descrição</h2>
 O desafio consiste na gestão de ativação de clientes na plataforma Dom Rock. Precisamos de uma 
 solução que seja orientada a entrada de dados de parâmetros e variáveis de cada cliente para alocar 
 recursos na plataforma Dom Rock, entrada de dados e estimativa de consumo de recursos (baseado 
@@ -22,23 +22,6 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <h2>📄Backlog do Produto</h2>
 
-<table border="1">
-    <tr>
-        <td>Nome</td>
-        <td>Idade</td>
-        <td>Profissão</td>
-    </tr>
-    <tr>
-        <td>Desenvolver um protótipo da interface para entendimento</td>
-        <td>22</td>
-        <td>Estudante</td>
-    </tr>
-    <tr>
-        <td>Ralf</td>
-        <td>26</td>
-        <td>Designer</td>
-    </tr>
-</table>
 
 |Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
 |:------------------|:-------|:-------|:-------|
@@ -74,12 +57,6 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
     </tr>
     
 </table>
-
-|Nível de impotância|Sprint 1|
-|:------------------|:-------|
-|Crucial| Protótipo com input dos dados(Escopo e bronze) | 
-|Importante| Wireframe        |     
-|Relevante| Adição de uma Interface | 
 
 <h2>📄Branches de cada Sprint</h2>
 To do list Sprint 1:

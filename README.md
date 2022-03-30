@@ -68,9 +68,9 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
         <td>Criando o banco de dados e utilizando a ferramenta SGBD juntamente com a ferramenta java para cominucação</td>
      </tr>
      <tr>
-        <td></td>
-        <td>O que?</td>
-        <td>Por que?</td>
+        <td>adicionar interface e login ao projeto</td>
+        <td>login e seguranca do sistema</td>
+        <td>para gerenciar usuários do sistema com maior segurança.</td>
     </tr>
     
 </table>

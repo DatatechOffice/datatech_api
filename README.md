@@ -44,15 +44,18 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 |:------------------|:-------|:-------|:-------|
 |Crucial| Protótipo com input dos dados(Escopo e bronze) | Interação programa e Banco de dados | Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)  |  
 |Importante| Wireframe        | Criação das interfaces restantes e a posterior interação com o Banco       |        |        
-|Relevante| Adição de uma Interface | Adição de mecanismo que reporta erros    |        |    
+|Relevante| Adição de uma Interface | Adição de mecanismo que reporta erros    |        |   
+
+
+
 
 <h2>📄Backlog da Sprint1</h2>
 
 <table border="1">
     <tr>
-        <td>Nome</td>
-        <td>Idade</td>
-        <td>Profissão</td>
+        <td>O que</td>
+        <td>Para quem?</td>
+        <td>Como</td>
     </tr>
     <tr>
         <td>Ted</td>

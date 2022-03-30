@@ -53,13 +53,13 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <table border="1">
     <tr>
-        <td>O que</td>
-        <td>Para quem?</td>
-        <td>Como</td>
+        <td>Quem</td>
+        <td>O que?</td>
+        <td>Por que?</td>
     </tr>
     <tr>
-        <td>Desenvolver um protótipo da interface para entendimento</td>
-        <td>22</td>
+        <td>Desenvolver um protótipo da interface</td>
+        <td></td>
         <td>Estudante</td>
     </tr>
     <tr>

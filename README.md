@@ -50,7 +50,10 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 </table>
 
 <h2>📄Cronograma das Sprints</h2>
-    
+    <table border="1">
+        <tr>
+        </tr>    
+    </table>
     
     
 <h2>🖼 Propostas de Entregas</h2>
@@ -61,7 +64,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
         <td>Sprint 3</td>
     </tr>
     <tr>
-        <td>criação do wireframe para validação do produto</td>
+        <td>Criação do wireframe para validação do produto</td>
         <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
         <td>Adicionar interface e login ao projeto</td>
     </tr>
@@ -71,7 +74,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
         <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
      </tr>
      <tr>
-         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
+         <td>Criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
          <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
         <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
 encontrados durante a ativação de cada cliente</td>

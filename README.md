@@ -42,22 +42,17 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
     </tr>
     <tr>
         <td>criação do wireframe para validação do produto</td>
-        <td>a partir da validação iniciar o desenvolver um protótipo da interface</td>
-        <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
+        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
+        <td>Adicionar interface e login ao projeto</td>
     </tr>
     <tr>
-        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
+        <td>A partir da validação iniciar o desenvolver um protótipo da interface</td>
         <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
-        <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
+        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
      </tr>
      <tr>
-        <td>adicionar interface e login ao projeto</td>
-        <td>login e seguranca do sistema</td>
-        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
-    </tr>
-    <tr>
-        <td> </td>
-        <td> </td>
+         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
+         <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
         <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
 encontrados durante a ativação de cada cliente</td>
     </tr>

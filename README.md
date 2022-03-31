@@ -4,8 +4,8 @@
 - [Descrição](#descrição)
 - [Objetivo do Projeto](#objetivo-do-projeto)
 - [Backlog do Produto](#backlog-do-produto)
-- [Branches de cada Sprint](#branches-de-cada-sprint)
-- [Wireframes do projeto](#wireframes-do-projeto)
+- [Proposta de Entregas](#proposta-de-entregas)
+- [Cronograma das Sprints](#cronograma-das-sprints)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Equipe Datatech ](#equipe-datatech)
 
@@ -52,16 +52,30 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 <h2>📄Cronograma das Sprints</h2>
     <table border="1">
         <tr>
+            <td><b>Data</b></td>
+            <td><b>Evento</b></td>  
+        </tr>    
+        <tr>
+            <td>14/04/2022 </td>
+            <td>Sprint1 </td>  
+        </tr>    
+        <tr>
+            <td>15/05/2022 </td>
+            <td>Sprint2</td>  
+        </tr>    
+        <tr>
+            <td>05/06/2022 </td>
+            <td>Sprint3</td>  
         </tr>    
     </table>
     
     
-<h2>🖼 Propostas de Entregas</h2>
+<h2>🖼Proposta de Entregas</h2>
 <table border="1">
     <tr>
-        <td>Sprint 1</td>
-        <td>Sprint 2</td>
-        <td>Sprint 3</td>
+        <td><b>Sprint 1</b></td>
+        <td><b>Sprint 2</b></td>
+        <td><b>Sprint 3</b></td>
     </tr>
     <tr>
         <td>Criação do wireframe para validação do produto</td>

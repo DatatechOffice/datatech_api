@@ -49,7 +49,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     </tr>    
 </table>
 
-<h2>📄Branches de cada Sprint</h2>
+<h2>📄Cronograma das Sprints</h2>
 <h2>🖼Wireframes do Projeto</h2>
 
 

@@ -32,7 +32,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 
 
-<h2>📄Backlog da Sprint1</h2>
+<h2>📄Proposta de Entrega</h2>
 
 <table border="1">
     <tr>

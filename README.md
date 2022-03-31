@@ -36,24 +36,25 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <table border="1">
     <tr>
-        <td>Quem</td>
-        <td>O que?</td>
-        <td>Por que?</td>
+        <td>Sprint 1</td>
+        <td>Sprint 2</td>
+        <td>Sprint 3</td>
     </tr>
     <tr>
-        <td>Desenvolver um protótipo da interface</td>
-        <td>para o cliente verificar a interface do produto</td>
-        <td>criando wireframe para demostração</td>
+        <td>criação do wireframe para validação do produto</td>
+        <td>a partir da validação iniciar o desenvolver um protótipo da interface</td>
+        <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
     </tr>
     <tr>
-        <td>Desenvolver integração de banco de dados com o programa desenvolvido no backend </td>
-        <td>para realizar o CRUd do projeto</td>
-        <td>Criando o banco de dados e utilizando a ferramenta SGBD juntamente com a ferramenta java para cominucação</td>
+        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend </td>
+        <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
+        <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
      </tr>
      <tr>
         <td>adicionar interface e login ao projeto</td>
         <td>login e seguranca do sistema</td>
-        <td>para gerenciar usuários do sistema com maior segurança.</td>
+        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
+        <td>fvsagsgsg </td>
     </tr>
     
 </table>

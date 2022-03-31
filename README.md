@@ -46,7 +46,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
     </tr>
     <tr>
-        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend </td>
+        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
         <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
         <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
      </tr>
@@ -60,9 +60,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
         <td> </td>
         <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
 encontrados durante a ativação de cada cliente</td>
-       
     </tr>
-    
 </table>
 
 <h2>📄Branches de cada Sprint</h2>

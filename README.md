@@ -54,9 +54,13 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
         <td>adicionar interface e login ao projeto</td>
         <td>login e seguranca do sistema</td>
         <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
-        <td>fvsagsgsg </td>
     </tr>
     <tr>
+        <td> </td>
+        <td> </td>
+        <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
+encontrados durante a ativação de cada cliente</td>
+       
     </tr>
     
 </table>

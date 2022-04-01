@@ -59,17 +59,6 @@ encontrados durante a ativação de cada cliente</td>
 </table>
 
 <h2>📄Branches de cada Sprint</h2>
-To do list Sprint 1:
-
-1- planejar e montar o backlog do projeto
-
-1.1- planejamento e montagem dos backlogs e storycards das Sprints. Adicionar storycards para o produto final.
-
-1.2- criar um check list de perguntas respondidas e funções do programa que ainda continuam dúbias e não foram respondidas.
-
-2- montagem dos Wireframes (escopo e bronze inicialmente), pois a partir deles os backlogs das sprints serão mais fáceis de serem construidos.
-
-3- a partir dos Wireframes focar na produção do programa, com foco na usabilidade e funcionamento e não priorizar a interface(caso haja tempo hábil para cria-las, fazer)
 
 <h2>🖼Wireframes do Projeto</h2>
 Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-id=0%3A1

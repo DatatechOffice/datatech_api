@@ -1,2 +1,0 @@
-# datatech_api
-bxbxb

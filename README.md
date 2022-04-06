@@ -103,7 +103,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [Git](https://github.com/)
 - [Discord](https://discord.com/)
 - [Java](https://www.java.com/pt-BR/)
-- [MySQL](https://www.mysql.com/)
+- [SQLServer](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 
 
 </table>

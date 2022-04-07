@@ -42,9 +42,9 @@ Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-
 
 <h2>Requisitos para utilização do programa</h2>
 
-## 1º Instalação SQLServer(ou utilizar em nuvem)
+### 1º Instalação SQLServer(ou utilizar em nuvem)
 
-## 2º Instalar executável do programa Java de acordo com o as instruções do vídeo:
+### 2º Instalar executável do programa Java de acordo com o as instruções do vídeo:
 Insira o video tutorial aqui
 
 

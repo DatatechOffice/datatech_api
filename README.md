@@ -42,17 +42,6 @@ Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-
 
 <img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png">
 
-
-<h2>🛠Tecnologias utilizadas</h2>
-
-AS Tecnologias abaixo foram utilizadas na construção do projeto.
-- [GitHub](https://github.com/)
-- [Git](https://github.com/)
-- [Discord](https://discord.com/)
-- [Java](https://www.java.com/pt-BR/)
-- [MySQL](https://www.mysql.com/)
-
-
 </table>
 <h2>🎲Equipe Datatech</h2>
 <table>

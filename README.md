@@ -36,40 +36,18 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 
 <table border="1">
     <tr>
-        <td>Sprint 1</td>
         <td>Sprint 2</td>
-        <td>Sprint 3</td>
     </tr>
     <tr>
-        <td>criação do wireframe para validação do produto</td>
         <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
-        <td>Adicionar interface e login ao projeto</td>
     </tr>
     <tr>
-        <td>A partir da validação iniciar o desenvolver um protótipo da interface</td>
         <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
-        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
      </tr>
      <tr>
-         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
          <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
-        <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
-encontrados durante a ativação de cada cliente</td>
     </tr>
 </table>
-
-<h2>📄Branches de cada Sprint</h2>
-To do list Sprint 1:
-
-1- planejar e montar o backlog do projeto
-
-1.1- planejamento e montagem dos backlogs e storycards das Sprints. Adicionar storycards para o produto final.
-
-1.2- criar um check list de perguntas respondidas e funções do programa que ainda continuam dúbias e não foram respondidas.
-
-2- montagem dos Wireframes (escopo e bronze inicialmente), pois a partir deles os backlogs das sprints serão mais fáceis de serem construidos.
-
-3- a partir dos Wireframes focar na produção do programa, com foco na usabilidade e funcionamento e não priorizar a interface(caso haja tempo hábil para cria-las, fazer)
 
 <h2>🖼Wireframes do Projeto</h2>
 Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-id=0%3A1

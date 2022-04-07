@@ -2,9 +2,7 @@
 <h2>📜Menu de Navegação</h2>
 
 - [Descrição](#descrição)
-- [Objetivo do Projeto](#objetivo-do-projeto)
 - [Backlog do Produto](#backlog-do-produto)
-- [Branches de cada Sprint](#branches-de-cada-sprint)
 - [Wireframes do projeto](#wireframes-do-projeto)
 - [Tecnologias utilizadas](#tecnologias-utilizadas)
 - [Equipe Datatech ](#equipe-datatech)

@@ -23,7 +23,7 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 <h2>📄Backlog do Produto</h2>
 
 
-|Nível de impotância|Sprint 1|Sprint 2|Sprint 3|
+|Nível de impotância| | | |
 |:------------------|:-------|:-------|:-------|
 |Crucial| Protótipo com input dos dados(Escopo e bronze) | Interação programa e Banco de dados | Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)  |  
 |Importante| Wireframe        | Criação das interfaces restantes e a posterior interação com o Banco       |        |        

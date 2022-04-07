@@ -20,18 +20,6 @@ outros sistemas.
 <h2>🎯Objetivo do Projeto</h2>
 Construir interfaces para a ativação dos clientes visando a facilidade e agilidade dos usúarios
 
-<h2>📄Backlog do Produto</h2>
-
-
-|Nível de impotância| | | |
-|:------------------|:-------|:-------|:-------|
-|Crucial| Protótipo com input dos dados(Escopo e bronze) | Interação programa e Banco de dados | Adição da permissão por tipo de usuário(ADM, Suporte e Cliente)  |  
-|Importante| Wireframe        | Criação das interfaces restantes e a posterior interação com o Banco       |        |        
-|Relevante| Adição de uma Interface | Adição de mecanismo que reporta erros    |        |   
-
-
-
-
 <h2>📄Proposta de Entrega</h2>
 
 <table border="1">

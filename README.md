@@ -105,7 +105,6 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [Java](https://www.java.com/pt-BR/)
 - [SQLServer](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
 
-
 </table>
 <h2>🎲Equipe Datatech</h2>
 <table>

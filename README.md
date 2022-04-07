@@ -43,8 +43,8 @@ Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-
 <img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png">
 
 <h2>Requisitos para utilização do programa</h2>
-### 1º Instalação SQLServer(ou utilizar em nuvem)
-### 2º Instalar executável do programa Java de acordo com o as instruções do vídeo:
+## 1º Instalação SQLServer(ou utilizar em nuvem)
+## 2º Instalar executável do programa Java de acordo com o as instruções do vídeo:
 Insira o video tutorial aqui
 
 

@@ -38,8 +38,8 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     <tr>
         <td>Importante</td>
         <td>Wireframe</td>
-        <td> Criação das interfaces restantes e a posterior interação com o Banco r</td>
-        <td></td>
+        <td> Criação das interfaces restantes e a posterior interação com o Banco </td>
+        <td>Exportação dos dados inputados no programa em pdf</td>
     </tr>
     <tr>
        <td>Relevante</td>

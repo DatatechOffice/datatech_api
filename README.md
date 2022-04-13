@@ -111,7 +111,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [Discord](https://discord.com/)
 - [Java](https://www.java.com/pt-BR/)
 - [SQLServer](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-- [JDK](https://www.oracle.com/java/technologies/downloads/)
+- [JDK(JRE está contido nele)](https://www.oracle.com/java/technologies/downloads/)
     
 </table>
 <h2>🎲Equipe Datatech</h2>

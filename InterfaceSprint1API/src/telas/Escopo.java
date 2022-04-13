@@ -58,7 +58,7 @@ public class Escopo {
 		this.c1=c1;
 		initialize();
 		
-		vCliente.setText(c1.getvCliente());
+		textField_vObjetivo.setText(this.c1.getvObjetivo());
 		
 		
 	}
@@ -173,6 +173,19 @@ public class Escopo {
 		btnNewButton_Prosseguir.setBounds(20, 260, 151, 23);
 		frmEscopo.getContentPane().add(btnNewButton_Prosseguir);
 		
+		JButton btnNewButton = new JButton("teste");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.out.println(c1.getvCliente()+"\n"+
+						c1.getvSolucao()+"\n"+
+						c1.getvObjetivo()+"\n"+
+						c1.getvEntregaM()+"\n"+
+						c1.getvEntregaP());
+			}
+		});
+		btnNewButton.setBounds(181, 260, 89, 23);
+		frmEscopo.getContentPane().add(btnNewButton);
+		
 		vSolucao_NxtOperations.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(vSolucao_NxtOperations.isSelected()) {
@@ -224,31 +237,30 @@ public class Escopo {
 				
 				//Adicionando na array de produtos as opções de NxtDemand
 				if(vProduto_Vox.isSelected()) {
-					vProList.add("NxtDemand Vox");
+					vProList.add("Nxt.Demand Vox");
 				}
 				if(vProduto_Sales.isSelected()) {
-					vProList.add("NxtDemand Sales");
+					vProList.add("Nxt.Demand Sales");
 				}
 				if(vProduto_Pricing.isSelected()) {
-					vProList.add("NxtDemand Pricing");
+					vProList.add("Nxt.Demand Pricing");
 				}
 				if(vProduto_Marketing.isSelected()) {
-					vProList.add("NxtDemand Marketing");
+					vProList.add("Nxt.Demand Marketing");
 				}
 				
 				//Adicionando na array de produtos as opções de Operations
 				if(vProduto_Matching.isSelected()) {
-					vProList.add("NxtOperations Macthing");
+					vProList.add("Nxt.Operations Macthing");
 				}
 				if(vProduto_Optimization.isSelected()) {
-					vProList.add("NxtOperations Optimization");
+					vProList.add("Nxt.Operations Optimization");
 				}
 
 				// Mostrar as informações da ativaçao na tela
 				
 				
 				//lista para armazenar várias pessoas
-				ArrayList<Cliente> cli=new ArrayList<Cliente>();
 				
 				//se houver dados para prosseguir
 				//armazenando a solução selecionado
@@ -274,8 +286,6 @@ public class Escopo {
 					c1.setvEntregaM(textField_vEntregaM.getText());
 					c1.setvEntregaP(textField_vEntregaP.getText());
 					
-					//e adcionado à lista
-					cli.add(c1);
 					
 					//Criando as opções do alerta
 					Object[] options = { "Confirmar", "Cancelar" };
@@ -319,16 +329,12 @@ public class Escopo {
 				}
 				
 				
-					
-				for (int i = 0; i < cli.size(); i ++) {
-					Cliente cList = cli.get(i);
-					System.out.println(cList.getvCliente()+"\n"+
-										cList.getvSolucao()+"\n"+
-										cList.getvObjetivo()+"\n"+
-										cList.getvEntregaM()+"\n"+
-										cList.getvEntregaP());
-							
-				}
+					System.out.println(c1.getvCliente()+"\n"+
+										c1.getvSolucao()+"\n"+
+										c1.getvObjetivo()+"\n"+
+										c1.getvEntregaM()+"\n"+
+										c1.getvEntregaP());
+	
 				System.out.println(vProList);
 								
 			}

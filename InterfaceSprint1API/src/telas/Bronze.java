@@ -119,6 +119,20 @@ public class Bronze {
 		btnRetorna.setBounds(160, 258, 141, 23);
 		frmBronze.getContentPane().add(btnRetorna);
 		
+		JButton btnNewButton_1 = new JButton("teste");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				System.out.println(c1.getvCliente()+"\n"+
+						c1.getvSolucao()+"\n"+
+						c1.getvObjetivo()+"\n"+
+						c1.getvEntregaM()+"\n"+
+						c1.getvEntregaP());
+			}
+		});
+		btnNewButton_1.setBounds(311, 258, 89, 23);
+		frmBronze.getContentPane().add(btnNewButton_1);
+		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -161,18 +175,10 @@ public class Bronze {
 		btnRetorna.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//Criando as opções do alerta
-				Object[] options = { "Confirmar", "Cancelar" };
-				int retorno=JOptionPane.showOptionDialog(null,"Você deseja continuar: ", "Informação", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
-				
-				//Definindo as ações do alerta
-				
-				//Se o usúario confirma segue para a proxima etap
-				if(retorno == 0){					
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
 							try {
-								Escopo window2 = new Escopo();
+								Escopo window2 = new Escopo(c1);
 								window2.frmEscopo.setVisible(true);
 								frmBronze.setVisible(false);
 								
@@ -183,7 +189,7 @@ public class Bronze {
 					});
 					
 				}
-			}
+			
 		});
 	}
 }

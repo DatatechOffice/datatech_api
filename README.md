@@ -99,6 +99,7 @@ encontrados durante a ativação de cada cliente</td>
     Basta ter o Java e o JRE do mesmo atualizados em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
     
     Baixe o executável e abra na sua maquina:
+    
     https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar 
    
     

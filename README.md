@@ -27,6 +27,11 @@ Essa sprint tem como entregas Wireframes das interfaces, as interfaces 'Escopo' 
      </tr>
 </table>
 
+<h2>📄Burndown Chart Sprint 1</h2>
+
+<img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint1.png">
+
+
 <h2>🖼Wireframes do Projeto</h2>
 Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-id=0%3A1
 

@@ -94,6 +94,11 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 encontrados durante a ativação de cada cliente</td>
     </tr>
 </table>
+    
+<h2>🛠Como instalar e utilizar o programa</h2>
+    Basta ter o Java e o JRE do mesmo atualizados em sua ultima versão na maquina que for utilizar, fazendo o download e instalção de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
+    Baixe o executável https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar e execute na sua maquina.
+    
 
 
 <h2>🛠Tecnologias utilizadas</h2>
@@ -104,7 +109,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 - [Discord](https://discord.com/)
 - [Java](https://www.java.com/pt-BR/)
 - [SQLServer](https://www.microsoft.com/pt-br/sql-server/sql-server-downloads)
-
+- [JDK](https://www.oracle.com/java/technologies/downloads/)
+    
 </table>
 <h2>🎲Equipe Datatech</h2>
 <table>

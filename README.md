@@ -98,7 +98,8 @@ encontrados durante a ativação de cada cliente</td>
 <h2>🛠Como instalar e utilizar o programa</h2>
     Basta ter o Java e o JRE do mesmo atualizados em sua ultima versão na maquina que for utilizar, fazendo o download e instalção de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
     
-    Baixe o executável https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar e execute na sua maquina.
+    Baixe o executável https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar 
+    e execute na sua maquina.
     
 
 

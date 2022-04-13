@@ -25,12 +25,12 @@ import java.awt.event.ActionEvent;
 
 public class Escopo {
 
-	private JFrame frmEscopo;
+	JFrame frmEscopo;
 	private JTextField vCliente;
 	private JTextField textField_vObjetivo;
 	private JTextField textField_vEntregaM;
 	private JTextField textField_vEntregaP;
-
+	Cliente c1;
 	/**
 	 * Launch the application.
 	 */
@@ -53,7 +53,15 @@ public class Escopo {
 	public Escopo() {
 		initialize();
 	}
-
+	
+	public Escopo(Cliente c1) {
+		this.c1=c1;
+		initialize();
+		
+		vCliente.setText(c1.getvCliente());
+		
+		
+	}
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -252,7 +260,7 @@ public class Escopo {
 						vProList.size() != 0)
 				{
 					// um objeto pessoa é criado
-					Cliente c1=new Cliente(vCliente.getText());
+					c1=new Cliente(vCliente.getText());
 					
 					//salvando a solução selecionada no atributo do cliente
 					if(vSolucao_NxtDemand.isSelected()) {
@@ -288,7 +296,7 @@ public class Escopo {
 						EventQueue.invokeLater(new Runnable() {
 							public void run() {
 								try {
-									Bronze window1 = new Bronze();
+									Bronze window1 = new Bronze(c1);
 									window1.frmBronze.setVisible(true);
 									frmEscopo.setVisible(false);
 									
@@ -301,7 +309,7 @@ public class Escopo {
 					}
 					//Se cancelar ele altera os dados necessarios
 					else {
-						JOptionPane.showMessageDialog(null, "Reescreva os dados");
+						JOptionPane.showMessageDialog(null, "Altere os dados");
 
 					}
 				}

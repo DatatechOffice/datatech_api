@@ -95,6 +95,8 @@ encontrados durante a ativação de cada cliente</td>
     </tr>
 </table>
 
+- [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
+- [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)    
     
 <h2>🛠Como instalar e utilizar o programa</h2>

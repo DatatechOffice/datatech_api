@@ -26,7 +26,7 @@ import java.awt.event.ActionEvent;
 public class Escopo {
 
 	JFrame frmEscopo;
-	private JTextField vCliente;
+	private JTextField textField_vCliente;
 	private JTextField textField_vObjetivo;
 	private JTextField textField_vEntregaM;
 	private JTextField textField_vEntregaP;
@@ -58,7 +58,12 @@ public class Escopo {
 		this.c1=c1;
 		initialize();
 		
+		textField_vCliente.setText(this.c1.getvCliente());
 		textField_vObjetivo.setText(this.c1.getvObjetivo());
+		textField_vEntregaM.setText(this.c1.getvEntregaP());
+		textField_vEntregaP.setText(this.c1.getvEntregaM());
+		
+		
 		
 		
 	}
@@ -77,10 +82,10 @@ public class Escopo {
 		ButtonGroup vRadioGroup = new ButtonGroup();
 	
 		
-		vCliente = new JTextField();
-		vCliente.setBounds(10, 30, 151, 20);
-		frmEscopo.getContentPane().add(vCliente);
-		vCliente.setColumns(10);
+		textField_vCliente = new JTextField();
+		textField_vCliente.setBounds(10, 30, 151, 20);
+		frmEscopo.getContentPane().add(textField_vCliente);
+		textField_vCliente.setColumns(10);
 		
 		JLabel lblNewLabel = new JLabel("Nome do Cliente");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 15));
@@ -265,14 +270,14 @@ public class Escopo {
 				//se houver dados para prosseguir
 				//armazenando a solução selecionado
 				
-				if(!vCliente.getText().equals("") &&
+				if(!textField_vCliente.getText().equals("") &&
 						!textField_vObjetivo.getText().equals("") &&
 						!textField_vEntregaM.getText().equals("")  &&
 						!textField_vEntregaP.getText().equals("") &&
 						vProList.size() != 0)
 				{
 					// um objeto pessoa é criado
-					c1=new Cliente(vCliente.getText());
+					c1=new Cliente(textField_vCliente.getText());
 					
 					//salvando a solução selecionada no atributo do cliente
 					if(vSolucao_NxtDemand.isSelected()) {
@@ -301,7 +306,7 @@ public class Escopo {
 					
 					//Se o usúario confirma segue para a proxima etap
 					if(retorno == 0){
-						JOptionPane.showMessageDialog(null, "Cliente: "+vCliente.getText()+"\n"+"Cadastrado com sucesso");
+						JOptionPane.showMessageDialog(null, "Cliente: "+textField_vCliente.getText()+"\n"+"Cadastrado com sucesso");
 						
 						EventQueue.invokeLater(new Runnable() {
 							public void run() {

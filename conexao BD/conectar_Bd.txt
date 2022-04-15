@@ -1,0 +1,21 @@
+priemiro
+fazer download e instalar  mysql na maquina.
+
+
+Segundo
+instalar o java driver no eclipse.
+
+teceiro
+Criar a classe(conexao_banco)
+
+quarto
+na classe conexao_banco configurar o endereço de acordo com seu banco no mysql. Exemplo abaixo.
+
+ String url = "jdbc:mysql://localhost:3306/nome do banco";
+ String user = "root";
+ String password = "fatecsjc";
+ String driver = "com.mysql.cj.jdbc.Driver";(não sei onde achar)
+
+
+quinto
+utilizar a classe teste banco para verificar a conexao do banco de dados.

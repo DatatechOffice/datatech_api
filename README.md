@@ -106,7 +106,7 @@ encontrados durante a ativação de cada cliente</td>
    Baixe o executável e abra na sua maquina:
 - [Protótipoexe](https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar?raw=true) 
    
-   Ao abrir o programa insira os dados do cliente e na segunda tela(bronze), haverá um botão para extrair as informações colocadas, a partir disso passe essas informações onde achar melhor, seja num arquivo txt, ou de qualquer outra forma 
+   Ao abrir o programa insira os dados do cliente e na segunda tela(bronze), haverá um botão para extrair as informações colocadas, a partir disso passe essas informações onde achar melhor, seja num arquivo txt, ou de qualquer outra forma. 
     
     
 

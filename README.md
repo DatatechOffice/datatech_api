@@ -74,8 +74,6 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     <table border="1">
     <tr>
         <td><b>Sprint 1<src= "https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/README.md1"></b></td>
-        <td><b> </b></td>
-        <td><b> </b></td>
     </tr>
     <tr>
         <td>Criação do wireframe para validação do produto</td>

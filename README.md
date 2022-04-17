@@ -100,7 +100,7 @@ encontrados durante a ativação de cada cliente</td>
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)    
     
 <h2>🛠Como instalar e utilizar o programa</h2>
-    Basta ter o Java e o JRE do mesmo atualizados em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
+    Basta instalar o Java e o JRE em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
     
 Baixe o executável e abra na sua maquina:
 - [Protótipoexe](https://github.com/DatatechOffice/datatech_api/blob/main/InterfaceSprint1API/domrock.jar?raw=true) 

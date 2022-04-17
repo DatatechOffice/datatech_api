@@ -71,29 +71,21 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     
     
 <h2>🖼Proposta de Entregas</h2>
-<table border="1">
+    <table border="1">
     <tr>
-        <td><b>Sprint 1<src= "https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/README.md1"></b></td>
-        <td><b> </b></td>
-        <td><b> </b></td>
-    </tr>
+        <td>Sprint 1</td>
+        </tr>
     <tr>
-        <td>Criação do wireframe para validação do produto</td>
-        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
-        <td>Adicionar interface e login ao projeto</td>
-    </tr>
+        <td>criação do wireframe para validação do produto</td>
+        </tr>
     <tr>
         <td>A partir da validação iniciar o desenvolver um protótipo da interface</td>
-        <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
-        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
-     </tr>
+        </tr>
      <tr>
-         <td>Criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
-         <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
-        <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
-encontrados durante a ativação de cada cliente</td>
-    </tr>
+         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
+     </tr>
 </table>
+    
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
 - [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)

@@ -14,27 +14,20 @@ import javax.swing.JCheckBox;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.awt.event.ActionEvent;
+import javax.swing.JList;
+import javax.swing.DefaultComboBoxModel;
 
 public class Bronze {
 
 	JFrame frmBronze;
 	Cliente c1;
+	Escopo vProList;
+	private JTextField textField_vEnvio;
 
 	/**
 	 * Launch the application.
 	 */
-	/*public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Bronze window = new Bronze(c1);
-					window.frmBronze.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}*/
+
 
 	/**
 	 * Create the application.
@@ -65,9 +58,9 @@ public class Bronze {
 		lblFormaDeEnvio.setBounds(10, 96, 141, 14);
 		frmBronze.getContentPane().add(lblFormaDeEnvio);
 		
-		JLabel lblQuantidadeRecebida = new JLabel("Quantidade Recebida");
+		JLabel lblQuantidadeRecebida = new JLabel("Prazo deDados Recebida");
 		lblQuantidadeRecebida.setFont(new Font("Tahoma", Font.BOLD, 15));
-		lblQuantidadeRecebida.setBounds(10, 155, 174, 14);
+		lblQuantidadeRecebida.setBounds(10, 155, 246, 14);
 		frmBronze.getContentPane().add(lblQuantidadeRecebida);
 		
 		JButton btnNewButton = new JButton("Prosseguir");
@@ -119,23 +112,28 @@ public class Bronze {
 		btnRetorna.setBounds(160, 258, 141, 23);
 		frmBronze.getContentPane().add(btnRetorna);
 		
-		JButton btnNewButton_1 = new JButton("teste");
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				
-				System.out.println(c1.getvCliente()+"\n"+
-						c1.getvSolucao()+"\n"+
-						c1.getvObjetivo()+"\n"+
-						c1.getvEntregaM()+"\n"+
-						c1.getvEntregaP());
-			}
-		});
-		btnNewButton_1.setBounds(311, 258, 89, 23);
-		frmBronze.getContentPane().add(btnNewButton_1);
+		JSpinner vContagem = new JSpinner();
+		vContagem.setBounds(10, 175, 44, 20);
+		frmBronze.getContentPane().add(vContagem);
 		
+		JComboBox JComboBo_vData = new JComboBox();
+		JComboBo_vData.setModel(new DefaultComboBoxModel(new String[] {"<Selecione uma das op\u00E7\u00F5es>", "Dias", "Semanas", "Meses"}));
+		JComboBo_vData.setBounds(64, 174, 192, 22);
+		frmBronze.getContentPane().add(JComboBo_vData);
+		
+		textField_vEnvio = new JTextField();
+		textField_vEnvio.setBounds(10, 227, 246, 20);
+		frmBronze.getContentPane().add(textField_vEnvio);
+		textField_vEnvio.setColumns(10);
+		
+		JLabel lblQuantidadeRecebida_1 = new JLabel("Quantidade Recebida");
+		lblQuantidadeRecebida_1.setFont(new Font("Tahoma", Font.BOLD, 15));
+		lblQuantidadeRecebida_1.setBounds(10, 212, 174, 14);
+		frmBronze.getContentPane().add(lblQuantidadeRecebida_1);
+		
+		//botão de prosseguir
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				//armezando tipos de dados
 				ArrayList<String> vDadosList = new ArrayList<String>();
 				
@@ -169,9 +167,56 @@ public class Bronze {
 				}
 				//fim do armazenamento de tipos de dados
 				
+				//armazena os tipos de envio
+				ArrayList<String> vEnviarList = new ArrayList<String>();
+				
+				if(vOrigem_API.isSelected()) {
+					vEnviarList.add("API");
+					
+				}
+				if(vOrigem_SFTP.isSelected()) {
+					vEnviarList.add("SFTP");
+					
+				}
+				if(vOrigem_Upload.isSelected()) {
+					vEnviarList.add("Upload");
+					
+				}
+
+				//fim do armazenamento dos tipos de envio
+				
+				//Recebendo da quantidade  de dados
+				c1.setvEnvio(textField_vEnvio.getText());
+				c1.setvPrazo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
+				
+				//Armazenando o prazo de dados recebidos
+
+
+
+					
+
+				if(vDadosList.size() !=0 &&
+						vEnviarList.size() !=0 &&
+						!textField_vEnvio.getText().equals("") &&
+						!JComboBo_vData.getSelectedItem().equals("<Selecione uma das opções>")) {	
+				//Mostrando pro cliente os dados salvos ate agora
+				JOptionPane.showMessageDialog(null, "Cliente: "+c1.getvCliente()+"\n"+
+						"Solução: "+c1.getvSolucao()+"\n"+
+						"Objetivo: "+c1.getvObjetivo()+"\n"+
+						"Entregas Minimas: "+c1.getvEntregaM()+"\n"+
+						"Entregas Possiveis: "+c1.getvEntregaP()+"\n"+
+						"Produtos Selecionados:"+"\n"+
+						"Tipo de Dados Selecionado:"+vDadosList+"\n"+
+						"Forma de Envio Selecionado:"+vEnviarList+"\n"+
+						"Programação de envio de dados:"+c1.getvPrazo()+"\n"+
+						"Quantidade de Dados Recebido: "+c1.getvEnvio());
+				}else {
+					JOptionPane.showMessageDialog(null,"Seleciona um  prazo valido ou Selecione todos os campos");
+				}
 			}
 		});
 		
+		//Botão de retorna a pagina anteior
 		btnRetorna.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				

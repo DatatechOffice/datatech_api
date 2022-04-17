@@ -31,6 +31,7 @@ public class Escopo {
 	private JTextField textField_vEntregaM;
 	private JTextField textField_vEntregaP;
 	Cliente c1;
+
 	/**
 	 * Launch the application.
 	 */
@@ -178,19 +179,6 @@ public class Escopo {
 		btnNewButton_Prosseguir.setBounds(20, 260, 151, 23);
 		frmEscopo.getContentPane().add(btnNewButton_Prosseguir);
 		
-		JButton btnNewButton = new JButton("teste");
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println(c1.getvCliente()+"\n"+
-						c1.getvSolucao()+"\n"+
-						c1.getvObjetivo()+"\n"+
-						c1.getvEntregaM()+"\n"+
-						c1.getvEntregaP());
-			}
-		});
-		btnNewButton.setBounds(181, 260, 89, 23);
-		frmEscopo.getContentPane().add(btnNewButton);
-		
 		vSolucao_NxtOperations.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(vSolucao_NxtOperations.isSelected()) {
@@ -306,7 +294,7 @@ public class Escopo {
 					
 					//Se o usúario confirma segue para a proxima etap
 					if(retorno == 0){
-						JOptionPane.showMessageDialog(null, "Cliente: "+textField_vCliente.getText()+"\n"+"Cadastrado com sucesso");
+						//JOptionPane.showMessageDialog(null, "Cliente: "+textField_vCliente.getText()+"\n"+"Cadastrado com sucesso");
 						
 						EventQueue.invokeLater(new Runnable() {
 							public void run() {

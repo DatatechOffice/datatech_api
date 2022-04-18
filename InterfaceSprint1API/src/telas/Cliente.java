@@ -7,6 +7,8 @@ public class Cliente {
 	private String vObjetivo;
 	private String vEntregaM;
 	private String vEntregaP;
+	private String vEnvio;
+	private Object vPrazo;
 	
 	//Atributo Produto
 	
@@ -22,16 +24,28 @@ public class Cliente {
 					String vSolucao,
 					String vObjetivo,
 					String vEntregaM,
-					String vEntregaP) {
+					String vEntregaP,
+					String vEnvio,
+					Object vPrazo) {
 		
 			this.vCliente_Nome = vCliente;
 			this.vSolucao = vSolucao;
 			this.vObjetivo = vObjetivo;
 			this.vEntregaM = vEntregaM;
 			this.vEntregaP = vEntregaP;
+			this.vEnvio = vEnvio;
+			this.vPrazo = vPrazo;
 
 	}
 	 //métodos de acesso do tipo getters e setters
+
+	public Object getvPrazo() {
+		return vPrazo;
+	}
+
+	public void setvPrazo(Object vPrazo) {
+		this.vPrazo = vPrazo;
+	}
 
 	public String getvCliente() {
 		return vCliente_Nome;
@@ -71,6 +85,14 @@ public class Cliente {
 
 	public void setvEntregaP(String vEntregaP) {
 		this.vEntregaP = vEntregaP;
+	}
+	
+	public String getvEnvio() {
+		return vEnvio;
+	}
+	
+	public void setvEnvio(String vEnvio) {
+		this.vEnvio= vEnvio;
 	}
 	
 	//métodos da classe

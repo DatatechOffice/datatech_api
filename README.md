@@ -86,6 +86,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     </tr>
 </table>
     <tr>
+        <table border="1">
         <td>Sprint 2</td>
     </tr>
     <tr>

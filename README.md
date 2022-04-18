@@ -90,7 +90,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
         <td>Sprint 2</td>
     </tr>
     <tr>
-        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
+        <td>Modelagem do banco e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
     </tr>
     <tr>
         <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>

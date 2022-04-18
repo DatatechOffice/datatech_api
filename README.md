@@ -85,6 +85,19 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
          <td>Criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
     </tr>
 </table>
+    <tr>
+        <td>Sprint 2</td>
+    </tr>
+    <tr>
+        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
+    </tr>
+    <tr>
+        <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
+     </tr>
+     <tr>
+         <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
+    </tr>
+</table>
     
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)

@@ -1,0 +1,23 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>1234</groupId>
+  <artifactId>1234</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>Banco</name>
+  <description>TesteBanco</description>
+
+<dependencies>
+
+<!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>11.1.0.jre17-preview</version>
+</dependency>
+
+</dependencies>
+
+
+
+
+</project>

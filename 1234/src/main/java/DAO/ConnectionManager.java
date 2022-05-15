@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class ConnectionManager {
 
     public static Connection getConnection() throws SQLException {
-        return DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=master;user=Teste;password=1234;encrypt=true;trustServerCertificate=true");
+        return DriverManager.getConnection("jdbc:sqlserver://datatechserver.database.windows.net;databaseName=datatech;user=datatech;password=Datttechoffice01");
     }
     
 }

@@ -7,6 +7,10 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+
+import DAO.DaoCliente;
+import DAO.DaoClienteDados;
+
 import javax.swing.JComboBox;
 import javax.swing.JSpinner;
 import javax.swing.JButton;
@@ -23,15 +27,20 @@ public class Bronze {
 	Cliente c1;
 	Escopo vProList;
 	private JTextField textField_vEnvio;
-
+	int vQuantidade;
 	/**
 	 * Launch the application.
 	 */
-
-
+	
+	
+	
 	/**
 	 * Create the application.
 	 */
+	
+	public Bronze(int vQuantidade) {
+		this.vQuantidade=vQuantidade;
+	}
 	public Bronze(Cliente c1) {
 		this.c1=c1;
 		initialize();
@@ -186,15 +195,18 @@ public class Bronze {
 				//fim do armazenamento dos tipos de envio
 				
 				//Recebendo da quantidade  de dados
+				
 				c1.setvEnvio(textField_vEnvio.getText());
 				c1.setvPrazo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
 				
-				//Armazenando o prazo de dados recebidos
-
+				
+				DaoClienteDados daoClienteDados = new DaoClienteDados();
+				
+				daoClienteDados.nova1(c1, vQuantidade);
 
 
 					
-
+				//Armazenando o prazo de dados recebidos
 				if(vDadosList.size() !=0 &&
 						vEnviarList.size() !=0 &&
 						!textField_vEnvio.getText().equals("") &&

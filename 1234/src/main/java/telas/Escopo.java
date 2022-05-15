@@ -15,7 +15,7 @@ import javax.swing.JSpinner;
 import javax.swing.JTree;
 import javax.swing.text.JTextComponent;
 
-import DAO.TarefaDao;
+import DAO.DaoCliente;
 
 import javax.swing.JProgressBar;
 import javax.swing.JTextPane;
@@ -34,7 +34,7 @@ public class Escopo {
 	private JTextField textField_vEntregaM;
 	private JTextField textField_vEntregaP;
 	Cliente c1;
-	TarefaDao insert_sql;
+	DaoCliente insert_sql;
 
 	/**
 	 * Launch the application.
@@ -58,7 +58,7 @@ public class Escopo {
 	public Escopo() {
 		initialize();
 	}
-	public Escopo(TarefaDao insert_sql) {
+	public Escopo(DaoCliente insert_sql) {
 		this.insert_sql = insert_sql; 
 		
 	}
@@ -200,7 +200,7 @@ public class Escopo {
 					vProduto_Pricing.setVisible(false);
 					vProduto_Marketing.setVisible(false);
 					
-					//Os produtos s„o desselecionados
+					//Os produtos sÁ∏ä desselecionados
 					vProduto_Vox.setSelected(false);
 					vProduto_Sales.setSelected(false);
 					vProduto_Pricing.setSelected(false);
@@ -218,7 +218,7 @@ public class Escopo {
 					vProduto_Optimization.setVisible(false);
 					vProduto_Matching.setVisible(false);
 					
-					//Os Produtos s„o desselecionados
+					//Os Produtos sÁ∏ä desselecionados
 					vProduto_Optimization.setSelected(false);
 					vProduto_Matching.setSelected(false);
 					
@@ -236,7 +236,7 @@ public class Escopo {
 				
 				ArrayList<String> vProList = new ArrayList<String>();
 				
-				//Adicionando na array de produtos as opÁıes de NxtDemand
+				//Adicionando na array de produtos as opÈãèes de NxtDemand
 				if(vProduto_Vox.isSelected()) {
 					vProList.add("Nxt.Demand Vox");
 				}
@@ -250,7 +250,7 @@ public class Escopo {
 					vProList.add("Nxt.Demand Marketing");
 				}
 				
-				//Adicionando na array de produtos as opÁıes de Operations
+				//Adicionando na array de produtos as opÈãèes de Operations
 				if(vProduto_Matching.isSelected()) {
 					vProList.add("Nxt.Operations Macthing");
 				}
@@ -258,13 +258,13 @@ public class Escopo {
 					vProList.add("Nxt.Operations Optimization");
 				}
 
-				// Mostrar as informaÁıes da ativaÁao na tela
+				// Mostrar as informaÈãèes da ativaËªão na tela
 				
 				
-				//lista para armazenar v·rias pessoas
+				//lista para armazenar vÁñµias pessoas
 				
 				//se houver dados para prosseguir
-				//armazenando a soluÁ„o selecionado
+				//armazenando a soluÈà¨o selecionado
 				
 				if(!textField_vCliente.getText().equals("") &&
 						!textField_vObjetivo.getText().equals("") &&
@@ -272,10 +272,10 @@ public class Escopo {
 						!textField_vEntregaP.getText().equals("") &&
 						vProList.size() != 0)
 				{
-					// um objeto pessoa È criado
+					// um objeto pessoa ÔøΩ criado
 					c1=new Cliente(textField_vCliente.getText());
 					
-					//salvando a soluÁ„o selecionada no atributo do cliente
+					//salvando a soluÈà¨o selecionada no atributo do cliente
 					if(vSolucao_NxtDemand.isSelected()) {
 						c1.setvSolucao("NxtDemand");
 					}
@@ -288,29 +288,30 @@ public class Escopo {
 					c1.setvEntregaP(textField_vEntregaP.getText());
 					
 					
-					//Criando as opÁıes do alerta
+					//Criando as opÈãèes do alerta
 					Object[] options = { "Confirmar", "Cancelar" };
 					int retorno=JOptionPane.showOptionDialog(null, "Cliente: "+c1.getvCliente()+"\n"+
-															"SoluÁ„o: "+c1.getvSolucao()+"\n"+
+															"SoluÈà¨o: "+c1.getvSolucao()+"\n"+
 															"Objetivo: "+c1.getvObjetivo()+"\n"+
 															"Entregas Minimas: "+c1.getvEntregaM()+"\n"+
 															"Entregas Possiveis: "+c1.getvEntregaP()+"\n"+
 															"Produtos Selecionados:"+vProList+"\n"+
-															"VocÍ deseja continuar: ", "InformaÁ„o", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
+															"VocÔøΩ deseja continuar: ", "InformaÈà¨o", JOptionPane.DEFAULT_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0]);
 					
-					//Definindo as aÁıes do alerta
+					//Definindo as aÈãèes do alerta
 					
-					//Se o us˙ario confirma segue para a proxima etap
+					//Se o us‰øârio confirma segue para a proxima etap
 					if(retorno == 0){
 						//JOptionPane.showMessageDialog(null, "Cliente: "+textField_vCliente.getText()+"\n"+"Cadastrado com sucesso");
-						TarefaDao tarefaDao = new TarefaDao();
-						tarefaDao.nova(c1);
+						DaoCliente daoCliente = new DaoCliente();
+						daoCliente.nova(c1);
 						
 						
 						
 						EventQueue.invokeLater(new Runnable() {
 							public void run() {
 								try {
+									Object vQuantidade = null;
 									Bronze window1 = new Bronze(c1);
 									window1.frmBronze.setVisible(true);
 									frmEscopo.setVisible(false);
@@ -328,7 +329,7 @@ public class Escopo {
 
 					}
 				}
-				//Se houver um campo vazio o programa n„o continua
+				//Se houver um campo vazio o programa nÁ∏ä continua
 				else {
 					JOptionPane.showMessageDialog(null, "Preencha todos os campos");
 				}

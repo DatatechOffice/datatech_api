@@ -99,6 +99,21 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
          <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
     </tr>
 </table>
+
+    <table border="1">
+    <td>Sprint 3</td>
+    </tr>
+    <tr>
+        <td>Restante das Entregas da Sprint 2</td>
+    </tr>
+    <tr>
+        <td>Interfaces de Cadastro da Prata a Ativação, com as devidas conexões</td>
+     </tr>
+     Interface de Login e Menu para a Ler, Alterar e Deletar tebelas do banco de acordo com a necessidade
+     <tr>
+         <td></td>
+    </tr>
+</table>
     
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)

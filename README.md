@@ -52,13 +52,9 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 <h2>🖼Wireframes do Projeto</h2>
 Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-id=0%3A1
 
-## Escopo
+## BurndownChartSprint2:
 
-<img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png">
-
-## Bronze
-
-<img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png">
+<img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png">
 
 
 <h2>🛠Tecnologias utilizadas</h2>

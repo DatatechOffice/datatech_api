@@ -110,7 +110,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     Basta instalar o Java e o JRE em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
     
    Baixe o executável e abra na sua maquina:
-- [Protótipoexe](https://github.com/DatatechOffice/datatech_api/blob/main/DatatechS2DomRockApp.jar) 
+- [Protótipoexe](https://github.com/DatatechOffice/datatech_api/blob/main/DatatechS2DomRockApp.jar?raw=true) 
    
    Ao abrir o programa insira os dados do cliente e na segunda tela(bronze), haverá um botão para extrair as informações colocadas, a partir disso passe essas informações onde achar melhor, seja num arquivo txt, ou de qualquer outra forma. 
     

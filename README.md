@@ -100,7 +100,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     </tr>
 </table>
 
-    <table border="1">
+<table border="1">
     <td>Sprint 3</td>
     </tr>
     <tr>

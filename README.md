@@ -109,7 +109,6 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     <tr>
         <td>Interfaces de Cadastro da Prata a Ativação, com as devidas conexões</td>
      </tr>
-     Interface de Login e Menu para a Ler, Alterar e Deletar tebelas do banco de acordo com a necessidade
      <tr>
          <td>Interface de Login com permissão pra tipo de usuários e Menu para a Ler, Alterar e Deletar tebelas do banco de acordo com a necessidade</td>
     </tr>

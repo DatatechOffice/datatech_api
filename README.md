@@ -103,7 +103,8 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
 - [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)
-- [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)    
+- [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)
+- [BurndownChart Sprint 2](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png)     
     
 <h2>🛠Como instalar e utilizar o programa</h2>
     Basta instalar o Java e o JRE em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).

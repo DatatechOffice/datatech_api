@@ -54,7 +54,7 @@ Link Wireframe: https://www.figma.com/file/N0v3XOncDh8nzq6iqi0h3e/Untitled?node-
 
 ## DER/Modelagem do programa Sprint 2:
 
-<img src="[https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png]https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/DerModDatatechS2.png
+<img src="https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/DerModDatatechS2.png">
 
 
 ## BurndownChartSprint2:

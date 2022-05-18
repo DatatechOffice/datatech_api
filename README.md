@@ -117,6 +117,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
 - [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)
+- - [DER Banco](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/DerModDatatechS2.png)
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)
 - [BurndownChart Sprint 2](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png)     
     

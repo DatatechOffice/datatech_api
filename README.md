@@ -70,6 +70,17 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <tr>
 <td align="center">
 <a href="https://github.com">
+    
+    
+<img src="https://avatars.githubusercontent.com/u/100881194?v=4" width = "40%">            
+<br />
+<sub><b>Git Equipe Datatech</b></sub>
+<br />
+</a>
+<sub><b>Equipe</b></sub>
+<sub><b><a href="https://github.com/DatatechOffice"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
+<td align="center">
+<a href="https://github.com">
  
 <img src="https://avatars.githubusercontent.com/u/88751032?v=4" width = "40%">            
 <br />
@@ -119,6 +130,18 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <td align="center">
 <a href="https://github.com">
   
+<img src="https://avatars.githubusercontent.com/u/88066389?v=4" width = "40%"> 
+<br />
+<sub><b>Danilo Verginio</b></sub>
+<br />
+</a>
+<sub><b>Developer</b></sub>
+<sub><b><a href="https://github.com/Daniloel"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub>
+<br />
+</td>
+<td align="center">
+<a href="https://github.com">
+    
 <img src="https://avatars.githubusercontent.com/u/88066389?v=4" width = "40%"> 
 <br />
 <sub><b>Danilo Verginio</b></sub>

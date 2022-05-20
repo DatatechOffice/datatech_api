@@ -35,26 +35,16 @@ Construir interfaces para a ativação dos clientes visando a facilidade e agili
 <h2>📄Proposta de Entrega</h2>
 
 <table border="1">
-    <tr>
-        <td>Sprint 1</td>
-        <td>Sprint 2</td>
-        <td>Sprint 3</td>
+    <td>Sprint 3</td>
     </tr>
     <tr>
-        <td>criação do wireframe para validação do produto</td>
-        <td>Modelagem e validação da mesma. A partir da validação, início do desenvolvimento da integração de banco de dados com o programa desenvolvido no backend        </td>
-        <td>Adicionar interface e login ao projeto</td>
+        <td>Restante das Entregas da Sprint 2</td>
     </tr>
     <tr>
-        <td>A partir da validação iniciar o desenvolver um protótipo da interface</td>
-        <td>Criação do CRUD(realização dos métodos: criar, ler, alterar e deletar) do projeto</td>
-        <td>Adição de perfis de usúarios de acordo com nível hierárquico</td>
+        <td>Interfaces de Cadastro da Prata e Gold, com as devidas conexões</td>
      </tr>
      <tr>
-         <td>criação métodos para validação de entradas, saídas e armazenamento dos dados</td>
-         <td>Criar banco de dados e utilizar a ferramenta SGBD para manipulação de dados</td>
-        <td>Cadastro de comentários/soluções/sugestão de melhorias para problemas conhecidos ou 
-encontrados durante a ativação de cada cliente</td>
+         <td>Interface de Login com permissão pra tipo de usuários e Menu para a Ler, Alterar e Deletar tabelas do banco de acordo com a necessidade</td>
     </tr>
 </table>
 

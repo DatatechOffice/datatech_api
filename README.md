@@ -107,7 +107,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
         <td>Restante das Entregas da Sprint 2</td>
     </tr>
     <tr>
-        <td>Interfaces de Cadastro da Prata a Ativação, com as devidas conexões</td>
+        <td>Interfaces de Cadastro da Prata e Gold, com as devidas conexões</td>
      </tr>
      <tr>
          <td>Interface de Login com permissão pra tipo de usuários e Menu para a Ler, Alterar e Deletar tabelas do banco de acordo com a necessidade</td>

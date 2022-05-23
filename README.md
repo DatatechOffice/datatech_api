@@ -207,7 +207,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
+<a href="https://github.com/Daniloel">
  
 <img src="https://avatars.githubusercontent.com/u/90358435?v=4" width = "40%"> 
 <br />

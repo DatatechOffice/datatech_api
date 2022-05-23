@@ -152,7 +152,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://https://github.com/MrZeroLeft">
+<a href="https://https://github.com">
  
 <img src="https://avatars.githubusercontent.com/u/90358435?v=4" width = "40%"> 
 <br />

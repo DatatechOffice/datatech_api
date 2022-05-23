@@ -195,7 +195,7 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
+<a href="https://github.com/EduardoPedroA">
   
 <img src="https://avatars.githubusercontent.com/u/88066389?v=4" width = "40%"> 
 <br />

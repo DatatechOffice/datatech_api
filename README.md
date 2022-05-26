@@ -69,9 +69,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <table>
 <tr>
 <td align="center">
-<a href="https://github.com">
     
-    
+<a href="https://github.com/DatatechOffice">    
 <img src="https://avatars.githubusercontent.com/u/100881194?v=4" width = "40%">            
 <br />
 <sub><b>Git Equipe Datatech</b></sub>
@@ -80,8 +79,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <sub><b>Equipe</b></sub>
 <sub><b><a href="https://github.com/DatatechOffice"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <td align="center">
-<a href="https://github.com">
- 
+    
+<a href="https://github.com/LeoAdlerr">
 <img src="https://avatars.githubusercontent.com/u/88751032?v=4" width = "40%">            
 <br />
 <sub><b>Leonardo Adler da Silva</b></sub>
@@ -90,8 +89,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <sub><b>Scrum Master</b></sub>
 <sub><b><a href="https://github.com/LeoAdlerr"><button style="background: #069cc2; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 8px;">github</button></a></b></sub> 
 <td align="center">
-<a href="https://github.com">
- 
+    
+<a href="https://github.com/VilRL">
 <img src="https://avatars.githubusercontent.com/u/56142288?v=4" width = "40%"> 
 <br />
 <sub><b>Vitor R. de Lima</b></sub>
@@ -102,8 +101,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
-
+    
+<a href="https://github.com/jmachadoo">
  <img src="https://avatars.githubusercontent.com/u/88752151?v=4" width = "40%"> 
 <br />
 <sub><b>João Vitor Machado</b></sub>
@@ -116,8 +115,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 </tr>
 <tr>
 <td align="center">
-<a href="https://github.com">
- 
+    
+<a href="https://github.com/EduardoPedroA">
 <img src="https://avatars.githubusercontent.com/u/90360441?v=4" width = "40%"> 
 <br />
 <sub><b>Eduardo Pedro A dos Reis</b></sub>
@@ -128,8 +127,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
-  
+    
+<a href="https://github.com/Daniloel">
 <img src="https://avatars.githubusercontent.com/u/88066389?v=4" width = "40%"> 
 <br />
 <sub><b>Danilo Verginio</b></sub>
@@ -140,8 +139,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://github.com">
     
+<a href="https://github.com/MrZeroLeft">   
 <img src="https://avatars.githubusercontent.com/u/77200265?v=4" width = "40%"> 
 <br />
 <sub><b>Augusto</b></sub>
@@ -152,8 +151,8 @@ AS Tecnologias abaixo foram utilizadas na construção do projeto.
 <br />
 </td>
 <td align="center">
-<a href="https://https://github.com">
- 
+    
+<a href="https://https://github.com/GabrielDepiro">
 <img src="https://avatars.githubusercontent.com/u/90358435?v=4" width = "40%"> 
 <br />
 <sub><b>Gabriel D'Epiro</b></sub>

@@ -1,0 +1,70 @@
+create table cliente(
+	id_cliente bigint Identity,
+	nome_cliente varchar(100),
+	objetivo varchar(1000),
+	entrega_minimas varchar(1000),
+	entregas_possiveis varchar(1000),
+	primary key (id_cliente)
+	);
+
+
+create table solucao(
+	id_solucao bigint Identity,
+	nome_solucao varchar(30),
+	primary key(id_solucao)
+);
+
+
+create table produto(
+	id_produto bigint Identity,
+	nome_produto varchar(30),
+	id_solucao bigint,
+	primary key(id_produto),
+	foreign key(id_solucao) references solucao(id_solucao)
+);
+
+
+create table tipo_dados(
+	id_dados bigint Identity,
+	tipo_dados varchar(20),
+	primary key(id_dados)
+);
+
+
+create table cliente_solucao(
+	id_cliente bigint,
+	id_solucao bigint,
+	primary key(id_cliente, id_solucao),
+	foreign key (id_cliente) references cliente(id_cliente),
+	foreign key (id_solucao) references solucao(id_solucao)
+);
+
+
+create table cliente_dados(
+	id_cliente bigint,
+	id_dados bigint,
+	prazo varchar(15),
+	forma_envio varchar(50),
+	quantidade int,
+	primary key(id_cliente, id_dados),
+	foreign key(id_cliente) references cliente(id_cliente),
+	foreign key(id_dados) references tipo_dados(id_dados)
+);
+
+
+create table cliente_produto(
+	id_cliente bigint,
+	id_produto bigint,
+	primary key(id_cliente, id_produto),
+	foreign key(id_cliente) references cliente(id_cliente),
+	foreign key(id_produto) references produto(id_produto)
+);
+
+
+create table dados_produto(
+	id_dados bigint,
+	id_produto bigint,
+	primary key(id_dados, id_produto),
+	foreign key(id_dados) references tipo_dados(id_dados),
+	foreign key(id_produto) references produto(id_produto)
+);

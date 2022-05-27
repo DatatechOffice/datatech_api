@@ -1,0 +1,18 @@
+insert into solucao (nome_solucao) values ('Nxt.Demand')
+insert into solucao (nome_solucao) values ('NxT.Operations')
+
+insert into produto (nome_produto, id_solucao) values ('Nxt.Demand Vox', 1)
+insert into produto (nome_produto, id_solucao) values ('Nxt.Demand Marketing', 1)
+insert into produto (nome_produto, id_solucao) values ('Nxt.Demand Sales', 1)
+insert into produto (nome_produto, id_solucao) values ('Nxt.Demand Pricing', 1)
+insert into produto (nome_produto, id_solucao) values ('Nxt.Operations Macthing', 2)
+insert into produto (nome_produto, id_solucao) values ('Nxt.Operations Optimization', 2)
+
+insert into tipo_dados (tipo_dados) values ('PDF')
+insert into tipo_dados (tipo_dados) values ('JSON')
+insert into tipo_dados (tipo_dados) values ('CSV')
+insert into tipo_dados (tipo_dados) values ('Planilhas')
+insert into tipo_dados (tipo_dados) values ('Tabelas')
+insert into tipo_dados (tipo_dados) values ('Audio')
+insert into tipo_dados (tipo_dados) values ('vDados_Texto')
+

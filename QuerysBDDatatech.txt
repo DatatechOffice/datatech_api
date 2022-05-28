@@ -1,9 +1,12 @@
 create table cliente(
 	id_cliente bigint Identity,
-	nome_cliente varchar(100),
-	objetivo varchar(1000),
+	cnpj varchar(20),
 	entrega_minimas varchar(1000),
 	entregas_possiveis varchar(1000),
+	nome_cliente varchar(500),
+	objetivo varchar(500),
+	setor varchar(15),
+	razao_social varchar(50),
 	primary key (id_cliente)
 	);
 

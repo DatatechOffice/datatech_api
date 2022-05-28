@@ -45,11 +45,39 @@ public class Menu {
 		frmMenu.getContentPane().setLayout(null);
 		
 		JButton btnNewButton = new JButton("Consultar");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Escopo2 window = new Escopo2();
+				//aqui setamos a nova tela como visivel
+				window.getFrmEscopo2().setVisible(true);
+				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmMenu.setVisible(false);
+			}
+		});
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton.setBounds(300, 200, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("Ativa\u00E7\u00E3o do Cliente");
+		btnNewButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {
+					public void run() {
+						try {
+							//aqui setamos qual dela vai ser aberta
+							Escopo window = new Escopo();
+							//aqui setamos a nova tela como visivel
+							window.getFrmEscopo().setVisible(true);
+							//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							frmMenu.setVisible(false);
+							
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
 		btnNewButton_1.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton_1.setBounds(300, 160, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_1);

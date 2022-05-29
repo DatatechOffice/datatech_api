@@ -82,7 +82,7 @@ public class DaoCliente {
         try {
             con = ConnectionManager.getConnection();
             //cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social
-            String insert_sql = "update cliente set cnpj=?, entrega_minimas=?, entregas_possiveis=?, nome_cliente=?, objetivo=?, setor=?, razao_social=?  where cnpj =? and nome_cliente =? ";
+            String insert_sql = "update cliente set cnpj=?, entrega_minimas=?, entregas_possiveis=?, nome_cliente=?, objetivo=?, setor=?, razao_social=?  where cnpj =? and nome_cliente =?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
             pst.setString(1, c1.getvCNPJ_Cliente());
@@ -150,7 +150,7 @@ public class DaoCliente {
             	c2.setvSocial_Cliente(rs.getString("razao_social"));
             	clientes.add(c2);
             	
-            	System.out.print("Id= " + c2.getvId() + " Entrega_minima= " + c2.getvEntregaM_Cliente() +" Entrega_possivel= " +
+            	System.out.print("Id= " + c2.getvId() +" CNPJ= " + c2.getvCNPJ_Cliente() + " Entrega_minima= " + c2.getvEntregaM_Cliente() +" Entrega_possivel= " +
             	c2.getvEntregaP_Cliente() + " Nome= " + c2.getvNome_Cliente() + " Objetivo= " + c2.getvObjetivo_Cliente() +
             	" Setor= " + c2.getvSetor_Cliente() + " Razao_Social= " + c2.getvSocial_Cliente());
             	 

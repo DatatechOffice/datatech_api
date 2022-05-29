@@ -109,7 +109,7 @@ public class Escopo {
 		frmEscopo.getContentPane().add(lblSetor);
 		
 		JComboBox comboBox_vEstabalecimento = new JComboBox();
-		comboBox_vEstabalecimento.setModel(new DefaultComboBoxModel(new String[] {"<Selecione uma op\u00E7ao>", "Varejo", "Atacado"}));
+		comboBox_vEstabalecimento.setModel(new DefaultComboBoxModel(new String[] {"Varejo", "Atacado"}));
 		comboBox_vEstabalecimento.setFont(new Font("Arial", Font.BOLD, 15));
 		comboBox_vEstabalecimento.setBounds(14, 220, 300, 30);
 		frmEscopo.getContentPane().add(comboBox_vEstabalecimento);
@@ -336,13 +336,13 @@ public class Escopo {
 					c1.setvNome_Cliente(textField_vNomeCliente.getText());
 					
 					//setando o CNPJ do nosso Cliente
-					c1.setvCNPF_Cliente(textField_vCNPJ.getText());
+					c1.setvCNPJ_Cliente(textField_vCNPJ.getText());
 					
 					//setando o nome de raz縊 social ao qual a empresa � aderida
 					c1.setvSocial_Cliente(textField_vRazaoSocial.getText());
 					
 					//setando o setor do nosso cliente
-					c1.setvSetor_Cliente(null);
+					c1.setvSetor_Cliente((String) comboBox_vEstabalecimento.getSelectedItem());
 					
 					//um if para selecionar e setar qual a solu鈬o que o cliente esta ligada
 					//se NxtDemand for selecionado entao setamos NxtDemand na variavel
@@ -355,7 +355,7 @@ public class Escopo {
 					}
 					
 					//setando o objetivo do nosso cliente
-					c1.setvOjetivo_Cliente(textField_vObjetivo.getText());
+					c1.setvObjetivo_Cliente(textField_vObjetivo.getText());
 					
 					
 					//setando as entregas possiveis a serem entregadas

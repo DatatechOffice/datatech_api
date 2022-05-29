@@ -336,7 +336,7 @@ public class Escopo2 {
 					c1.setvNome_Cliente(textField_vNomeCliente.getText());
 					
 					//setando o CNPJ do nosso Cliente
-					c1.setvCNPF_Cliente(textField_vCNPJ.getText());
+					c1.setvCNPJ_Cliente(textField_vCNPJ.getText());
 					
 					//setando o nome de raz縊 social ao qual a empresa � aderida
 					c1.setvSocial_Cliente(textField_vRazaoSocial.getText());
@@ -355,7 +355,7 @@ public class Escopo2 {
 					}
 					
 					//setando o objetivo do nosso cliente
-					c1.setvOjetivo_Cliente(textField_vObjetivo.getText());
+					c1.setvObjetivo_Cliente(textField_vObjetivo.getText());
 					
 					
 					//setando as entregas possiveis a serem entregadas

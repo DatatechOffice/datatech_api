@@ -47,9 +47,9 @@ public class Menu {
 		JButton btnNewButton = new JButton("Consultar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Escopo2 window = new Escopo2();
+				EscopoSelect window = new EscopoSelect();
 				//aqui setamos a nova tela como visivel
-				window.getFrmEscopo2().setVisible(true);
+				window.getFrmEscopoSelect().setVisible(true);
 				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}
@@ -65,9 +65,9 @@ public class Menu {
 					public void run() {
 						try {
 							//aqui setamos qual dela vai ser aberta
-							Escopo window = new Escopo();
+							EscopoInsert window = new EscopoInsert();
 							//aqui setamos a nova tela como visivel
-							window.getFrmEscopo().setVisible(true);
+							window.getFrmEscopoInsert().setVisible(true);
 							//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmMenu.setVisible(false);
 							
@@ -82,7 +82,7 @@ public class Menu {
 		btnNewButton_1.setBounds(300, 160, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Cadastrar Usuaro");
+		JButton btnNewButton_2 = new JButton("Cadastrar Usuario");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -114,9 +114,9 @@ public class Menu {
 		JButton btnNewButton_3 = new JButton("Deletar");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Escopo3 window = new Escopo3();
+				EscopoDelete window = new EscopoDelete();
 				//aqui setamos a nova tela como visivel
-				window.getFrmEscopo3().setVisible(true);
+				window.getFrmEscopoDelete().setVisible(true);
 				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}
@@ -128,9 +128,9 @@ public class Menu {
 		JButton btnNewButton_3_1 = new JButton("Atualizar");
 		btnNewButton_3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Escopo4 window = new Escopo4();
+				EscopoUpdate window = new EscopoUpdate();
 				//aqui setamos a nova tela como visivel
-				window.getFrmEscopo4().setVisible(true);
+				window.getFrmEscopoUpdate().setVisible(true);
 				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}

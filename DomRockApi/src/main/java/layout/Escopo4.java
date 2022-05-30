@@ -36,6 +36,8 @@ public class Escopo4 {
 	private JLabel lblSetor;
 	private JTextField textField_vObjetivo;
 	private JTextField textField_vRazaoSocial;
+	private JTextField textField_vNome_Cliente2;
+	private JTextField textField_vCNPJ2;
 
 
 	public JFrame getFrmEscopo4() {
@@ -244,6 +246,30 @@ public class Escopo4 {
 		textArea_EntregaM.setFont(new Font("Arial", Font.BOLD, 15));
 		textArea_EntregaM.setBounds(339, 361, 301, 69);
 		frmEscopo4.getContentPane().add(textArea_EntregaM);
+		
+		textField_vNome_Cliente2 = new JTextField();
+		textField_vNome_Cliente2.setFont(new Font("Arial", Font.BOLD, 15));
+		textField_vNome_Cliente2.setColumns(10);
+		textField_vNome_Cliente2.setBounds(545, 127, 182, 30);
+		frmEscopo4.getContentPane().add(textField_vNome_Cliente2);
+		
+		textField_vCNPJ2 = new JTextField();
+		textField_vCNPJ2.setFont(new Font("Arial", Font.BOLD, 15));
+		textField_vCNPJ2.setColumns(10);
+		textField_vCNPJ2.setBounds(545, 187, 182, 30);
+		frmEscopo4.getContentPane().add(textField_vCNPJ2);
+		
+		JLabel lblNomeDoCliente = new JLabel("Nome do Cliente 2:");
+		lblNomeDoCliente.setForeground(Color.WHITE);
+		lblNomeDoCliente.setFont(new Font("Arial", Font.BOLD, 20));
+		lblNomeDoCliente.setBounds(545, 99, 182, 21);
+		frmEscopo4.getContentPane().add(lblNomeDoCliente);
+		
+		JLabel lblCnpj = new JLabel("CNPJ 2:");
+		lblCnpj.setForeground(Color.WHITE);
+		lblCnpj.setFont(new Font("Arial", Font.BOLD, 20));
+		lblCnpj.setBounds(545, 160, 102, 30);
+		frmEscopo4.getContentPane().add(lblCnpj);
 
 		vSolucao_NxtDemand.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -337,6 +363,11 @@ public class Escopo4 {
 					
 					//setando o CNPJ do nosso Cliente
 					c1.setvCNPJ_Cliente(textField_vCNPJ.getText());
+					
+					c1.setvNome_Cliente2(textField_vNome_Cliente2.getText());
+					
+					//setando o CNPJ do nosso Cliente
+					c1.setvCNPJ_Cliente2(textField_vCNPJ2.getText());
 					
 					//setando o nome de raz縊 social ao qual a empresa � aderida
 					c1.setvSocial_Cliente(textField_vRazaoSocial.getText());

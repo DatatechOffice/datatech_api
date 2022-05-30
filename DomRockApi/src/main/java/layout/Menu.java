@@ -124,6 +124,20 @@ public class Menu {
 		btnNewButton_3.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton_3.setBounds(300, 241, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_3);
+		
+		JButton btnNewButton_3_1 = new JButton("Atualizar");
+		btnNewButton_3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Escopo4 window = new Escopo4();
+				//aqui setamos a nova tela como visivel
+				window.getFrmEscopo4().setVisible(true);
+				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmMenu.setVisible(false);
+			}
+		});
+		btnNewButton_3_1.setFont(new Font("Arial", Font.BOLD, 15));
+		btnNewButton_3_1.setBounds(300, 282, 180, 30);
+		frmMenu.getContentPane().add(btnNewButton_3_1);
 		frmMenu.setTitle("Menu");
 		frmMenu.setBounds(100, 100, 800, 600);
 		frmMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

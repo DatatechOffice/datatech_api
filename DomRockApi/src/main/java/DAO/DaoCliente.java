@@ -85,15 +85,15 @@ public class DaoCliente {
             String insert_sql = "update cliente set cnpj=?, entrega_minimas=?, entregas_possiveis=?, nome_cliente=?, objetivo=?, setor=?, razao_social=?  where cnpj =? and nome_cliente =?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
-            pst.setString(1, c1.getvCNPJ_Cliente());
+            pst.setObject(1, c1.getvCNPJ_Cliente());
             pst.setObject(2, c1.getvEntregaM_Cliente());
             pst.setObject(3, c1.getvEntregaP_Cliente());
             pst.setObject(4, c1.getvNome_Cliente());
-            pst.setObject(4, c1.getvObjetivo_Cliente());
-            pst.setObject(4, c1.getvSetor_Cliente());
-            pst.setObject(4, c1.getvSocial_Cliente());
-            pst.setObject(4, c1.getvCNPJ_Cliente());
-            pst.setObject(4, c1.getvNome_Cliente());
+            pst.setObject(5, c1.getvObjetivo_Cliente());
+            pst.setObject(6, c1.getvSetor_Cliente());
+            pst.setObject(7, c1.getvSocial_Cliente());
+            pst.setObject(8, c1.getvCNPJ_Cliente2());
+            pst.setObject(9, c1.getvNome_Cliente2());
             int rowsUpdated = pst.executeUpdate();
             if(rowsUpdated > 0) {
             	System.out.println("Atualizou passou");

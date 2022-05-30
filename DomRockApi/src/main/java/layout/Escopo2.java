@@ -109,7 +109,7 @@ public class Escopo2 {
 		frmEscopo2.getContentPane().add(lblSetor);
 		
 		JComboBox comboBox_vEstabalecimento = new JComboBox();
-		comboBox_vEstabalecimento.setModel(new DefaultComboBoxModel(new String[] {"<Selecione uma op\u00E7ao>", "Varejo", "Atacado"}));
+		comboBox_vEstabalecimento.setModel(new DefaultComboBoxModel(new String[] {"Varejo", "Atacado"}));
 		comboBox_vEstabalecimento.setFont(new Font("Arial", Font.BOLD, 15));
 		comboBox_vEstabalecimento.setBounds(14, 220, 300, 30);
 		frmEscopo2.getContentPane().add(comboBox_vEstabalecimento);
@@ -220,7 +220,7 @@ public class Escopo2 {
 		
 		JButton btnNewButton = new JButton("Avan\u00E7ar");
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton.setBounds(300, 500, 150, 30);
+		btnNewButton.setBounds(624, 499, 150, 30);
 		frmEscopo2.getContentPane().add(btnNewButton);
 		
 		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
@@ -244,6 +244,32 @@ public class Escopo2 {
 		textArea_EntregaM.setFont(new Font("Arial", Font.BOLD, 15));
 		textArea_EntregaM.setBounds(339, 361, 301, 69);
 		frmEscopo2.getContentPane().add(textArea_EntregaM);
+		
+		JButton btnRetornar = new JButton("Retornar");
+		btnRetornar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				 EventQueue.invokeLater(new Runnable() {                                        
+	                    public void run() {
+	                        
+	                        try {
+
+	                            //aqui setamos qual dela vai ser aberta
+	                            Menu window = new Menu();
+	                            //aqui setamos a nova tela como visivel
+	                            window.frmMenu.setVisible(true);
+	                            //e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+	                            frmEscopo2.setVisible(false);
+	                            
+	                        } catch (Exception e) {
+	                            e.printStackTrace();
+	                        }
+	                    }
+	                });
+	            }
+		});
+		btnRetornar.setFont(new Font("Arial", Font.BOLD, 15));
+		btnRetornar.setBounds(10, 499, 150, 30);
+		frmEscopo2.getContentPane().add(btnRetornar);
 
 		vSolucao_NxtDemand.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

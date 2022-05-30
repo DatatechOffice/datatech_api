@@ -26,6 +26,8 @@ import java.util.Set;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 import javax.swing.JButton;
+import javax.swing.AbstractAction;
+import javax.swing.Action;
 
 public class Escopo {
 
@@ -36,6 +38,7 @@ public class Escopo {
 	private JLabel lblSetor;
 	private JTextField textField_vObjetivo;
 	private JTextField textField_vRazaoSocial;
+	private final Action action = new SwingAction();
 
 
 	public JFrame getFrmEscopo() {
@@ -220,7 +223,7 @@ public class Escopo {
 		
 		JButton btnNewButton = new JButton("Avan\u00E7ar");
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton.setBounds(300, 500, 150, 30);
+		btnNewButton.setBounds(624, 500, 150, 30);
 		frmEscopo.getContentPane().add(btnNewButton);
 		
 		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
@@ -244,6 +247,33 @@ public class Escopo {
 		textArea_EntregaM.setFont(new Font("Arial", Font.BOLD, 15));
 		textArea_EntregaM.setBounds(339, 361, 301, 69);
 		frmEscopo.getContentPane().add(textArea_EntregaM);
+		
+		JButton btnRetornar_1 = new JButton("Retornar");
+		btnRetornar_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {										
+					public void run() {
+						
+						try {
+
+							//aqui setamos qual dela vai ser aberta
+							Menu window = new Menu();
+							//aqui setamos a nova tela como visivel
+							window.frmMenu.setVisible(true);
+							//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							frmEscopo.setVisible(false);
+							
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
+
+		btnRetornar_1.setFont(new Font("Arial", Font.BOLD, 15));
+		btnRetornar_1.setBounds(10, 500, 150, 30);
+		frmEscopo.getContentPane().add(btnRetornar_1);
 
 		vSolucao_NxtDemand.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -393,5 +423,13 @@ public class Escopo {
 				
 			}
 		});
+	}
+	private class SwingAction extends AbstractAction {
+		public SwingAction() {
+			putValue(NAME, "SwingAction");
+			putValue(SHORT_DESCRIPTION, "Some short description");
+		}
+		public void actionPerformed(ActionEvent e) {
+		}
 	}
 }

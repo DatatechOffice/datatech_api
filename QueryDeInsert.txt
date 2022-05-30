@@ -16,3 +16,5 @@ insert into tipo_dados (tipo_dados) values ('Tabelas')
 insert into tipo_dados (tipo_dados) values ('Audio')
 insert into tipo_dados (tipo_dados) values ('Texto')
 
+insert into usuario(nome_usuario, senha, email) values('admin', '!@Admin123', 'datatech01office@gmail.com')
+

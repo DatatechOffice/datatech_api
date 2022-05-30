@@ -21,7 +21,7 @@ create table solucao(
 create table produto(
 	id_produto bigint Identity,
 	nome_produto varchar(30),
-	id_solucao bigint,
+	id_solucao bigint not null,
 	primary key(id_produto),
 	foreign key(id_solucao) references solucao(id_solucao)
 );
@@ -70,4 +70,11 @@ create table dados_produto(
 	primary key(id_dados, id_produto),
 	foreign key(id_dados) references tipo_dados(id_dados),
 	foreign key(id_produto) references produto(id_produto)
+);
+
+create table usuario(
+nome_usuario varchar(50),
+senha varchar(50),
+email varchar(50),
+primary key (nome_usuario)
 );

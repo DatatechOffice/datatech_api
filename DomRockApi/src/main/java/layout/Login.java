@@ -7,6 +7,10 @@ import javax.swing.JLabel;
 import java.awt.Component;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+
+import DAO.DaoUsuario;
+import controlador.Usuario;
+
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.SystemColor;
@@ -16,10 +20,11 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Login {
-
+	
+	Usuario usuario;
 	JFrame frmLogin;
 	private JTextField textField_Usuario;
-	private JTextField textField;
+	private JTextField textFieldSenha;
 	private JButton btnNewButton;
 
 	/**
@@ -80,18 +85,30 @@ public class Login {
 		lblSenha.setBounds(350, 265, 100, 30);
 		frmLogin.getContentPane().add(lblSenha);
 		
-		textField = new JTextField();
-		textField.setBackground(SystemColor.menu);
-		textField.setHorizontalAlignment(SwingConstants.CENTER);
-		textField.setFont(new Font("Arial", Font.BOLD, 14));
-		textField.setColumns(10);
-		textField.setBounds(250, 305, 300, 30);
-		frmLogin.getContentPane().add(textField);
+		textFieldSenha = new JTextField();
+		textFieldSenha.setBackground(SystemColor.menu);
+		textFieldSenha.setHorizontalAlignment(SwingConstants.CENTER);
+		textFieldSenha.setFont(new Font("Arial", Font.BOLD, 14));
+		textFieldSenha.setColumns(10);
+		textFieldSenha.setBounds(250, 305, 300, 30);
+		frmLogin.getContentPane().add(textFieldSenha);
+		
+		
 		
 		btnNewButton = new JButton("Entrar");
-		btnNewButton.addActionListener(new ActionListener() {
+		btnNewButton.addActionListener(new ActionListener() {		
+
 			//ação do botão entrar onde vamos verificar no banco o login e senha e passar para tela menu
 			public void actionPerformed(ActionEvent e) {
+				
+				Usuario u1 = new Usuario();
+				
+				u1.setvNome_Usuario(textField_Usuario.getText());
+				u1.setvSenha_Usuario(textFieldSenha.getText());
+	
+				
+				 DaoUsuario daoExibirUsuario = new DaoUsuario(); 
+				 daoExibirUsuario.buscarUsuarios(usuario);
 				
 				//<------------------------------ação responsavel pelo transação de tela de login para menu------------------------------>
 				EventQueue.invokeLater(new Runnable() {

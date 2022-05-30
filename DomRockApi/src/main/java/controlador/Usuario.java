@@ -17,7 +17,17 @@ public class Usuario {
         this.vEmail_Usuario = vEmail_Usuario;
     }
 
-    // Getters and Setters
+    public Usuario(String vNome_Usuario, String vSenha_Usuario, String vEmail_Usuario) {
+        this.vNome_Usuario = vNome_Usuario;
+        this.vSenha_Usuario = vSenha_Usuario;
+        this.vEmail_Usuario = vEmail_Usuario;
+    }
+    
+    public Usuario() {
+		// TODO Auto-generated constructor stub
+	}
+
+	// Getters and Setters
     public String getvNome_Usuario() {
         return vNome_Usuario;
     }

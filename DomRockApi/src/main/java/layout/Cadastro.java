@@ -11,6 +11,8 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
 
+import DAO.DaoCliente;
+import DAO.DaoUsuario;
 import controlador.Usuario;
 
 import javax.swing.JButton;
@@ -119,6 +121,9 @@ public class Cadastro {
 					
 					//utilizando um if para comparar se a senha e a re-senha são equivalantes
 					if(usuario.getvSenha_Usuario().equals(usuario.getvReSenha_Usuario())) {
+						
+						 DaoUsuario daoCriarUsuario = new DaoUsuario(); 
+						 daoCriarUsuario.criarUS(usuario);
 						
 						//Metodo para retorna para a tela de login após o caastro ser confirmado
 						EventQueue.invokeLater(new Runnable() {

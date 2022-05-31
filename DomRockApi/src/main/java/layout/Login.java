@@ -20,7 +20,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class Login {
-	
+
 	Usuario usuario;
 	JFrame frmLogin;
 	private JTextField textField_Usuario;
@@ -60,7 +60,7 @@ public class Login {
 		frmLogin.setBounds(100, 100, 800, 600);
 		frmLogin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frmLogin.getContentPane().setLayout(null);
-		
+
 		JLabel lblUsuario = new JLabel("Usuario");
 		lblUsuario.setForeground(Color.WHITE);
 		lblUsuario.setHorizontalAlignment(SwingConstants.CENTER);
@@ -68,7 +68,7 @@ public class Login {
 		lblUsuario.setAlignmentX(Component.CENTER_ALIGNMENT);
 		lblUsuario.setBounds(350, 183, 100, 30);
 		frmLogin.getContentPane().add(lblUsuario);
-		
+
 		textField_Usuario = new JTextField();
 		textField_Usuario.setBackground(SystemColor.menu);
 		textField_Usuario.setHorizontalAlignment(SwingConstants.CENTER);
@@ -76,7 +76,7 @@ public class Login {
 		textField_Usuario.setBounds(250, 223, 300, 30);
 		frmLogin.getContentPane().add(textField_Usuario);
 		textField_Usuario.setColumns(10);
-		
+
 		JLabel lblSenha = new JLabel("Senha");
 		lblSenha.setForeground(Color.WHITE);
 		lblSenha.setHorizontalAlignment(SwingConstants.CENTER);
@@ -84,7 +84,7 @@ public class Login {
 		lblSenha.setAlignmentX(0.5f);
 		lblSenha.setBounds(350, 265, 100, 30);
 		frmLogin.getContentPane().add(lblSenha);
-		
+
 		textFieldSenha = new JTextField();
 		textFieldSenha.setBackground(SystemColor.menu);
 		textFieldSenha.setHorizontalAlignment(SwingConstants.CENTER);
@@ -92,43 +92,48 @@ public class Login {
 		textFieldSenha.setColumns(10);
 		textFieldSenha.setBounds(250, 305, 300, 30);
 		frmLogin.getContentPane().add(textFieldSenha);
-		
-		
-		
-		btnNewButton = new JButton("Entrar");
-		btnNewButton.addActionListener(new ActionListener() {		
 
-			//ação do botão entrar onde vamos verificar no banco o login e senha e passar para tela menu
+		btnNewButton = new JButton("Entrar");
+		btnNewButton.addActionListener(new ActionListener() {
+
+			// ação do botão entrar onde vamos verificar no banco o login e senha e passar
+			// para tela menu
 			public void actionPerformed(ActionEvent e) {
+
+				Usuario usuario = new Usuario();
+
+				usuario.setvNome_Usuario(textField_Usuario.getText());
+				usuario.setvSenha_Usuario(textFieldSenha.getText());
+
+				DaoUsuario daoExibirUsuario = new DaoUsuario();
+				daoExibirUsuario.buscarUsuarios(usuario);
 				
-				Usuario u1 = new Usuario();
 				
-				u1.setvNome_Usuario(textField_Usuario.getText());
-				u1.setvSenha_Usuario(textFieldSenha.getText());
-	
 				
-				 DaoUsuario daoExibirUsuario = new DaoUsuario(); 
-				 daoExibirUsuario.buscarUsuarios(usuario);
-				
-				//<------------------------------ação responsavel pelo transação de tela de login para menu------------------------------>
+
+				// <------------------------------ação responsavel pelo transação de tela de
+				// login para menu------------------------------>
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							//aqui setamos qual dela vai ser aberta
+
+							// aqui setamos qual dela vai ser aberta
 							Menu window = new Menu();
-							//aqui setamos a nova tela como visivel
+							// aqui setamos a nova tela como visivel
 							window.frmMenu.setVisible(true);
-							//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							// e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmLogin.setVisible(false);
-							
+
 						} catch (Exception e) {
 							e.printStackTrace();
 						}
 					}
 				});
-				//<------------------------------fim da ação de transação------------------------------>
-				
+				// <------------------------------fim da ação de
+				// transação------------------------------>
+
 			}
+
 		});
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 20));
 		btnNewButton.setBounds(325, 369, 169, 21);

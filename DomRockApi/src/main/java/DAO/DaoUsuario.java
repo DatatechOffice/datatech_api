@@ -138,7 +138,17 @@ public class DaoUsuario {
             	u1.setvEmail_Usuario(rs.getString("email"));
             	usuarios.add(u1);
             	
-            	System.out.print("Nome= " + u1.getvNome_Usuario());
+
+            	if(usuario.getvNome_Usuario().equals(u1.getvNome_Usuario()) )
+				{
+                	System.out.print("Nome= " + u1.getvNome_Usuario());	
+				}
+            	else {
+            		System.out.print("Nome= " + usuario.getvSenha_Usuario());
+            	}
+            	
+            	//System.out.print("Nome= " + usuario.getvNome_Usuario());	
+			
             	 
           	
             	

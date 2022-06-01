@@ -404,7 +404,7 @@ public class EscopoInsert {
 								 DaoCliente daoCriarCliente = new DaoCliente(); 
 								 daoCriarCliente.criarCl(c1);
 								//aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze();
+								Bronze window = new Bronze(c1);
 								//aqui setamos a nova tela como visivel
 								window.frmBronze.setVisible(true);
 								//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel

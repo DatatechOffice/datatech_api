@@ -17,6 +17,7 @@ import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
 import DAO.DaoCliente;
+import DAO.DaoCliente_Produto;
 import DAO.DaoCliente_Solucao;
 import controlador.Cliente;
 
@@ -324,29 +325,41 @@ public class EscopoInsert {
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				Cliente c1 = new Cliente();
+				Cliente p1 = new Cliente();
+				Cliente p2 = new Cliente();
+				Cliente p3 = new Cliente();
+				Cliente p4 = new Cliente();
+				Cliente p5 = new Cliente();
+				Cliente p6 = new Cliente();
 				ArrayList<String> vProList = new ArrayList<String>();
 				
 				//<------------------------------ADICIONANDO OS PRODUTOS NUMA ARRAY------------------------------>
 				if(vProduto_Optimization.isSelected()) {
 					vProList.add("NxtOperations optimization");
+					p6.setvId_Produto(6);
 				}
 				
 				if(vProduto_Matching.isSelected()) {
 					vProList.add("NxtOperations Matching");
+					p5.setvId_Produto(5);
 				}
 				
 				if(vProduto_Vox.isSelected()) {
 					vProList.add("NxtDemand Vox");
+					p1.setvId_Produto(1);
 				}
 				if(vProduto_Sales.isSelected()) {
 					vProList.add("NxtDemand Sales");
+					p3.setvId_Produto(3);
 				}
 				if(vProduto_Pricing.isSelected()) {
 					vProList.add("NxtDemand Pricing");
+					p4.setvId_Produto(4);
 				}
 				if(vProduto_Marketing.isSelected()) {
 					vProList.add("NxtDemand Marketing");
+					p2.setvId_Produto(2);
 				}
 				//<------------------------------fim do adicionar produtos na array------------------------------>
 				
@@ -360,7 +373,7 @@ public class EscopoInsert {
 					
 					//<------------------------------come輟 dos set da tela escopo nos atributos------------------------------>
 					//criando o objeto cliente para setar as informa鋏es da tela
-					Cliente c1 = new Cliente(null, null, null, null, null, null, null, null);
+					//Cliente c1 = new Cliente(null, null, null, null, null, null, null, null);
 					
 					//setando o nome do cliente
 					c1.setvNome_Cliente(textField_vNomeCliente.getText());
@@ -402,20 +415,22 @@ public class EscopoInsert {
 						public void run() {
 							
 							try {
-								
-								Cliente c2 = new Cliente();
-								
-								//Aqui estou criando o cliente
+								//Aqui estou inputando os dados do cliente no banco
 								  
 								DaoCliente daoCriarCliente = new DaoCliente(); 
 								daoCriarCliente.criarCl(c1);
-								 
+								
 								 //Aqui estou buscando o cliente que eu acabei de criar para obter para obter o Id do mesmo
 								 DaoCliente daoExibirCliente = new DaoCliente(); 
 								 daoExibirCliente.buscarClientes(c1);
 								 
+								 //Aqui está sendo inputado os ids do cliente e da solucao na tabela Cliente_Solucao
 								 DaoCliente_Solucao daoCriarClienteSolucao = new DaoCliente_Solucao(); 
 								 daoCriarClienteSolucao.criarCS(c1);
+								 
+								//Aqui está sendo inputado os ids do cliente e do produto na tabela Cliente_Produto
+								 DaoCliente_Produto daoCriarClienteProduto = new DaoCliente_Produto(p1, p2, p3, p4, p5, p6); 
+								 daoCriarClienteProduto.criarCP(c1);
 								 
 								//aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);

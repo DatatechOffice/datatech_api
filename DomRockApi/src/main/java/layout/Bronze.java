@@ -211,8 +211,8 @@ public class Bronze {
 				
 				//Recebendo da quantidade  de dados
 				
-				c1.setvEnvio(textField_vEnvio.getText());
-				c1.setvPrazo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
+				dados.setvEnvio(textField_vEnvio.getText());
+				dados.setvTempo(vContagem.getValue()+" "+JComboBo_vData.getSelectedItem());
 				vTipo=vDadosListStr;
 				
 				//Armazenando o prazo de dados recebidos
@@ -236,8 +236,8 @@ public class Bronze {
 						"Produtos Selecionados:"+"\n"+
 						"Tipo de Dados Selecionado:"+vDadosList+"\n"+
 						"Forma de Envio Selecionado:"+vEnviarList+"\n"+
-						"Programação de envio de dados:"+c1.getvPrazo()+"\n"+
-						"Quantidade de Dados Recebido: "+c1.getvEnvio());
+						"Programação de envio de dados:"+dados.getvTempo()+"\n"+
+						"Quantidade de Dados Recebido: "+dados.getvEnvio());
 				}else {
 					JOptionPane.showMessageDialog(null,"Seleciona um  prazo valido ou Selecione todos os campos");
 				}

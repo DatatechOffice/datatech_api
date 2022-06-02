@@ -18,9 +18,12 @@ public class Cliente {
     private String vObjetivo_Cliente;
     private String vEntregaM_Cliente;
     private String vEntregaP_Cliente;
-    private int vId;
+    private int vId_Cliente;
+    private int vId_Solucao;
+    private int vId_Produto;
 
-    // Construtor
+    
+	// Construtor
     public Cliente(String vNome_Cliente, String vCNPJ_Cliente, String vSocial_Cliente, String vSetor_Cliente,
             String vSolucao_Cliente, String vObjetivo_Cliente, String vEntregaM_Cliente, String vEntregaP_Cliente) {
         this.vNome_Cliente = vNome_Cliente;
@@ -46,6 +49,30 @@ public class Cliente {
         this.vCNPJ_Cliente2 = vCNPJ_Cliente2;
         this.vNome_Cliente2 = vNome_Cliente2;
     }
+    
+    public Cliente(int vId_Cliente,
+			String vNome_Cliente,
+			String vCNPJ_Cliente,
+			String vSocial_Cliente,
+			String vSetor_Cliente,
+			String vSolucao_Cliente,
+			String vOjetivo_Cliente,
+			String vEntregaM_Cliente,
+			String vEntregaP_Cliente) {
+		this.vId_Cliente=vId_Cliente;
+		this.vNome_Cliente = vNome_Cliente;
+		this.vCNPJ_Cliente = vCNPJ_Cliente;
+		this.vSocial_Cliente = vSocial_Cliente;
+		this.vSetor_Cliente = vSetor_Cliente;
+		this.vSolucao_Cliente = vSolucao_Cliente;
+		this.vObjetivo_Cliente = vOjetivo_Cliente;
+		this.vEntregaP_Cliente = vEntregaP_Cliente;
+		this.vEntregaM_Cliente = vEntregaM_Cliente;
+	}
+	public Cliente() {
+		// TODO Auto-generated constructor stub
+	}
+    
 // Getters and Setters
     public String getvNome_Cliente() {
         return vNome_Cliente;
@@ -104,35 +131,12 @@ public class Cliente {
     }
 
     public int getvId() {
-        return vId;
+        return vId_Cliente;
     }
     public void setvId(int vId) {
-        this.vId = vId;
+        this.vId_Cliente = vId;
     }
 
-
-	public Cliente(int vId,
-			String vNome_Cliente,
-			String vCNPJ_Cliente,
-			String vSocial_Cliente,
-			String vSetor_Cliente,
-			String vSolucao_Cliente,
-			String vOjetivo_Cliente,
-			String vEntregaM_Cliente,
-			String vEntregaP_Cliente) {
-		this.vId=vId;
-		this.vNome_Cliente = vNome_Cliente;
-		this.vCNPJ_Cliente = vCNPJ_Cliente;
-		this.vSocial_Cliente = vSocial_Cliente;
-		this.vSetor_Cliente = vSetor_Cliente;
-		this.vSolucao_Cliente = vSolucao_Cliente;
-		this.vObjetivo_Cliente = vOjetivo_Cliente;
-		this.vEntregaP_Cliente = vEntregaP_Cliente;
-		this.vEntregaM_Cliente = vEntregaM_Cliente;
-	}
-	public Cliente() {
-		// TODO Auto-generated constructor stub
-	}
 	public String getvNome_Cliente2() {
 		return vNome_Cliente2;
 	}
@@ -145,5 +149,27 @@ public class Cliente {
 	public void setvCNPJ_Cliente2(String vCNPJ_Cliente2) {
 		this.vCNPJ_Cliente2 = vCNPJ_Cliente2;
 	}
+	public int getvId_Cliente() {
+		return vId_Cliente;
+	}
+	public void setvId_Cliente(int vId_Cliente) {
+		this.vId_Cliente = vId_Cliente;
+	}
+	public int getvId_Solucao() {
+		return vId_Solucao;
+	}
+	public void setvId_Solucao(int vId_Solucao) {
+		this.vId_Solucao = vId_Solucao;
+	}
+	public int getvId_Produto() {
+		return vId_Produto;
+	}
+	public void setvId_Produto(int vId_Produto) {
+		this.vId_Produto = vId_Produto;
+	}
 	
 }
+
+
+
+

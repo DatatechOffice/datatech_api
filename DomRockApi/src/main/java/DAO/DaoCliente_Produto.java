@@ -8,8 +8,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import telas.Cliente;
-import telas.Dados;
+import controlador.Cliente;
+import controlador.Dados;
 
 public class DaoCliente_Produto {
  

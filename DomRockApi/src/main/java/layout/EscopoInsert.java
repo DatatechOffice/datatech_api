@@ -17,6 +17,7 @@ import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
 import DAO.DaoCliente;
+import DAO.DaoCliente_Solucao;
 import controlador.Cliente;
 
 import javax.swing.JCheckBox;
@@ -49,6 +50,13 @@ public class EscopoInsert {
 		this.frmEscopoInsert = frmEscopoInsert;
 	}
 
+	
+	private Cliente c2;
+	
+	public EscopoInsert(Cliente c2) {
+		this.c2 = c2;
+	}
+	
 	/**
 	 * Launch the application.
 	 */
@@ -300,7 +308,7 @@ public class EscopoInsert {
 			public void actionPerformed(ActionEvent e) {
 				
 				if(vSolucao_NxtOperations.isSelected()) {
-					
+			
 					//os produtos do Nxt Operations Aparece
 					vProduto_Optimization.setVisible(true);
 					vProduto_Matching.setVisible(true);
@@ -361,6 +369,7 @@ public class EscopoInsert {
 					//<------------------------------come輟 dos set da tela escopo nos atributos------------------------------>
 					//criando o objeto cliente para setar as informa鋏es da tela
 					Cliente c1 = new Cliente(null, null, null, null, null, null, null, null);
+					Cliente c2 = new Cliente();
 					
 					//setando o nome do cliente
 					c1.setvNome_Cliente(textField_vNomeCliente.getText());
@@ -377,10 +386,12 @@ public class EscopoInsert {
 					//um if para selecionar e setar qual a solu鈬o que o cliente esta ligada
 					//se NxtDemand for selecionado entao setamos NxtDemand na variavel
 					if(vSolucao_NxtDemand.isSelected()) {
+						c1.setvId_Solucao(1);
 						c1.setvSolucao_Cliente("NxtDemand");
 					}
 					//caso o contrario como so temos duas op鋏es ent縊 se nxtdemand n for selecionado automaticamente tem que ser nxtoperations
 					else {
+						c1.setvId_Solucao(2);
 						c1.setvSolucao_Cliente("NxtOperations");
 					}
 					
@@ -401,8 +412,19 @@ public class EscopoInsert {
 							
 							try {
 								
-								 DaoCliente daoCriarCliente = new DaoCliente(); 
-								 daoCriarCliente.criarCl(c1);
+								
+								
+								//Aqui estou criando o cliente
+								  DaoCliente daoCriarCliente = new DaoCliente(); 
+								  daoCriarCliente.criarCl(c1);
+								 
+								 //Aqui estou buscando o cliente que eu acabei de criar para obter para obter o Id do mesmo
+								 DaoCliente daoExibirCliente = new DaoCliente(); 
+								 daoExibirCliente.buscarClientes(c1);
+								 /*
+								 DaoCliente_Solucao daoCriarClienteSolucao = new DaoCliente_Solucao(); 
+								 daoCriarClienteSolucao.criarCS(c1,c2);
+								 */
 								//aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);
 								//aqui setamos a nova tela como visivel

@@ -49,14 +49,6 @@ public class EscopoInsert {
 	public void setFrmEscopoInsert(JFrame frmEscopoInsert) {
 		this.frmEscopoInsert = frmEscopoInsert;
 	}
-
-	
-	private Cliente c2;
-	
-	public EscopoInsert(Cliente c2) {
-		this.c2 = c2;
-	}
-	
 	/**
 	 * Launch the application.
 	 */
@@ -369,7 +361,6 @@ public class EscopoInsert {
 					//<------------------------------come輟 dos set da tela escopo nos atributos------------------------------>
 					//criando o objeto cliente para setar as informa鋏es da tela
 					Cliente c1 = new Cliente(null, null, null, null, null, null, null, null);
-					Cliente c2 = new Cliente();
 					
 					//setando o nome do cliente
 					c1.setvNome_Cliente(textField_vNomeCliente.getText());
@@ -412,19 +403,20 @@ public class EscopoInsert {
 							
 							try {
 								
-								
+								Cliente c2 = new Cliente();
 								
 								//Aqui estou criando o cliente
-								  DaoCliente daoCriarCliente = new DaoCliente(); 
-								  daoCriarCliente.criarCl(c1);
+								  
+								DaoCliente daoCriarCliente = new DaoCliente(); 
+								daoCriarCliente.criarCl(c1);
 								 
 								 //Aqui estou buscando o cliente que eu acabei de criar para obter para obter o Id do mesmo
 								 DaoCliente daoExibirCliente = new DaoCliente(); 
 								 daoExibirCliente.buscarClientes(c1);
-								 /*
+								 
 								 DaoCliente_Solucao daoCriarClienteSolucao = new DaoCliente_Solucao(); 
-								 daoCriarClienteSolucao.criarCS(c1,c2);
-								 */
+								 daoCriarClienteSolucao.criarCS(c1);
+								 
 								//aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);
 								//aqui setamos a nova tela como visivel

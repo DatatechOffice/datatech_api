@@ -130,13 +130,6 @@ public class Cliente {
         this.vEntregaP_Cliente = vEntregaP_Cliente;
     }
 
-    public int getvId() {
-        return vId_Cliente;
-    }
-    public void setvId(int vId) {
-        this.vId_Cliente = vId;
-    }
-
 	public String getvNome_Cliente2() {
 		return vNome_Cliente2;
 	}
@@ -150,8 +143,8 @@ public class Cliente {
 		this.vCNPJ_Cliente2 = vCNPJ_Cliente2;
 	}
 	public int getvId_Cliente() {
-		return vId_Cliente;
-	}
+        return vId_Cliente;
+    }
 	public void setvId_Cliente(int vId_Cliente) {
 		this.vId_Cliente = vId_Cliente;
 	}

@@ -15,9 +15,7 @@ public class DaoCliente {
     
     private Cliente c1;
     String sql;
-    Cliente c2 ;
     
-
 	public void criarCl(Cliente c1) {
     	this.c1=c1;
         Connection con = null;
@@ -141,23 +139,23 @@ public class DaoCliente {
             pst.setString(1, c1.getvCNPJ_Cliente());
             ResultSet rs = pst.executeQuery();
             while(rs.next()) {
-            	Cliente c2 = new Cliente() ;
-            	c2.setvId_Cliente(rs.getInt("id_cliente"));
-            	c2.setvCNPJ_Cliente(rs.getString("cnpj"));
-            	c2.setvEntregaM_Cliente(rs.getString("entrega_minimas"));
-            	c2.setvEntregaP_Cliente(rs.getString("entregas_possiveis"));
-            	c2.setvNome_Cliente(rs.getString("nome_cliente"));
-            	c2.setvObjetivo_Cliente(rs.getString("objetivo"));
-            	c2.setvSetor_Cliente(rs.getString("setor"));
-            	c2.setvSocial_Cliente(rs.getString("razao_social"));
-            	clientes.add(c2);
+            	
+            	c1.setvId_Cliente(rs.getInt("id_cliente"));
+            	c1.setvCNPJ_Cliente(rs.getString("cnpj"));
+            	c1.setvEntregaM_Cliente(rs.getString("entrega_minimas"));
+            	c1.setvEntregaP_Cliente(rs.getString("entregas_possiveis"));
+            	c1.setvNome_Cliente(rs.getString("nome_cliente"));
+            	c1.setvObjetivo_Cliente(rs.getString("objetivo"));
+            	c1.setvSetor_Cliente(rs.getString("setor"));
+            	c1.setvSocial_Cliente(rs.getString("razao_social"));
+            	clientes.add(c1);
             	
 				
-				  System.out.print("Id= " + c2.getvId() +" CNPJ= " + c2.getvCNPJ_Cliente() +
-				  " Entrega_minima= " + c2.getvEntregaM_Cliente() +" Entrega_possivel= " +
-				  c2.getvEntregaP_Cliente() + " Nome= " + c2.getvNome_Cliente() + " Objetivo= "
-				  + c2.getvObjetivo_Cliente() + " Setor= " + c2.getvSetor_Cliente() +
-				  " Razao_Social= " + c2.getvSocial_Cliente());
+				  System.out.print("Id= " + c1.getvId_Cliente() +" CNPJ= " + c1.getvCNPJ_Cliente() +
+				  " Entrega_minima= " + c1.getvEntregaM_Cliente() +" Entrega_possivel= " +
+				  c1.getvEntregaP_Cliente() + " Nome= " + c1.getvNome_Cliente() + " Objetivo= "
+				  + c1.getvObjetivo_Cliente() + " Setor= " + c1.getvSetor_Cliente() +
+				  " Razao_Social= " + c1.getvSocial_Cliente());
 				 
             	 
           	

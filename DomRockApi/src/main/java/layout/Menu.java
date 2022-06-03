@@ -47,9 +47,9 @@ public class Menu {
 		JButton btnNewButton = new JButton("Consultar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				EscopoSelect window = new EscopoSelect();
+				Consulta window = new Consulta();
 				//aqui setamos a nova tela como visivel
-				window.getFrmEscopoSelect().setVisible(true);
+				window.frmConsulta.setVisible(true);
 				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}
@@ -64,11 +64,11 @@ public class Menu {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							//aqui setamos qual dela vai ser aberta
-							EscopoInsert window = new EscopoInsert();
+							Consulta window2 = new Consulta();
 							//aqui setamos a nova tela como visivel
-							window.getFrmEscopoInsert().setVisible(true);
+							window2.frmConsulta.setVisible(true);
 							//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							frmMenu.setVisible(false);
 							frmMenu.setVisible(false);
 							
 						} catch (Exception e) {
@@ -110,34 +110,6 @@ public class Menu {
 		btnNewButton_2.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton_2.setBounds(596, 10, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_2);
-		
-		JButton btnNewButton_3 = new JButton("Deletar");
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EscopoDelete window = new EscopoDelete();
-				//aqui setamos a nova tela como visivel
-				window.getFrmEscopoDelete().setVisible(true);
-				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-				frmMenu.setVisible(false);
-			}
-		});
-		btnNewButton_3.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton_3.setBounds(300, 241, 180, 30);
-		frmMenu.getContentPane().add(btnNewButton_3);
-		
-		JButton btnNewButton_3_1 = new JButton("Atualizar");
-		btnNewButton_3_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EscopoUpdate window = new EscopoUpdate();
-				//aqui setamos a nova tela como visivel
-				window.getFrmEscopoUpdate().setVisible(true);
-				//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-				frmMenu.setVisible(false);
-			}
-		});
-		btnNewButton_3_1.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton_3_1.setBounds(300, 282, 180, 30);
-		frmMenu.getContentPane().add(btnNewButton_3_1);
 		frmMenu.setTitle("Menu");
 		frmMenu.setBounds(100, 100, 800, 600);
 		frmMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

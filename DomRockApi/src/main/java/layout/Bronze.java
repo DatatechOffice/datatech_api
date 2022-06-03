@@ -14,6 +14,7 @@ import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextPane;
+import javax.swing.SpinnerNumberModel;
 
 import controlador.Cliente;
 import controlador.Dados;
@@ -157,10 +158,11 @@ public class Bronze {
 		lblPrazoDeDados.setBounds(10, 191, 292, 31);
 		frmBronze.getContentPane().add(lblPrazoDeDados);
 		
-		JSpinner vContagem = new JSpinner();
+		JSpinner vContagem = new JSpinner((new SpinnerNumberModel(0, 0, 9999, 1)));
 		vContagem.setFont(new Font("Arial", Font.BOLD, 15));
 		vContagem.setBounds(10, 232, 40, 31);
 		frmBronze.getContentPane().add(vContagem);
+
 		
 		JComboBox comboBox_vPazo = new JComboBox();
 		comboBox_vPazo.setForeground(Color.WHITE);
@@ -257,6 +259,32 @@ public class Bronze {
 		textField_vQuantidade.setBounds(10, 303, 302, 31);
 		frmBronze.getContentPane().add(textField_vQuantidade);
 		textField_vQuantidade.setColumns(10);
+		
+		JButton btnRetornar_1 = new JButton("Retornar");
+		btnRetornar_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				EventQueue.invokeLater(new Runnable() {										
+					public void run() {
+						
+						try {
+
+							//aqui setamos qual dela vai ser aberta
+							EscopoInsert window = new EscopoInsert();
+							//aqui setamos a nova tela como visivel
+							window.frmEscopoInsert.setVisible(true);
+							//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							frmBronze.setVisible(false);
+							
+						} catch (Exception e) {
+							e.printStackTrace();
+						}
+					}
+				});
+			}
+		});
+		btnRetornar_1.setFont(new Font("Arial", Font.BOLD, 15));
+		btnRetornar_1.setBounds(10, 480, 150, 30);
+		frmBronze.getContentPane().add(btnRetornar_1);
 		frmBronze.setBounds(100, 100, 800, 600);
 		frmBronze.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}

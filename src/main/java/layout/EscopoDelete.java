@@ -38,12 +38,12 @@ public class EscopoDelete {
 	private JTextField textField_vRazaoSocial;
 
 
-	public JFrame getfrmEscopoDelete() {
+	public JFrame getFrmEscopoDelete() {
 		return frmEscopoDelete;
 	}
 
-	public void setFrmEscopo(JFrame frmEscopo) {
-		this.frmEscopoDelete = frmEscopo;
+	public void setFrmEscopoDelete(JFrame frmEscopoDelete) {
+		this.frmEscopoDelete = frmEscopoDelete;
 	}
 
 	/**
@@ -220,10 +220,10 @@ public class EscopoDelete {
 		
 		JButton btnNewButton = new JButton("Avan\u00E7ar");
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton.setBounds(606, 505, 150, 30);
+		btnNewButton.setBounds(300, 500, 150, 30);
 		frmEscopoDelete.getContentPane().add(btnNewButton);
 		
-		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
+		JLabel lblEntragasPossiveis = new JLabel("Entregas Possiveis:");
 		lblEntragasPossiveis.setForeground(Color.WHITE);
 		lblEntragasPossiveis.setFont(new Font("Arial", Font.BOLD, 20));
 		lblEntragasPossiveis.setBounds(340, 220, 200, 20);
@@ -248,27 +248,16 @@ public class EscopoDelete {
 		JButton btnRetornar = new JButton("Retornar");
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 EventQueue.invokeLater(new Runnable() {                                        
-	                    public void run() {
-	                        
-	                        try {
-
-	                            //aqui setamos qual dela vai ser aberta
-	                            Menu window = new Menu();
-	                            //aqui setamos a nova tela como visivel
-	                            window.frmMenu.setVisible(true);
-	                            //e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-	                            frmEscopoDelete.setVisible(false);
-	                            
-	                        } catch (Exception e) {
-	                            e.printStackTrace();
-	                        }
-	                    }
-	                });
+				//aqui setamos qual dela vai ser aberta
+				Menu window = new Menu();
+				//aqui setamos a nova tela como visivel
+				window.frmMenu.setVisible(true);
+				//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmEscopoDelete.setVisible(false);
 			}
 		});
 		btnRetornar.setFont(new Font("Arial", Font.BOLD, 15));
-		btnRetornar.setBounds(10, 505, 150, 30);
+		btnRetornar.setBounds(10, 500, 150, 30);
 		frmEscopoDelete.getContentPane().add(btnRetornar);
 
 		vSolucao_NxtDemand.addActionListener(new ActionListener() {
@@ -315,8 +304,6 @@ public class EscopoDelete {
 				}
 			}
 		});
-		
-		
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -399,12 +386,6 @@ public class EscopoDelete {
 								
 								 DaoCliente daoDeletarCliente = new DaoCliente(); 
 								 daoDeletarCliente.deletarCl(c1);
-								//aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze();
-								//aqui setamos a nova tela como visivel
-								window.frmBronze.setVisible(true);
-								//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-								frmEscopoDelete.setVisible(false);
 								
 							} catch (Exception e) {
 								e.printStackTrace();

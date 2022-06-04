@@ -41,12 +41,12 @@ public class EscopoInsert {
 	private final Action action = new SwingAction();
 
 
-	public JFrame getfrmEscopoInsert() {
-		return getFrmEscopoInsert();
+	public JFrame getFrmEscopoInsert() {
+		return frmEscopoInsert;
 	}
 
-	public void setfrmEscopoInsert(JFrame frmEscopoInsert) {
-		this.setFrmEscopoInsert(frmEscopoInsert);
+	public void setFrmEscopoInsert(JFrame frmEscopoInsert) {
+		this.frmEscopoInsert = frmEscopoInsert;
 	}
 
 	/**
@@ -57,7 +57,7 @@ public class EscopoInsert {
 			public void run() {
 				try {
 					EscopoInsert window = new EscopoInsert();
-					window.getFrmEscopoInsert().setVisible(true);
+					window.frmEscopoInsert.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -76,52 +76,52 @@ public class EscopoInsert {
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		setFrmEscopoInsert(new JFrame());
-		getFrmEscopoInsert().setTitle("Escopo");
-		getFrmEscopoInsert().getContentPane().setBackground(SystemColor.windowBorder);
-		getFrmEscopoInsert().getContentPane().setLayout(null);
+		frmEscopoInsert = new JFrame();
+		frmEscopoInsert.setTitle("Escopo");
+		frmEscopoInsert.getContentPane().setBackground(SystemColor.windowBorder);
+		frmEscopoInsert.getContentPane().setLayout(null);
 				
 		JLabel lblNewLabel = new JLabel("Nome do Cliente:");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 20));
 		lblNewLabel.setBounds(10, 10, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblNewLabel);
+		frmEscopoInsert.getContentPane().add(lblNewLabel);
 		
 		textField_vNomeCliente = new JTextField();
 		textField_vNomeCliente.setFont(new Font("Arial", Font.BOLD, 15));
 		textField_vNomeCliente.setBounds(10, 30, 300, 30);
-		getFrmEscopoInsert().getContentPane().add(textField_vNomeCliente);
+		frmEscopoInsert.getContentPane().add(textField_vNomeCliente);
 		textField_vNomeCliente.setColumns(10);
 		
 		lblCpfcnpj = new JLabel("CNPJ:");
 		lblCpfcnpj.setForeground(Color.WHITE);
 		lblCpfcnpj.setFont(new Font("Arial", Font.BOLD, 20));
 		lblCpfcnpj.setBounds(10, 70, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblCpfcnpj);
+		frmEscopoInsert.getContentPane().add(lblCpfcnpj);
 		
 		textField_vCNPJ = new JTextField();
 		textField_vCNPJ.setFont(new Font("Arial", Font.BOLD, 15));
 		textField_vCNPJ.setColumns(10);
 		textField_vCNPJ.setBounds(10, 90, 300, 30);
-		getFrmEscopoInsert().getContentPane().add(textField_vCNPJ);
+		frmEscopoInsert.getContentPane().add(textField_vCNPJ);
 		
 		lblSetor = new JLabel("Setor");
 		lblSetor.setForeground(SystemColor.text);
 		lblSetor.setFont(new Font("Arial", Font.BOLD, 20));
 		lblSetor.setBounds(14, 190, 300, 20);
-		getFrmEscopoInsert().getContentPane().add(lblSetor);
+		frmEscopoInsert.getContentPane().add(lblSetor);
 		
 		JComboBox comboBox_vEstabalecimento = new JComboBox();
 		comboBox_vEstabalecimento.setModel(new DefaultComboBoxModel(new String[] {"Varejo", "Atacado"}));
 		comboBox_vEstabalecimento.setFont(new Font("Arial", Font.BOLD, 15));
 		comboBox_vEstabalecimento.setBounds(14, 220, 300, 30);
-		getFrmEscopoInsert().getContentPane().add(comboBox_vEstabalecimento);
+		frmEscopoInsert.getContentPane().add(comboBox_vEstabalecimento);
 		
 		JLabel lblSolucao = new JLabel("Solu\u00E7\u00E3o:");
 		lblSolucao.setForeground(Color.WHITE);
 		lblSolucao.setFont(new Font("Arial", Font.BOLD, 20));
 		lblSolucao.setBounds(14, 260, 300, 20);
-		getFrmEscopoInsert().getContentPane().add(lblSolucao);
+		frmEscopoInsert.getContentPane().add(lblSolucao);
 		
 		JRadioButton vSolucao_NxtDemand = new JRadioButton("Nxt.Demand");
 		vSolucao_NxtDemand.setSelected(true);
@@ -129,16 +129,16 @@ public class EscopoInsert {
 		vSolucao_NxtDemand.setFont(new Font("Arial", Font.BOLD, 15));
 		vSolucao_NxtDemand.setBackground(SystemColor.windowBorder);
 		vSolucao_NxtDemand.setBounds(10, 286, 200, 30);
-		getFrmEscopoInsert().getContentPane().add(vSolucao_NxtDemand);
+		frmEscopoInsert.getContentPane().add(vSolucao_NxtDemand);
 		
 		JRadioButton vSolucao_NxtOperations = new JRadioButton("Nxt.Operations");
 		vSolucao_NxtOperations.setForeground(Color.WHITE);
 		vSolucao_NxtOperations.setFont(new Font("Arial", Font.BOLD, 15));
 		vSolucao_NxtOperations.setBackground(SystemColor.windowBorder);
 		vSolucao_NxtOperations.setBounds(10, 318, 200, 30);
-		getFrmEscopoInsert().getContentPane().add(vSolucao_NxtOperations);
-		getFrmEscopoInsert().setBounds(100, 100, 800, 600);
-		getFrmEscopoInsert().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frmEscopoInsert.getContentPane().add(vSolucao_NxtOperations);
+		frmEscopoInsert.setBounds(100, 100, 800, 600);
+		frmEscopoInsert.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		//Criando um grupo para selecionar apenas um radio
 		ButtonGroup vRadioGroup = new ButtonGroup();
@@ -151,33 +151,33 @@ public class EscopoInsert {
 		lblObjetivo.setForeground(Color.WHITE);
 		lblObjetivo.setFont(new Font("Arial", Font.BOLD, 20));
 		lblObjetivo.setBounds(10, 360, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblObjetivo);
+		frmEscopoInsert.getContentPane().add(lblObjetivo);
 		
 		textField_vObjetivo = new JTextField();
 		textField_vObjetivo.setFont(new Font("Arial", Font.BOLD, 15));
 		textField_vObjetivo.setColumns(10);
 		textField_vObjetivo.setBounds(10, 389, 300, 30);
-		getFrmEscopoInsert().getContentPane().add(textField_vObjetivo);
+		frmEscopoInsert.getContentPane().add(textField_vObjetivo);
 		
 		JLabel lblProdutos = new JLabel("Produtos:");
 		lblProdutos.setForeground(Color.WHITE);
 		lblProdutos.setFont(new Font("Arial", Font.BOLD, 20));
 		lblProdutos.setBounds(440, 10, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblProdutos);
+		frmEscopoInsert.getContentPane().add(lblProdutos);
 		
 		JCheckBox vProduto_Vox = new JCheckBox("Nxt.Demand Vox");
 		vProduto_Vox.setForeground(SystemColor.text);
 		vProduto_Vox.setBackground(SystemColor.windowBorder);
 		vProduto_Vox.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Vox.setBounds(339, 35, 175, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Vox);
+		frmEscopoInsert.getContentPane().add(vProduto_Vox);
 		
 		JCheckBox vProduto_Optimization = new JCheckBox("Nxt.Operations Optimization");
 		vProduto_Optimization.setForeground(SystemColor.text);
 		vProduto_Optimization.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Optimization.setBackground(SystemColor.windowBorder);
 		vProduto_Optimization.setBounds(516, 36, 240, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Optimization);
+		frmEscopoInsert.getContentPane().add(vProduto_Optimization);
 		vProduto_Optimization.setVisible(false);
 		
 		JCheckBox vProduto_Matching = new JCheckBox("Nxt.Operations Matching");
@@ -185,7 +185,7 @@ public class EscopoInsert {
 		vProduto_Matching.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Matching.setBackground(SystemColor.windowBorder);
 		vProduto_Matching.setBounds(516, 71, 240, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Matching);
+		frmEscopoInsert.getContentPane().add(vProduto_Matching);
 		vProduto_Matching.setVisible(false);
 		
 		JCheckBox vProduto_Sales = new JCheckBox("Nxt.Demand Sales");
@@ -193,60 +193,60 @@ public class EscopoInsert {
 		vProduto_Sales.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Sales.setBackground(SystemColor.windowBorder);
 		vProduto_Sales.setBounds(339, 70, 175, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Sales);
+		frmEscopoInsert.getContentPane().add(vProduto_Sales);
 		
 		JCheckBox vProduto_Marketing = new JCheckBox("Nxt.Demand Marketing");
 		vProduto_Marketing.setForeground(Color.WHITE);
 		vProduto_Marketing.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Marketing.setBackground(SystemColor.windowBorder);
 		vProduto_Marketing.setBounds(339, 137, 200, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Marketing);
+		frmEscopoInsert.getContentPane().add(vProduto_Marketing);
 		
 		JCheckBox vProduto_Pricing = new JCheckBox("Nxt.Demand Pricing");
 		vProduto_Pricing.setForeground(Color.WHITE);
 		vProduto_Pricing.setFont(new Font("Arial", Font.BOLD, 15));
 		vProduto_Pricing.setBackground(SystemColor.windowBorder);
 		vProduto_Pricing.setBounds(339, 102, 175, 30);
-		getFrmEscopoInsert().getContentPane().add(vProduto_Pricing);
+		frmEscopoInsert.getContentPane().add(vProduto_Pricing);
 		
 		JLabel lblRazoSocial = new JLabel("Raz\u00E3o Social");
 		lblRazoSocial.setForeground(Color.WHITE);
 		lblRazoSocial.setFont(new Font("Arial", Font.BOLD, 20));
 		lblRazoSocial.setBounds(10, 130, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblRazoSocial);
+		frmEscopoInsert.getContentPane().add(lblRazoSocial);
 		
 		textField_vRazaoSocial = new JTextField();
 		textField_vRazaoSocial.setFont(new Font("Arial", Font.BOLD, 15));
 		textField_vRazaoSocial.setColumns(10);
 		textField_vRazaoSocial.setBounds(10, 150, 300, 30);
-		getFrmEscopoInsert().getContentPane().add(textField_vRazaoSocial);
+		frmEscopoInsert.getContentPane().add(textField_vRazaoSocial);
 		
 		JButton btnNewButton = new JButton("Avan\u00E7ar");
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton.setBounds(624, 500, 150, 30);
-		getFrmEscopoInsert().getContentPane().add(btnNewButton);
+		frmEscopoInsert.getContentPane().add(btnNewButton);
 		
-		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
+		JLabel lblEntragasPossiveis = new JLabel("Entregas Possiveis:");
 		lblEntragasPossiveis.setForeground(Color.WHITE);
 		lblEntragasPossiveis.setFont(new Font("Arial", Font.BOLD, 20));
 		lblEntragasPossiveis.setBounds(340, 220, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblEntragasPossiveis);
+		frmEscopoInsert.getContentPane().add(lblEntragasPossiveis);
 		
 		JLabel lblEntregasMinimas = new JLabel("Entregas Minimas:");
 		lblEntregasMinimas.setForeground(Color.WHITE);
 		lblEntregasMinimas.setFont(new Font("Arial", Font.BOLD, 20));
 		lblEntregasMinimas.setBounds(339, 329, 200, 20);
-		getFrmEscopoInsert().getContentPane().add(lblEntregasMinimas);
+		frmEscopoInsert.getContentPane().add(lblEntregasMinimas);
 		
 		JTextArea textArea_EntregaP = new JTextArea();
 		textArea_EntregaP.setFont(new Font("Arial", Font.BOLD, 15));
 		textArea_EntregaP.setBounds(339, 250, 301, 69);
-		getFrmEscopoInsert().getContentPane().add(textArea_EntregaP);
+		frmEscopoInsert.getContentPane().add(textArea_EntregaP);
 		
 		JTextArea textArea_EntregaM = new JTextArea();
 		textArea_EntregaM.setFont(new Font("Arial", Font.BOLD, 15));
 		textArea_EntregaM.setBounds(339, 361, 301, 69);
-		getFrmEscopoInsert().getContentPane().add(textArea_EntregaM);
+		frmEscopoInsert.getContentPane().add(textArea_EntregaM);
 		
 		JButton btnRetornar_1 = new JButton("Retornar");
 		btnRetornar_1.addActionListener(new ActionListener() {
@@ -261,7 +261,7 @@ public class EscopoInsert {
 							//aqui setamos a nova tela como visivel
 							window.frmMenu.setVisible(true);
 							//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-							getFrmEscopoInsert().setVisible(false);
+							frmEscopoInsert.setVisible(false);
 							
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -273,7 +273,7 @@ public class EscopoInsert {
 
 		btnRetornar_1.setFont(new Font("Arial", Font.BOLD, 15));
 		btnRetornar_1.setBounds(10, 500, 150, 30);
-		getFrmEscopoInsert().getContentPane().add(btnRetornar_1);
+		frmEscopoInsert.getContentPane().add(btnRetornar_1);
 
 		vSolucao_NxtDemand.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -401,14 +401,15 @@ public class EscopoInsert {
 							
 							try {
 								
-								 DaoCliente daoCriarCliente = new DaoCliente(); 
-								 daoCriarCliente.criarCl(c1);
+								/*
+								 * DaoCliente daoCriarCliente = new DaoCliente(); daoCriarCliente.criarCl(c1);
+								 */
 								//aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze();
+								Bronze window = new Bronze(c1);
 								//aqui setamos a nova tela como visivel
-								window.frmBronze.setVisible(true);
+								window.getFrmBronze().setVisible(true);
 								//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-								getFrmEscopoInsert().setVisible(false);
+								frmEscopoInsert.setVisible(false);
 								
 							} catch (Exception e) {
 								e.printStackTrace();
@@ -423,13 +424,6 @@ public class EscopoInsert {
 				
 			}
 		});
-	}
-	public JFrame getFrmEscopoInsert() {
-		return frmEscopoInsert;
-	}
-
-	public void setFrmEscopoInsert(JFrame frmEscopoInsert) {
-		this.frmEscopoInsert = frmEscopoInsert;
 	}
 	private class SwingAction extends AbstractAction {
 		public SwingAction() {

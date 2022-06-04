@@ -49,7 +49,7 @@ public class Menu {
 			public void actionPerformed(ActionEvent e) {
 				EscopoSelect window = new EscopoSelect();
 				//aqui setamos a nova tela como visivel
-				window.getfrmEscopoSelect().setVisible(true);
+				window.getFrmEscopoSelect().setVisible(true);
 				//e para n�o ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}
@@ -67,7 +67,7 @@ public class Menu {
 							//aqui setamos qual dela vai ser aberta
 							EscopoInsert window = new EscopoInsert();
 							//aqui setamos a nova tela como visivel
-							window.getfrmEscopoInsert().setVisible(true);
+							window.getFrmEscopoInsert().setVisible(true);
 							//e para n�o ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmMenu.setVisible(false);
 							
@@ -82,7 +82,7 @@ public class Menu {
 		btnNewButton_1.setBounds(300, 160, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_1);
 		
-		JButton btnNewButton_2 = new JButton("Cadastrar Usuaro");
+		JButton btnNewButton_2 = new JButton("Cadastrar Usuario");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
@@ -116,7 +116,7 @@ public class Menu {
 			public void actionPerformed(ActionEvent e) {
 				EscopoDelete window = new EscopoDelete();
 				//aqui setamos a nova tela como visivel
-				window.getfrmEscopoDelete().setVisible(true);
+				window.getFrmEscopoDelete().setVisible(true);
 				//e para n�o ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}
@@ -130,7 +130,7 @@ public class Menu {
 			public void actionPerformed(ActionEvent e) {
 				EscopoUpdate window = new EscopoUpdate();
 				//aqui setamos a nova tela como visivel
-				window.getfrmEscopoUpdate().setVisible(true);
+				window.getFrmEscopoUpdate().setVisible(true);
 				//e para n�o ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmMenu.setVisible(false);
 			}

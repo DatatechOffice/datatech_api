@@ -11,6 +11,8 @@ import java.awt.Font;
 import java.awt.Color;
 import javax.swing.JTextField;
 
+import DAO.DaoCliente;
+import DAO.DaoUsuario;
 import controlador.Usuario;
 
 import javax.swing.JButton;
@@ -120,6 +122,9 @@ public class Cadastro {
 					//utilizando um if para comparar se a senha e a re-senha são equivalantes
 					if(usuario.getvSenha_Usuario().equals(usuario.getvReSenha_Usuario())) {
 						
+						 DaoUsuario daoCriarUsuario = new DaoUsuario(); 
+						 daoCriarUsuario.criarUS(usuario);
+						
 						//Metodo para retorna para a tela de login após o caastro ser confirmado
 						EventQueue.invokeLater(new Runnable() {
 							public void run() {
@@ -152,6 +157,18 @@ public class Cadastro {
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 20));
 		btnNewButton.setBounds(304, 413, 150, 29);
 		frmCadastro.getContentPane().add(btnNewButton);
+		
+		JButton btnRetornarCadastro = new JButton("Retornar");
+		btnRetornarCadastro.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Menu window = new Menu();
+				window.frmMenu.setVisible(true);
+				frmCadastro.setVisible(false);
+			}
+		});
+		btnRetornarCadastro.setFont(new Font("Arial", Font.BOLD, 20));
+		btnRetornarCadastro.setBounds(31, 413, 150, 29);
+		frmCadastro.getContentPane().add(btnRetornarCadastro);
 		frmCadastro.setBounds(100, 100, 800, 600);
 		frmCadastro.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

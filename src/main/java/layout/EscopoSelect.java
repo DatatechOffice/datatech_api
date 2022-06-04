@@ -38,7 +38,7 @@ public class EscopoSelect {
 	private JTextField textField_vRazaoSocial;
 
 
-	public JFrame getfrmEscopoSelect() {
+	public JFrame getFrmEscopoSelect() {
 		return frmEscopoSelect;
 	}
 
@@ -223,7 +223,7 @@ public class EscopoSelect {
 		btnNewButton.setBounds(624, 499, 150, 30);
 		frmEscopoSelect.getContentPane().add(btnNewButton);
 		
-		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
+		JLabel lblEntragasPossiveis = new JLabel("Entregas Possiveis:");
 		lblEntragasPossiveis.setForeground(Color.WHITE);
 		lblEntragasPossiveis.setFont(new Font("Arial", Font.BOLD, 20));
 		lblEntragasPossiveis.setBounds(340, 220, 200, 20);
@@ -399,12 +399,6 @@ public class EscopoSelect {
 								
 								 DaoCliente daoExibirCliente = new DaoCliente(); 
 								 daoExibirCliente.buscarClientes(c1);
-								//aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze();
-								//aqui setamos a nova tela como visivel
-								window.frmBronze.setVisible(true);
-								//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-								frmEscopoSelect.setVisible(false);
 								
 							} catch (Exception e) {
 								e.printStackTrace();

@@ -40,11 +40,11 @@ public class EscopoUpdate {
 	private JTextField textField_vCNPJ2;
 
 
-	public JFrame getfrmEscopoUpdate() {
+	public JFrame getFrmEscopoUpdate() {
 		return frmEscopoUpdate;
 	}
 
-	public void setfrmEscopoUpdate(JFrame frmEscopoUpdate) {
+	public void setFrmEscopoUpdate(JFrame frmEscopoUpdate) {
 		this.frmEscopoUpdate = frmEscopoUpdate;
 	}
 
@@ -222,10 +222,10 @@ public class EscopoUpdate {
 		
 		JButton btnNewButton = new JButton("Avan\u00E7ar");
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 15));
-		btnNewButton.setBounds(624, 500, 150, 30);
+		btnNewButton.setBounds(300, 500, 150, 30);
 		frmEscopoUpdate.getContentPane().add(btnNewButton);
 		
-		JLabel lblEntragasPossiveis = new JLabel("Entragas Possiveis:");
+		JLabel lblEntragasPossiveis = new JLabel("Entregas Possiveis:");
 		lblEntragasPossiveis.setForeground(Color.WHITE);
 		lblEntragasPossiveis.setFont(new Font("Arial", Font.BOLD, 20));
 		lblEntragasPossiveis.setBounds(340, 220, 200, 20);
@@ -274,23 +274,12 @@ public class EscopoUpdate {
 		JButton btnRetornar = new JButton("Retornar");
 		btnRetornar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				 EventQueue.invokeLater(new Runnable() {                                        
-	                    public void run() {
-	                        
-	                        try {
-
-	                            //aqui setamos qual dela vai ser aberta
-	                            Menu window = new Menu();
-	                            //aqui setamos a nova tela como visivel
-	                            window.frmMenu.setVisible(true);
-	                            //e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-	                            frmEscopoUpdate.setVisible(false);
-	                            
-	                        } catch (Exception e) {
-	                            e.printStackTrace();
-	                        }
-	                    }
-	                });
+				//aqui setamos qual dela vai ser aberta
+				Menu window = new Menu();
+				//aqui setamos a nova tela como visivel
+				window.frmMenu.setVisible(true);
+				//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmEscopoUpdate.setVisible(false);
 			}
 		});
 		btnRetornar.setFont(new Font("Arial", Font.BOLD, 15));
@@ -341,8 +330,6 @@ public class EscopoUpdate {
 				}
 			}
 		});
-		
-		
 		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -430,13 +417,7 @@ public class EscopoUpdate {
 								
 								 DaoCliente daoAtualizarCliente = new DaoCliente(); 
 								 daoAtualizarCliente.atualizarCl(c1);
-								//aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze();
-								//aqui setamos a nova tela como visivel
-								window.frmBronze.setVisible(true);
-								//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-								frmEscopoUpdate.setVisible(false);
-								
+
 							} catch (Exception e) {
 								e.printStackTrace();
 							}

@@ -397,9 +397,11 @@ public class Silver extends JFrame {
 		
 		textAreaSilver = new TextArea();
 		textAreaSilver.setForeground(Color.BLACK);
-		textAreaSilver.setFont(new Font("Arial", Font.PLAIN, 12));
+		textAreaSilver.setFont(new Font("Arial", Font.PLAIN, 12));https://github.com/DatatechOffice/datatech_api/upload/BranchSprint3
 		textAreaSilver.setBounds(624, 286, 150, 228);
 		contentPane.add(textAreaSilver);
+		
+		hideAll();
 	}
 	
 	public void hideAll() {

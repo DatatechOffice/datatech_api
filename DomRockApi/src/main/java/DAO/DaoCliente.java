@@ -21,7 +21,7 @@ public class DaoCliente {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "insert into cliente (cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social) values (?, ?, ?, ?, ?, ?, ?)";
+            String insert_sql = "insert into cliente (cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social,id_solucao) values (?, ?, ?, ?, ?, ?, ?,?)";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
             pst.setObject(1, c1.getvCNPJ_Cliente());
@@ -31,6 +31,7 @@ public class DaoCliente {
             pst.setObject(5, c1.getvObjetivo_Cliente());
             pst.setObject(6, c1.getvSetor_Cliente());
             pst.setObject(7, c1.getvSocial_Cliente());
+            pst.setObject(8, c1.getvId_Solucao());
             pst.executeUpdate();
             
         } catch (SQLException e) {

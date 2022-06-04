@@ -371,8 +371,6 @@ public class Silver extends JFrame {
 		chckbxNomeAudioSilver.setVisible(false);
 		chckbxTamanhoTextoSilver.setVisible(false);
 		chckbxNomeTextoSilver.setVisible(false);
-		btnAvacarSilver.setVisible(false);
-		btnVoltarMenuSilver.setVisible(false);
 		lbPdfSilver.setVisible(false);
 		lbJsonSilver.setVisible(false);
 		lbCsvSilver.setVisible(false);

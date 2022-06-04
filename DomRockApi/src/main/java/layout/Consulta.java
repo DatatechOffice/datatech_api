@@ -5,6 +5,11 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.SystemColor;
 import javax.swing.JTextField;
+
+import DAO.DaoCliente;
+import DAO.DaoEscolha;
+import controlador.Cliente;
+
 import java.awt.Font;
 import javax.swing.JLabel;
 import java.awt.Color;
@@ -21,6 +26,7 @@ public class Consulta {
 	private JTextField textField_Razao_Social;
 	private JTextField textField_Setor;
 	private JTextField textField_Solucao;
+	private JTextField textFieldProdutos;
 
 	/**
 	 * Launch the application.
@@ -142,36 +148,84 @@ public class Consulta {
 		
 		JButton btn_Alterar = new JButton("Alterar");
 		btn_Alterar.setFont(new Font("Arial", Font.BOLD, 15));
-		btn_Alterar.setBounds(10, 450, 150, 30);
+		btn_Alterar.setBounds(491, 451, 150, 30);
 		frmConsulta.getContentPane().add(btn_Alterar);
 		
 		JButton btn_Deletar = new JButton("Deletar");
 		btn_Deletar.setFont(new Font("Arial", Font.BOLD, 15));
 		btn_Deletar.setBounds(491, 30, 150, 30);
 		frmConsulta.getContentPane().add(btn_Deletar);
+		
+		textFieldProdutos = new JTextField();
+		textFieldProdutos.setFont(new Font("Arial", Font.BOLD, 15));
+		textFieldProdutos.setColumns(10);
+		textFieldProdutos.setBounds(357, 210, 300, 30);
+		frmConsulta.getContentPane().add(textFieldProdutos);
+		
+		JLabel lblCpfcnpj_1_3_3 = new JLabel("Produto(s):");
+		lblCpfcnpj_1_3_3.setForeground(Color.WHITE);
+		lblCpfcnpj_1_3_3.setFont(new Font("Arial", Font.BOLD, 20));
+		lblCpfcnpj_1_3_3.setBounds(357, 190, 200, 20);
+		frmConsulta.getContentPane().add(lblCpfcnpj_1_3_3);
+		
+		JButton btn_Retornar = new JButton("Retornar");
+		btn_Retornar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// aqui setamos qual dela vai ser aberta
+				Menu window = new Menu();
+				// aqui setamos a nova tela como visivel
+				window.frmMenu.setVisible(true);
+				// e para nï¾ƒï½§ï¾‚ï½¸ï¾…ï¿½ ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmConsulta.setVisible(false);
+			}
+		});
+		btn_Retornar.setFont(new Font("Arial", Font.BOLD, 15));
+		btn_Retornar.setBounds(10, 451, 150, 30);
+		frmConsulta.getContentPane().add(btn_Retornar);
 		frmConsulta.setTitle("Consulta");
 		frmConsulta.setBounds(100, 100, 800, 600);
 		frmConsulta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		//<------------------------------BOTÃO PARA CONSULTAR CLIENTE NO BANCO------------------------------>
+		//<------------------------------BOTï¾ƒO PARA CONSULTAR CLIENTE NO BANCO------------------------------>
 		btn_Consultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				Cliente c1= new Cliente();
+				Cliente p1= new Cliente();
+				Cliente p2= new Cliente();
+				Cliente p3= new Cliente();
+				Cliente p4= new Cliente();
+				Cliente p5= new Cliente();
+				Cliente p6= new Cliente();
+				
+				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+			
+				DaoCliente daoExibirCliente = new DaoCliente();
+				daoExibirCliente.buscarClientes(c1);
 				
 				//cria o select com o c1 para armazenar os dados
-				textField_CNPJ.setText("select do CNPJ");
-				textField_Nome_Cliente.setText("Select do Nome do Cliente");
-				textField_Razao_Social.setText("Select Razao Social");
-				textField_Setor.setText("Select do Setor");
-				textField_Solucao.setText("Select da Solucao");
-				textArea_P.setText("Select da Entrega Possivel");
-				textArea_M.setText("Select da entrega minima");
+				textField_CNPJ.setText(c1.getvCNPJ_Cliente());
+				textField_Nome_Cliente.setText(c1.getvNome_Cliente());
+				textField_Razao_Social.setText(c1.getvSocial_Cliente());
+				textField_Setor.setText(c1.getvSetor_Cliente());
 				
-
+				if(c1.getvId_Solucao()==1) {
+				textField_Solucao.setText("NxtDemand");
+				}
+				if(c1.getvId_Solucao()==2) {
+				textField_Solucao.setText("NxtOperations");
+				}
+				textArea_P.setText(c1.getvEntregaP_Cliente());
+				textArea_M.setText(c1.getvEntregaP_Cliente());
+				
+				DaoEscolha daobuscarproduto = new DaoEscolha(p1,p2,p3,p4,p5,p6);
+				daobuscarproduto.buscarEscolhaProduto(c1);
+				
+				textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
 			}
 		});
-		//<------------------------------FINAL DO BOTÃO PARA CONSULTAR CLIENTE NO BANCO------------------------------>
+		//<------------------------------FINAL DO BOTï¾ƒO PARA CONSULTAR CLIENTE NO BANCO------------------------------>
 		
-		//<------------------------------BOTÃO PARA ALTERAR OS CAMPOS DE CONSULTA------------------------------>
+		//<------------------------------BOTï¾ƒO PARA ALTERAR OS CAMPOS DE CONSULTA------------------------------>
 		btn_Alterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				//CRIAR OS GET PARA MANDAR PRO BANCO OS CAMPOS
@@ -185,17 +239,16 @@ public class Consulta {
 				
 			}
 		});
-		//<------------------------------FINAL BOTÃO PARA ALTERAR OS CAMPOS DE CONSULTA------------------------------>
+		//<------------------------------FINAL BOTï¾ƒO PARA ALTERAR OS CAMPOS DE CONSULTA------------------------------>
 
-		//<------------------------------BOTÃO PARA DELETAR UM CLIENTE------------------------------>
+		//<------------------------------BOTï¾ƒO PARA DELETAR UM CLIENTE------------------------------>
 		btn_Deletar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				//DELETE ENTIDADE ONDE O CNPJ É IGUAL
+				//DELETE ENTIDADE ONDE O CNPJ ï¾‰ IGUAL
 			}
 		});
-		//<------------------------------FINAL BOTÃO PARA DELETAR O CLIENTE------------------------------>
+		//<------------------------------FINAL BOTï¾ƒO PARA DELETAR O CLIENTE------------------------------>
 
 	}
-
 }

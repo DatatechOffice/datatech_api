@@ -64,11 +64,10 @@ public class Menu {
 				EventQueue.invokeLater(new Runnable() {
 					public void run() {
 						try {
-							Consulta window2 = new Consulta();
+							EscopoInsert window2 = new EscopoInsert();
 							//aqui setamos a nova tela como visivel
-							window2.frmConsulta.setVisible(true);
+							window2.getFrmEscopoInsert().setVisible(true);
 							//e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-							frmMenu.setVisible(false);
 							frmMenu.setVisible(false);
 							
 						} catch (Exception e) {
@@ -113,5 +112,13 @@ public class Menu {
 		frmMenu.setTitle("Menu");
 		frmMenu.setBounds(100, 100, 800, 600);
 		frmMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	public JFrame getFrmMenu() {
+		return frmMenu;
+	}
+
+	public void setFrmMenu(JFrame frmMenu) {
+		this.frmMenu = frmMenu;
 	}
 }

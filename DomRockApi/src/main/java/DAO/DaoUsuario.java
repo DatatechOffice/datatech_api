@@ -1,5 +1,6 @@
 package DAO;
 
+import java.awt.EventQueue;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -10,6 +11,8 @@ import java.util.List;
 
 import controlador.Cliente;
 import controlador.Usuario;
+import layout.Login;
+import layout.Menu;
 
 
 public class DaoUsuario {
@@ -126,10 +129,11 @@ public class DaoUsuario {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String select_sql = "select * from usuario where nome_usuario = ?";// where cnpj = ?
+            String select_sql = "select * from usuario where nome_usuario = ? and senha=?";// where cnpj = ?
             PreparedStatement pst;
             pst = con.prepareStatement(select_sql);
             pst.setString(1, usuario.getvNome_Usuario());
+            pst.setString(2, usuario.getvSenha_Usuario());
             ResultSet rs = pst.executeQuery();
             while(rs.next()) {
             	Usuario u1 = new Usuario();
@@ -142,9 +146,26 @@ public class DaoUsuario {
             	if(usuario.getvNome_Usuario().equals(u1.getvNome_Usuario()) )
 				{
                 	System.out.print("Nome= " + u1.getvNome_Usuario());	
+                	
+                	EventQueue.invokeLater(new Runnable() {
+    					public void run() {
+    						try {
+    							Login window = new Login();
+    							// aqui setamos qual dela vai ser aberta
+    							Menu window1 = new Menu();
+    							// aqui setamos a nova tela como visivel
+    							window1.getFrmMenu().setVisible(true);
+    							// e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+    							window.frmLogin.setVisible(false);
+
+    						} catch (Exception e) {
+    							e.printStackTrace();
+    						}
+    					}
+    				});
 				}
             	else {
-            		System.out.print("Nome= " + usuario.getvSenha_Usuario());
+            		System.out.print("Senha ou nome de usuario incorretos!");
             	}
             	
             	//System.out.print("Nome= " + usuario.getvNome_Usuario());	

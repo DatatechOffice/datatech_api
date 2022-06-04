@@ -17,8 +17,6 @@ import javax.swing.JRadioButton;
 import javax.swing.SwingConstants;
 
 import DAO.DaoCliente;
-import DAO.DaoCliente_Produto;
-import DAO.DaoCliente_Solucao;
 import DAO.DaoEscolha;
 import controlador.Cliente;
 
@@ -262,7 +260,7 @@ public class EscopoInsert {
 							Menu window = new Menu();
 							// aqui setamos a nova tela como visivel
 							window.frmMenu.setVisible(true);
-							// e para nç¸Š ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmEscopoInsert.setVisible(false);
 
 						} catch (Exception e) {
@@ -291,7 +289,7 @@ public class EscopoInsert {
 					vProduto_Optimization.setVisible(false);
 					vProduto_Matching.setVisible(false);
 
-					// os produtos do Nxt Operations sç¸Š deselecionados
+					// os produtos do Nxt Operations sﾃｧﾂｸﾅ� deselecionados
 					vProduto_Optimization.setSelected(false);
 					vProduto_Matching.setSelected(false);
 				}
@@ -313,7 +311,7 @@ public class EscopoInsert {
 					vProduto_Sales.setVisible(false);
 					vProduto_Pricing.setVisible(false);
 
-					// os produtos do Nxt Demand sç¸Š deselecionados
+					// os produtos do Nxt Demand sﾃｧﾂｸﾅ� deselecionados
 					vProduto_Vox.setSelected(false);
 					vProduto_Marketing.setSelected(false);
 					vProduto_Sales.setSelected(false);
@@ -369,9 +367,9 @@ public class EscopoInsert {
 						&& vProList.size() != 0 && !textArea_EntregaP.getText().equals("")
 						&& !textArea_EntregaM.getText().equals("")) {
 
-					// <------------------------------comeè¼Ÿ dos set da tela escopo nos
+					// <------------------------------comeﾃｨﾂｼﾅｸ dos set da tela escopo nos
 					// atributos------------------------------>
-					// criando o objeto cliente para setar as informaé‹�es da tela
+					// criando o objeto cliente para setar as informaﾃｩ窶ｹ�ｿｽes da tela
 					// Cliente c1 = new Cliente(null, null, null, null, null, null, null, null);
 
 					// setando o nome do cliente
@@ -380,19 +378,19 @@ public class EscopoInsert {
 					// setando o CNPJ do nosso Cliente
 					c1.setvCNPJ_Cliente(textField_vCNPJ.getText());
 
-					// setando o nome de razç¸Š social ao qual a empresa ï¿½ aderida
+					// setando o nome de razﾃｧﾂｸﾅ� social ao qual a empresa ﾃｯﾂｿﾂｽ aderida
 					c1.setvSocial_Cliente(textField_vRazaoSocial.getText());
 
 					// setando o setor do nosso cliente
 					c1.setvSetor_Cliente((String) comboBox_vEstabalecimento.getSelectedItem());
 
-					// um if para selecionar e setar qual a soluéˆ¬o que o cliente esta ligada
+					// um if para selecionar e setar qual a soluﾃｩﾋ�ﾂｬo que o cliente esta ligada
 					// se NxtDemand for selecionado entao setamos NxtDemand na variavel
 					if (vSolucao_NxtDemand.isSelected()) {
 						c1.setvId_Solucao(1);
 						c1.setvSolucao_Cliente("NxtDemand");
 					}
-					// caso o contrario como so temos duas opé‹�es entç¸Š se nxtdemand n for
+					// caso o contrario como so temos duas opﾃｩ窶ｹ�ｿｽes entﾃｧﾂｸﾅ� se nxtdemand n for
 					// selecionado automaticamente tem que ser nxtoperations
 					else {
 						c1.setvId_Solucao(2);
@@ -407,16 +405,16 @@ public class EscopoInsert {
 
 					// setando as entregas minimas que devemos exigir
 					c1.setvEntregaM_Cliente(textArea_EntregaM.getText());
-					// <------------------------------fim do sett de informaé‹�es da
+					// <------------------------------fim do sett de informaﾃｩ窶ｹ�ｿｽes da
 					// tela------------------------------>
 
-					// <------------------------------aéˆ¬o responsavel pelo transaéˆ¬o de tela de
+					// <------------------------------aﾃｩﾋ�ﾂｬo responsavel pelo transaﾃｩﾋ�ﾂｬo de tela de
 					// login para menu------------------------------>
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
 
 							try {
-								// Aqui estou inputando os dados do cliente e da solução do cliente no banco
+								// Aqui estou inputando os dados do cliente e da soluﾃｧﾃ｣o do cliente no banco
 
 								DaoCliente daoCriarCliente = new DaoCliente();
 								daoCriarCliente.criarCl(c1);
@@ -429,13 +427,13 @@ public class EscopoInsert {
 								// Inserindo os dados na tabela escolha que foram selecionados no escopo pelo
 								// cliente.
 								DaoEscolha daoCriarEscolha = new DaoEscolha(p1, p2, p3, p4, p5, p6);
-								daoCriarEscolha.criarEscolhaProduto(c1);							
-
+								daoCriarEscolha.criarEscolhaProduto(c1);				
+								
 								// aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);
 								// aqui setamos a nova tela como visivel
 								window.frmBronze.setVisible(true);
-								// e para nç¸Š ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+								// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 								frmEscopoInsert.setVisible(false);
 
 							} catch (Exception e) {
@@ -443,8 +441,8 @@ public class EscopoInsert {
 							}
 						}
 					});
-					// <------------------------------fim da aéˆ¬o de
-					// transaéˆ¬o------------------------------>
+					// <------------------------------fim da aﾃｩﾋ�ﾂｬo de
+					// transaﾃｩﾋ�ﾂｬo------------------------------>
 
 				} else {
 					JOptionPane.showMessageDialog(null, "Preencha todos os campos");

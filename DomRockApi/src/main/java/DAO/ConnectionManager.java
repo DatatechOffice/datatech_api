@@ -20,6 +20,7 @@ public class ConnectionManager {
 	  "jdbc:sqlserver://localhost:1433;databaseName=datatech;user=Jorge;password=12345;encrypt=true;trustServerCertificate=true"
 	  ); }
 	  
+	  
 	 
 	  
 }

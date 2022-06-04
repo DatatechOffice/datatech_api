@@ -21,6 +21,7 @@ public class Cliente {
     private int vId_Cliente;
     private int vId_Solucao;
     private int vId_Produto;
+    private int vId_Escolha;
 
     
 	// Construtor
@@ -159,6 +160,12 @@ public class Cliente {
 	}
 	public void setvId_Produto(int vId_Produto) {
 		this.vId_Produto = vId_Produto;
+	}
+	public int getvId_Escolha() {
+		return vId_Escolha;
+	}
+	public void setvId_Escolha(int vId_Escolha) {
+		this.vId_Escolha = vId_Escolha;
 	}
 	
 }

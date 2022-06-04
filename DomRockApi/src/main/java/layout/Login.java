@@ -22,7 +22,7 @@ import java.awt.event.ActionEvent;
 public class Login {
 
 	Usuario usuario;
-	JFrame frmLogin;
+	public JFrame frmLogin;
 	private JTextField textField_Usuario;
 	private JTextField textFieldSenha;
 	private JButton btnNewButton;
@@ -113,22 +113,7 @@ public class Login {
 
 				// <------------------------------ação responsavel pelo transação de tela de
 				// login para menu------------------------------>
-				EventQueue.invokeLater(new Runnable() {
-					public void run() {
-						try {
-
-							// aqui setamos qual dela vai ser aberta
-							Menu window = new Menu();
-							// aqui setamos a nova tela como visivel
-							window.frmMenu.setVisible(true);
-							// e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-							frmLogin.setVisible(false);
-
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
+				
 				// <------------------------------fim da ação de
 				// transação------------------------------>
 
@@ -138,5 +123,13 @@ public class Login {
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 20));
 		btnNewButton.setBounds(325, 369, 169, 21);
 		frmLogin.getContentPane().add(btnNewButton);
+	}
+
+	public JFrame getFrmLogin() {
+		return frmLogin;
+	}
+
+	public void setFrmLogin(JFrame frmLogin) {
+		this.frmLogin = frmLogin;
 	}
 }

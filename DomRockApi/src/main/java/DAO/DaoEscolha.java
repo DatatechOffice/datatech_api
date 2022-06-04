@@ -20,7 +20,8 @@ public class DaoEscolha {
 	private Cliente p4;
 	private Cliente p5;
 	private Cliente p6;
-
+	private Cliente p7;
+	
 	public DaoEscolha(Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6) {
 		this.p1 = p1;
 		this.p2 = p2;
@@ -108,6 +109,40 @@ public class DaoEscolha {
 			}
 		}
 	}
+	public List<Cliente> buscarEscolhaProduto(Cliente c1) {
+    	this.c1=c1;
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setString(1, c1.getvCNPJ_Cliente());
+            pst.setInt(2, c1.getvId_Cliente());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	
+            	
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	c1.setvId_Produto(rs.getInt("id_produto"));
+            	clientes.add(c1);	
+            }
+            System.out.print("Id_Escolha= " + c1.getvId_Escolha() + "Id_Produto= " + c1.getvId_Produto());
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexão", e);
+            }
+        }        
+        return clientes;
+    }
 
 	/*
 	 * public void criarEscolhaCliente(Cliente c1) { Connection con = null; try {

@@ -21,7 +21,7 @@ public class DaoCliente {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "insert into cliente (cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social,id_solucao) values (?, ?, ?, ?, ?, ?, ?,?)";
+            String insert_sql = "insert into cliente (cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social, id_solucao) values (?, ?, ?, ?, ?, ?, ?, ?)";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
             pst.setObject(1, c1.getvCNPJ_Cliente());
@@ -142,6 +142,7 @@ public class DaoCliente {
             while(rs.next()) {
             	
             	c1.setvId_Cliente(rs.getInt("id_cliente"));
+            	c1.setvId_Solucao(rs.getInt("id_solucao"));
             	c1.setvCNPJ_Cliente(rs.getString("cnpj"));
             	c1.setvEntregaM_Cliente(rs.getString("entrega_minimas"));
             	c1.setvEntregaP_Cliente(rs.getString("entregas_possiveis"));
@@ -152,7 +153,7 @@ public class DaoCliente {
             	clientes.add(c1);
             	
 				
-				  System.out.print("Id= " + c1.getvId_Cliente() +" CNPJ= " + c1.getvCNPJ_Cliente() +
+				  System.out.print("Id_Cliente= " + c1.getvId_Cliente() +" Id_Solucao= "+c1.getvId_Solucao()+" CNPJ= " + c1.getvCNPJ_Cliente() +
 				  " Entrega_minima= " + c1.getvEntregaM_Cliente() +" Entrega_possivel= " +
 				  c1.getvEntregaP_Cliente() + " Nome= " + c1.getvNome_Cliente() + " Objetivo= "
 				  + c1.getvObjetivo_Cliente() + " Setor= " + c1.getvSetor_Cliente() +

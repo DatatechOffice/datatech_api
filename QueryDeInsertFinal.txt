@@ -1,0 +1,20 @@
+insert into solucao (nome_solucao) values ('Nxt.Demand')
+insert into solucao (nome_solucao) values ('NxT.Operations')
+
+insert into produto (nome_produto) values ('Nxt.Demand Vox')
+insert into produto (nome_produto) values ('Nxt.Demand Marketing')
+insert into produto (nome_produto) values ('Nxt.Demand Sales')
+insert into produto (nome_produto) values ('Nxt.Demand Pricing')
+insert into produto (nome_produto) values ('Nxt.Operations Macthing')
+insert into produto (nome_produto) values ('Nxt.Operations Optimization')
+
+insert into tipo_dados (tipo_dados) values ('PDF')
+insert into tipo_dados (tipo_dados) values ('JSON')
+insert into tipo_dados (tipo_dados) values ('CSV')
+insert into tipo_dados (tipo_dados) values ('Planilhas')
+insert into tipo_dados (tipo_dados) values ('Tabelas')
+insert into tipo_dados (tipo_dados) values ('Audio')
+insert into tipo_dados (tipo_dados) values ('vDados_Texto')
+
+insert into usuario(nome_usuario, senha, email) values('admin', '!@Admin123', 'datatech01office@gmail.com')
+

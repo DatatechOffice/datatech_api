@@ -15,6 +15,8 @@ import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JTextPane;
 
+import DAO.DaoCliente;
+import DAO.DaoEscolha;
 import controlador.Cliente;
 import controlador.Dados;
 import javax.swing.JButton;
@@ -180,6 +182,16 @@ public class Bronze {
 		btnNewButton_Avancar.addActionListener(new ActionListener() {
 
 			Dados d1 = new Dados(null, 0, null, null);
+			Dados t1 = new Dados();
+			Dados t2 = new Dados();
+			Dados t3 = new Dados();
+			Dados t4 = new Dados();
+			Dados t5 = new Dados();
+			Dados t6 = new Dados();
+			Dados t7 = new Dados();
+			Dados e1 = new Dados();
+			Dados e2 = new Dados();
+			Dados e3 = new Dados();
 			
 			public void actionPerformed(ActionEvent e) {
 				
@@ -189,30 +201,37 @@ public class Bronze {
 				
 				if(vDados_PDF.isSelected()) {
 					vDadosList.add("PDF");
+					t1.setvId_Dados(1);
 					}
 				
 				if(vDados_JSON.isSelected()) {
 					vDadosList.add("JSON");
+					t2.setvId_Dados(2);
 				}
 				
 				if(vDados_CSV.isSelected()) {
 					vDadosList.add("CSV");
+					t3.setvId_Dados(3);
 				}
 				
 				if(vDados_Planilhas.isSelected()) {
 					vDadosList.add("Planilhas");
+					t4.setvId_Dados(4);
 				}
 				
 				if(vDados_Audio.isSelected()) {
 					vDadosList.add("Audio");
+					t6.setvId_Dados(6);
 				}
 				
 				if(vDados_Tabelas.isSelected()) {
 					vDadosList.add("Tabelas");
+					t5.setvId_Dados(5);
 				}
 				
 				if(vDados_Texto.isSelected()) {
-					vDadosList.add("Texto");				
+					vDadosList.add("Texto");
+					t7.setvId_Dados(7);
 					}
 				//<------------------------------FIM DA ARRAY DOS TIPOS DE DADOS------------------------------>
 				
@@ -221,31 +240,50 @@ public class Bronze {
 				
 				if(vEnvio_API.isSelected()) {
 					vEnviarList.add("API");
+					e1.setvEnvio("API");
 				}
 				
 				if(vEnvio_SFTP.isSelected()) {
 					vEnviarList.add("SFTP");
+					e2.setvEnvio("SFTP");
 				}
 				if(vEnvio_Upload.isSelected()) {
 					vEnviarList.add("Upload");
+					e3.setvEnvio("Upload");
 				}
 				//<------------------------------FIM DA FORMA DE ENVIO------------------------------>
 
 				//<------------------------------RECEBENDO A QUANTIDADE DE DADOS------------------------------>
-				d1.setvEnvio(textField_vQuantidade.getText());
-				d1.setvTempo(vContagem.getValue()+""+comboBox_vPazo.getSelectedItem());
+				d1.setvQuantidade(Integer.parseInt(textField_vQuantidade.getText()));
+				d1.setvPrazo(vContagem.getValue()+""+comboBox_vPazo.getSelectedItem());
 				//<------------------------------FIM DA QUANTIDADE DE DADOS------------------------------>
 
 				if(vDadosList.size() != 0 &&
 						vEnviarList.size() !=0 &&
 						!textField_vQuantidade.getText().equals("") &&
-						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das op��es>")
+						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das opções>")
 						) {
 					JOptionPane.showMessageDialog(null,"Concluido com Sucesso");
 				}
+				//executando select do cliente para usa-lo na próxima etapa
+				DaoCliente daoExibirCliente = new DaoCliente();
+				daoExibirCliente.buscarClientes(c1);
 				
-
-
+				//utilizando do update para preencher as colunas Quantidade e Prazo que ficaram vazias durante o
+				//preenchimento do escopo
+				DaoEscolha daoCriarEscolhaQuantidade = new DaoEscolha(d1);
+				daoCriarEscolhaQuantidade.criarEscolhaQuantidadePrazo(c1);
+				
+				//novamente usando update para preencher, porém dessa vez pra forma_envio
+				DaoEscolha daoCriarEscolhaEnvio = new DaoEscolha(e1, e2, e3, d1);
+				daoCriarEscolhaEnvio.criarEscolhaEnvio(c1);
+				
+				// aqui setamos qual dela vai ser aberta
+				Silver window = new Silver();
+				// aqui setamos a nova tela como visivel
+				window.setVisible(true);
+				// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				frmBronze.setVisible(false);
 				
 			}
 		});
@@ -258,19 +296,17 @@ public class Bronze {
 		frmBronze.getContentPane().add(textField_vQuantidade);
 		textField_vQuantidade.setColumns(10);
 		
-		JButton btnNewButton_Avancar_1 = new JButton("Retornar");
-		btnNewButton_Avancar_1.addActionListener(new ActionListener() {
+		JButton btnNewButton_Retornar_1 = new JButton("Retornar");
+		btnNewButton_Retornar_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				EventQueue.invokeLater(new Runnable() {										
-					public void run() {
-						
+					public void run() {		
 						try {
-
 							//aqui setamos qual dela vai ser aberta
-							EscopoInsert window = new EscopoInsert();
+							Menu window = new Menu();
 							//aqui setamos a nova tela como visivel
-							window.getFrmEscopoInsert().setVisible(true);
-							//e para n縊 ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							window.frmMenu.setVisible(true);
+							//e para nç¸Š ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmBronze.setVisible(false);
 							
 						} catch (Exception e) {
@@ -283,9 +319,9 @@ public class Bronze {
 			
 		
 
-  btnNewButton_Avancar_1.setFont(new Font("Arial", Font.BOLD, 15));
-  btnNewButton_Avancar_1.setBounds(60, 480, 150, 30);
-  frmBronze.getContentPane().add(btnNewButton_Avancar_1);
+  btnNewButton_Retornar_1.setFont(new Font("Arial", Font.BOLD, 15));
+  btnNewButton_Retornar_1.setBounds(60, 480, 150, 30);
+  frmBronze.getContentPane().add(btnNewButton_Retornar_1);
   frmBronze.setBounds(100, 100, 800, 600);
   frmBronze.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  

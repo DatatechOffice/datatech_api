@@ -6,19 +6,22 @@ public class Dados {
     //Atributos
     private String vTipo;
     private int vQuantidade;
-    private String vTempo;
+    private String vPrazo;
     private String vEnvio;
+    private int vId_Dados;
 
 
     // Construtor
     public Dados(String vTipo, int vQuantidade, String vTempo, String vEnvio) {
         this.vTipo = vTipo;
         this.vQuantidade = vQuantidade;
-        this.vTempo = vTempo;
+        this.vPrazo = vTempo;
         this.vEnvio = vEnvio;
     }
-
-    // Getters and Setters
+    public Dados() {
+    	
+    }
+	// Getters and Setters
     public String getvTipo() {
         return vTipo;
     }
@@ -33,11 +36,11 @@ public class Dados {
         this.vQuantidade = vQuantidade;
     }
 
-    public String getvTempo() {
-        return vTempo;
+    public String getvPrazo() {
+        return vPrazo;
     }
-    public void setvTempo(String vTempo) {
-        this.vTempo = vTempo;
+    public void setvPrazo(String vPrazo) {
+        this.vPrazo = vPrazo;
     }
 
     public String getvEnvio() {
@@ -46,4 +49,10 @@ public class Dados {
     public void setvEnvio(String vEnvio) {
         this.vEnvio = vEnvio;
     }
+	public int getvId_Dados() {
+		return vId_Dados;
+	}
+	public void setvId_Dados(int vId_Dados) {
+		this.vId_Dados = vId_Dados;
+	}
 }

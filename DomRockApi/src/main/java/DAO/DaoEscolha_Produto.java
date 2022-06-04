@@ -11,7 +11,7 @@ import java.util.List;
 import controlador.Cliente;
 import controlador.Dados;
 
-public class DaoEscolha {
+public class DaoEscolha_Produto {
 
 	private Cliente c1;
 	private Cliente p1;
@@ -33,7 +33,7 @@ public class DaoEscolha {
 	private Dados e2;
 	private Dados e3;
 	
-	public DaoEscolha(Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6) {
+	public DaoEscolha_Produto(Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6) {
 		this.p1 = p1;
 		this.p2 = p2;
 		this.p3 = p3;
@@ -41,25 +41,11 @@ public class DaoEscolha {
 		this.p5 = p5;
 		this.p6 = p6;
 	}
-	public DaoEscolha(Dados d1) {
+
+	public DaoEscolha_Produto(Dados d1) {
 		this.d1=d1;	
 	}
-	public DaoEscolha(Dados e1, Dados e2, Dados e3, Dados d1) {
-		this.e1=e1;
-		this.e2=e2;
-		this.e3=e3;
-		this.d1=d1;
-	}
-	public DaoEscolha(Dados t1, Dados t2, Dados t3, Dados t4, Dados t5, Dados t6, Dados t7) {
-		this.t1=t1;
-		this.t2=t2;
-		this.t3=t3;
-		this.t4=t4;
-		this.t5=t5;
-		this.t6=t6;
-		this.t7=t7;
-	}
-	public DaoEscolha() {
+	public DaoEscolha_Produto() {
 	}
 	
 	public void criarEscolhaProduto(Cliente c1) {
@@ -146,44 +132,67 @@ public class DaoEscolha {
 		Connection con = null;
 		try {
 
-			if (e1.getvEnvio() != d1.getvEnvio()) {
+			if (p1.getvId_Produto() != c1.getvId_Produto()) {
 				con = ConnectionManager.getConnection();
-				String insert_sql = "update escolha set forma_envio = ? where cnpj = ? and id_cliente = ?";
+				String insert_sql = "update escolha set quantidade = ?, forma_envio = ?, prazo = ? where cnpj =? and id_cliente =?";
 				PreparedStatement pst;
 				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, e1.getvEnvio());
+				pst.setObject(1, c1.getvCNPJ_Cliente());
 				pst.setObject(2, c1.getvCNPJ_Cliente());
 				pst.setObject(3, c1.getvId_Cliente());
-				int rowsUpdated = pst.executeUpdate();
-	            if(rowsUpdated > 0) {
-	            	System.out.println("Atualizou passou");
-	            }
+				pst.setObject(4, c1.getvId_Cliente());
+				pst.setObject(5, c1.getvId_Cliente());
+				pst.executeUpdate();
 			}
-			if (e2.getvEnvio() != d1.getvEnvio() ) {
+			if (p2.getvId_Produto() != c1.getvId_Produto()) {
 				con = ConnectionManager.getConnection();
-				String insert_sql = "update escolha set forma_envio = ? where cnpj = ? and id_cliente = ?";
+				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
 				PreparedStatement pst;
 				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, e2.getvEnvio());
+				pst.setObject(1, p2.getvId_Produto());
 				pst.setObject(2, c1.getvCNPJ_Cliente());
 				pst.setObject(3, c1.getvId_Cliente());
-				int rowsUpdated = pst.executeUpdate();
-	            if(rowsUpdated > 0) {
-	            	System.out.println("Atualizou passou");
-	            }
+				pst.executeUpdate();
 			}
-			if (e3.getvEnvio()!= d1.getvEnvio()) {
+			if (p3.getvId_Produto() != c1.getvId_Produto()) {
 				con = ConnectionManager.getConnection();
-				String insert_sql = "update escolha set forma_envio = ? where cnpj = ? and id_cliente = ?";
+				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
 				PreparedStatement pst;
 				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, e3.getvEnvio());
+				pst.setObject(1, p3.getvId_Produto());
 				pst.setObject(2, c1.getvCNPJ_Cliente());
 				pst.setObject(3, c1.getvId_Cliente());
-				int rowsUpdated = pst.executeUpdate();
-	            if(rowsUpdated > 0) {
-	            	System.out.println("Atualizou passou");
-	            }
+				pst.executeUpdate();
+			}
+			if (p4.getvId_Produto() != c1.getvId_Produto()) {
+				con = ConnectionManager.getConnection();
+				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
+				PreparedStatement pst;
+				pst = con.prepareStatement(insert_sql);
+				pst.setObject(1, p4.getvId_Produto());
+				pst.setObject(2, c1.getvCNPJ_Cliente());
+				pst.setObject(3, c1.getvId_Cliente());
+				pst.executeUpdate();
+			}
+			if (p5.getvId_Produto() != c1.getvId_Produto()) {
+				con = ConnectionManager.getConnection();
+				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
+				PreparedStatement pst;
+				pst = con.prepareStatement(insert_sql);
+				pst.setObject(1, p5.getvId_Produto());
+				pst.setObject(2, c1.getvCNPJ_Cliente());
+				pst.setObject(3, c1.getvId_Cliente());
+				pst.executeUpdate();
+			}
+			if (p6.getvId_Produto() != c1.getvId_Produto()) {
+				con = ConnectionManager.getConnection();
+				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
+				PreparedStatement pst;
+				pst = con.prepareStatement(insert_sql);
+				pst.setObject(1, p6.getvId_Produto());
+				pst.setObject(2, c1.getvCNPJ_Cliente());
+				pst.setObject(3, c1.getvId_Cliente());
+				pst.executeUpdate();
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

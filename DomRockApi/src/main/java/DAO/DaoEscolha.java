@@ -299,26 +299,23 @@ public class DaoEscolha {
 		}
 	}
 	
-	public List<Cliente> buscarEscolhaProduto(Cliente c1) {
-    	this.c1=c1;
+	public List<Cliente> buscarEscolhaProdutoE1() {
         List<Cliente> clientes = new ArrayList<Cliente>();
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String select_sql = "select * from escolha where cnpj = ? and id_cliente=?";// where cnpj = ?
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
             PreparedStatement pst;
             pst = con.prepareStatement(select_sql);
-            pst.setString(1, c1.getvCNPJ_Cliente());
-            pst.setInt(2, c1.getvId_Cliente());
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p1.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
             ResultSet rs = pst.executeQuery();
             while(rs.next()) {
-            	
-            	
             	c1.setvId_Escolha(rs.getInt("id_escolha"));
-            	c1.setvId_Produto(rs.getInt("id_produto"));
             	clientes.add(c1);	
             }
-            System.out.print("Id_Escolha= " + c1.getvId_Escolha() + "Id_Produto= " + c1.getvId_Produto());
         } catch (SQLException e) {
             e.printStackTrace();
             throw new RuntimeException("Erro ao buscar tarefas!", e);
@@ -333,6 +330,535 @@ public class DaoEscolha {
         }        
         return clientes;
     }
+	public List<Cliente> buscarEscolhaProdutoE2() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p1.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE3() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p1.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	
+	public List<Cliente> buscarEscolhaProdutoE4() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p2.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE5() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p2.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE6() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p2.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE7() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p3.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE8() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p3.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE9() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p3.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE10() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p4.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE11() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p4.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE12() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p4.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE13() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p5.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE14() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p5.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE15() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p5.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE16() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p6.getvId_Produto());
+            pst.setObject(4, e1.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE17() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p6.getvId_Produto());
+            pst.setObject(4, e2.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	public List<Cliente> buscarEscolhaProdutoE18() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=? and id_produto=? and forma_envio=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            pst.setObject(3, p6.getvId_Produto());
+            pst.setObject(4, e3.getvEnvio());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
+	
 	public void deletarEscolha(Cliente c1) {
     	this.c1=c1;
         Connection con = null;

@@ -17,6 +17,7 @@ import javax.swing.JTextPane;
 
 import DAO.DaoCliente;
 import DAO.DaoEscolha;
+import DAO.DaoEscolha_Dados;
 import controlador.Cliente;
 import controlador.Dados;
 import javax.swing.JButton;
@@ -183,7 +184,7 @@ public class Bronze {
 		comboBox_vPazo.setForeground(Color.WHITE);
 		comboBox_vPazo.setFont(new Font("Arial", Font.BOLD, 15));
 		comboBox_vPazo.setBackground(SystemColor.windowBorder);
-		comboBox_vPazo.setModel(new DefaultComboBoxModel(new String[] {"<Selecione uma das op\u00E7\u00F5es>", "Dias", "Semanas", "Meses"}));
+		comboBox_vPazo.setModel(new DefaultComboBoxModel(new String[] {"Dias", "Semanas", "Meses"}));
 		comboBox_vPazo.setBounds(60, 232, 252, 31);
 		frmBronze.getContentPane().add(comboBox_vPazo);
 		
@@ -281,14 +282,150 @@ public class Bronze {
 						) {
 					
 				}
-				System.out.println(c1.getvCNPJ_Cliente()+" "+c1.getvId_Solucao());
 				//executando select do cliente para usa-lo na prﾃｳxima etapa
 				DaoCliente daoExibirCliente = new DaoCliente();
 				daoExibirCliente.buscarClientes(c1);
 				
+				//inserindo todos os dados na tabla escolha
 				DaoEscolha daoCriarEscolha = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
 				daoCriarEscolha.criarEscolhaProduto();
 				
+				//select ta tabela escolha que acabamos de criar para conseguir inputar os
+				//dados na tabela escolha_dados(para cada id escolha terá uma combinação de id_produto e forma_envio)
+				
+				  if(e1.getvEnvio()!=d1.getvEnvio()) { 
+					  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE1(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+					  }
+					  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE4(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE7(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE10(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE13(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE16(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+				  }  
+				  if(e2.getvEnvio()!=d1.getvEnvio()){
+					  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE2(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+					  }
+					  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE5(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE8(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE11(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE14(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE17(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+				  }
+				  if(e3.getvEnvio()!=d1.getvEnvio()) { 
+					  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE3(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+					  }
+					  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE6(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE9(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE12();
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE15(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+					  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
+						  DaoEscolha daoExibirEscolha1 = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						  daoExibirEscolha1.buscarEscolhaProdutoE18(); 
+						  
+						  DaoEscolha_Dados daoCriarEscolhaDados = new DaoEscolha_Dados(c1, d1, t1, t2, t3, t4, t5, t6, t7);
+						  daoCriarEscolhaDados.criarEscolhaDados(); 
+						  }
+				  }
+				 
 				// aqui setamos qual dela vai ser aberta
 				Silver window = new Silver();
 				// aqui setamos a nova tela como visivel

@@ -216,7 +216,7 @@ public class Consulta {
 					daoExibirCliente.buscarClientes(c1);
 					
 					DaoEscolha daobuscarproduto = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
-					daobuscarproduto.buscarEscolhaProduto(c1);
+					daobuscarproduto.buscarEscolhaProduto();
 
 					textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
 					// Trazer Tela limpa após deletar a tabela
@@ -237,7 +237,7 @@ public class Consulta {
 						daoExibirCliente.buscarClientes(c1);
 						
 						DaoEscolha daobuscarproduto = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
-						daobuscarproduto.buscarEscolhaProduto(c1);
+						daobuscarproduto.buscarEscolhaProduto();
 
 						textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
 

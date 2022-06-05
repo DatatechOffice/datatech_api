@@ -14,13 +14,6 @@ import controlador.Dados;
 public class DaoEscolha_Dados {
 
 	private Cliente c1;
-	private Cliente p1;
-	private Cliente p2;
-	private Cliente p3;
-	private Cliente p4;
-	private Cliente p5;
-	private Cliente p6;
-	private Cliente p7;
 	private Dados d1;
 	private Dados t1;
 	private Dados t2;
@@ -29,219 +22,95 @@ public class DaoEscolha_Dados {
 	private Dados t5;
 	private Dados t6;
 	private Dados t7;
-	private Dados e1;
-	private Dados e2;
-	private Dados e3;
-	
-	public DaoEscolha_Dados(Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6) {
-		this.p1 = p1;
-		this.p2 = p2;
-		this.p3 = p3;
-		this.p4 = p4;
-		this.p5 = p5;
-		this.p6 = p6;
-	}
 
-	public DaoEscolha_Dados(Dados d1) {
-		this.d1=d1;	
-	}
-	public DaoEscolha_Dados() {
+	
+	public DaoEscolha_Dados(Cliente c1, Dados d1, Dados t1, Dados t2, Dados t3, Dados t4, Dados t5, Dados t6, Dados t7) {
+		this.c1=c1;	
+		this.d1=d1;
+		this.t1=t1;
+		this.t2=t2;
+		this.t3=t3;
+		this.t4=t4;
+		this.t5=t5;
+		this.t6=t6;
+		this.t7=t7;
 	}
 	
-	public void criarEscolhaDados(Cliente c1) {
-		this.c1 = c1;
+	public void criarEscolhaDados() {
 		Connection con = null;
 		try {
-			
-			if(t1.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t1.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t2.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t2.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t3.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t3.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t4.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t4.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t5.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t5.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t6.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t6.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-			if(t7.getvId_Dados() != d1.getvId_Dados()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_dados, id_escolha) values (?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, t7.getvId_Dados());
-				pst.setObject(2, c1.getvId_Escolha());
-				pst.executeUpdate();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Erro ao inserir os dados!", e);
-		} finally {
-			try {
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-				throw new RuntimeException("Erro ao fechar conexão", e);
-			}
-		}
-	}
-	
-	public void criarEscolhaEnvio(Cliente c1) {
-		this.c1 = c1;
-		Connection con = null;
-		try {
-
-			if (p1.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "update escolha set quantidade = ?, forma_envio = ?, prazo = ? where cnpj =? and id_cliente =?";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, c1.getvCNPJ_Cliente());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.setObject(4, c1.getvId_Cliente());
-				pst.setObject(5, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-			if (p2.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, p2.getvId_Produto());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-			if (p3.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, p3.getvId_Produto());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-			if (p4.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, p4.getvId_Produto());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-			if (p5.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, p5.getvId_Produto());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-			if (p6.getvId_Produto() != c1.getvId_Produto()) {
-				con = ConnectionManager.getConnection();
-				String insert_sql = "insert into escolha (id_produto, cnpj, id_cliente) values (?,?,?)";
-				PreparedStatement pst;
-				pst = con.prepareStatement(insert_sql);
-				pst.setObject(1, p6.getvId_Produto());
-				pst.setObject(2, c1.getvCNPJ_Cliente());
-				pst.setObject(3, c1.getvId_Cliente());
-				pst.executeUpdate();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			throw new RuntimeException("Erro ao inserir os dados!", e);
-		} finally {
-			try {
-				if (con != null)
-					con.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-				throw new RuntimeException("Erro ao fechar conexão", e);
-			}
-		}
-	}
-	public void criarEscolhaQuantidadePrazo(Cliente c1) {
-		this.c1=c1;
-        Connection con = null;
-        try {
-            con = ConnectionManager.getConnection();
-            //cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social
-            String insert_sql = "update escolha set quantidade = ?, prazo = ? where cnpj = ? and id_cliente = ?";
+			con = ConnectionManager.getConnection();
+            if(t1.getvId_Dados()!=d1.getvId_Dados()) {
+			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
-            pst.setObject(1, d1.getvQuantidade());
-            pst.setObject(2, d1.getvPrazo());
-            pst.setObject(3, c1.getvCNPJ_Cliente());
-            pst.setObject(4, c1.getvId_Cliente());
-            int rowsUpdated = pst.executeUpdate();
-            if(rowsUpdated > 0) {
-            	System.out.println("Atualizou passou");
+            pst.setObject(1, t1.getvId_Dados());
+            pst.setObject(2, c1.getvId_Escolha());
+            pst.executeUpdate();
             }
-            
-            
-        } catch (SQLException e) {
-            throw new RuntimeException("Erro ao inserir os dados!", e);
-        } finally {
-            try {
-                if (con != null)
-                    con.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-                throw new RuntimeException("Erro ao fechar conexão", e);
-            }
-        }
-
-    }
+            if(t2.getvId_Dados()!=d1.getvId_Dados()) {
+    			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                PreparedStatement pst;
+                pst = con.prepareStatement(insert_sql);
+                pst.setObject(1, t2.getvId_Dados());
+                pst.setObject(2, c1.getvId_Escolha());
+                pst.executeUpdate();
+                }
+            if(t3.getvId_Dados()!=d1.getvId_Dados()) {
+    			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                PreparedStatement pst;
+                pst = con.prepareStatement(insert_sql);
+                pst.setObject(1, t3.getvId_Dados());
+                pst.setObject(2, c1.getvId_Escolha());
+                pst.executeUpdate();
+                }
+            if(t4.getvId_Dados()!=d1.getvId_Dados()) {
+    			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                PreparedStatement pst;
+                pst = con.prepareStatement(insert_sql);
+                pst.setObject(1, t4.getvId_Dados());
+                pst.setObject(2, c1.getvId_Escolha());
+                pst.executeUpdate();
+                }
+            if(t5.getvId_Dados()!=d1.getvId_Dados()) {
+    			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                PreparedStatement pst;
+                pst = con.prepareStatement(insert_sql);
+                pst.setObject(1, t5.getvId_Dados());
+                pst.setObject(2, c1.getvId_Escolha());
+                pst.executeUpdate();
+                }
+            if(t6.getvId_Dados()!=d1.getvId_Dados()) {
+        			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                    PreparedStatement pst;
+                    pst = con.prepareStatement(insert_sql);
+                    pst.setObject(1, t6.getvId_Dados());
+                    pst.setObject(2, c1.getvId_Escolha());
+                    pst.executeUpdate();
+                    }
+            if(t7.getvId_Dados()!=d1.getvId_Dados()) {
+        			String insert_sql = "insert into escolha_dados (id_dados, id_escolha) values (?, ?)";
+                    PreparedStatement pst;
+                    pst = con.prepareStatement(insert_sql);
+                    pst.setObject(1, t7.getvId_Dados());
+                    pst.setObject(2, c1.getvId_Escolha());
+                    pst.executeUpdate();
+                    }
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new RuntimeException("Erro ao inserir os dados!", e);
+		} finally {
+			try {
+				if (con != null)
+					con.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				throw new RuntimeException("Erro ao fechar conexão", e);
+			}
+		}
+	}
+	
+	
 	
 	public List<Cliente> buscarEscolhaProduto(Cliente c1) {
     	this.c1=c1;

@@ -181,7 +181,7 @@ public class Bronze {
 		JButton btnNewButton_Avancar = new JButton("Avan\u00E7ar");
 		btnNewButton_Avancar.addActionListener(new ActionListener() {
 
-			Dados d1 = new Dados(null, 0, null, null);
+			Dados d1 = new Dados();
 			Dados t1 = new Dados();
 			Dados t2 = new Dados();
 			Dados t3 = new Dados();
@@ -192,6 +192,12 @@ public class Bronze {
 			Dados e1 = new Dados();
 			Dados e2 = new Dados();
 			Dados e3 = new Dados();
+			Cliente p1 = new Cliente();
+			Cliente p2 = new Cliente();
+			Cliente p3 = new Cliente();
+			Cliente p4 = new Cliente();
+			Cliente p5 = new Cliente();
+			Cliente p6 = new Cliente();
 			
 			public void actionPerformed(ActionEvent e) {
 				
@@ -254,7 +260,7 @@ public class Bronze {
 				//<------------------------------FIM DA FORMA DE ENVIO------------------------------>
 
 				//<------------------------------RECEBENDO A QUANTIDADE DE DADOS------------------------------>
-				d1.setvQuantidade(Integer.parseInt(textField_vQuantidade.getText()));
+				d1.setvQuantidade(textField_vQuantidade.getText());
 				d1.setvPrazo(vContagem.getValue()+""+comboBox_vPazo.getSelectedItem());
 				//<------------------------------FIM DA QUANTIDADE DE DADOS------------------------------>
 
@@ -269,14 +275,8 @@ public class Bronze {
 				DaoCliente daoExibirCliente = new DaoCliente();
 				daoExibirCliente.buscarClientes(c1);
 				
-				//utilizando do update para preencher as colunas Quantidade e Prazo que ficaram vazias durante o
-				//preenchimento do escopo
-				DaoEscolha daoCriarEscolhaQuantidade = new DaoEscolha(d1);
-				daoCriarEscolhaQuantidade.criarEscolhaQuantidadePrazo(c1);
-				
-				//novamente usando update para preencher, porém dessa vez pra forma_envio
-				DaoEscolha daoCriarEscolhaEnvio = new DaoEscolha(e1, e2, e3, d1);
-				daoCriarEscolhaEnvio.criarEscolhaEnvio(c1);
+				DaoEscolha daoCriarEscolha = new DaoEscolha(p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+				daoCriarEscolha.criarEscolhaProduto(c1);
 				
 				// aqui setamos qual dela vai ser aberta
 				Silver window = new Silver();

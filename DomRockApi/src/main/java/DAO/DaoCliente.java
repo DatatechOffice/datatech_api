@@ -54,11 +54,11 @@ public class DaoCliente {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "DELETE FROM cliente WHERE cnpj =? and nome_cliente=?";
+            String insert_sql = "DELETE FROM cliente WHERE cnpj =? and id_cliente=?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
             pst.setString(1, c1.getvCNPJ_Cliente());
-            pst.setString(2, c1.getvNome_Cliente());
+            pst.setInt (2, c1.getvId_Cliente());
             pst.executeUpdate();
             
         } catch (SQLException e) {
@@ -82,7 +82,7 @@ public class DaoCliente {
         try {
             con = ConnectionManager.getConnection();
             //cnpj, entrega_minimas, entregas_possiveis, nome_cliente, objetivo, setor, razao_social
-            String insert_sql = "update cliente set cnpj=?, entrega_minimas=?, entregas_possiveis=?, nome_cliente=?, objetivo=?, setor=?, razao_social=?  where cnpj =? and nome_cliente =?";
+            String insert_sql = "update cliente set cnpj=?, entrega_minimas=?, entregas_possiveis=?, nome_cliente=?, objetivo=?, setor=?, razao_social=? , id_solucao=? where cnpj =? and id_cliente =?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
             pst.setObject(1, c1.getvCNPJ_Cliente());
@@ -92,8 +92,9 @@ public class DaoCliente {
             pst.setObject(5, c1.getvObjetivo_Cliente());
             pst.setObject(6, c1.getvSetor_Cliente());
             pst.setObject(7, c1.getvSocial_Cliente());
-            pst.setObject(8, c1.getvCNPJ_Cliente2());
-            pst.setObject(9, c1.getvNome_Cliente2());
+            pst.setObject(8, c1.getvId_Solucao());
+            pst.setObject(9, c1.getvCNPJ_Cliente());
+            pst.setObject(10, c1.getvId_Cliente());
             int rowsUpdated = pst.executeUpdate();
             if(rowsUpdated > 0) {
             	System.out.println("Atualizou passou");

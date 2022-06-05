@@ -2,6 +2,8 @@ package layout;
 
 import java.awt.EventQueue;
 
+import javax.swing.JOptionPane;
+
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -21,6 +23,7 @@ import java.awt.Checkbox;
 import java.awt.Color;
 
 public class Silver extends JFrame {
+	
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JFrame silver;
@@ -230,6 +233,9 @@ public class Silver extends JFrame {
 		comboBox.setBounds(10, 5, 764, 20);
 		comboBox.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
+				if(comboBox.getSelectedItem() == "Selecione uma Opção") {
+					hideAll();
+				}
 				if(comboBox.getSelectedItem() == "PDF") {
 					aparecerPdf();
 				}
@@ -254,11 +260,54 @@ public class Silver extends JFrame {
 			}
 		});
 		contentPane.add(comboBox);
-		
+
 		
 		btnAvacarSilver = new JButton("Avançar");
 		btnAvacarSilver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				if(comboBox.getSelectedItem() == "PDF" && chckbxExtensaoPdfSilver.isSelected()
+						&& chckbxTamanhoPdfSilver.isSelected() && chckbxNomePdfSilver.isSelected() ||
+						comboBox.getSelectedItem() == "JSON" && chckbxExtensaoJsonSilver.isSelected()
+						&& chckbxTamanhoJsonSilver.isSelected() && chckbxNomeJsonSilver.isSelected() ||
+						comboBox.getSelectedItem() == "CSV" && chckbxExtensaoCsvSilver.isSelected() &&
+						chckbxLimiteLinhasCsvSilver.isSelected() && chckbxTamanhoCsvSilver.isSelected() &&
+						chckbxNomeCsvSilver.isSelected() || comboBox.getSelectedItem() == "Planilhas" &&
+						chckbxTamanhoPlanilhasSilver.isSelected() && chckbxNomePlanilhasSilver.isSelected() ||
+						comboBox.getSelectedItem() == "Tabelas" && chckbxTamanhoTabelasSilver.isSelected()
+						&& chckbxNomeTabelasSilver.isSelected() || comboBox.getSelectedItem() == "Audio" &&
+						chckbxTamanhoAudioSilver.isSelected() && chckbxNomeAudioSilver.isSelected() || 
+						comboBox.getSelectedItem() == "Texto" && chckbxTamanhoTextoSilver.isSelected()
+						&& chckbxNomeTextoSilver.isSelected()) {
+					JOptionPane.showMessageDialog(null, "Silver OK");
+					
+					EventQueue.invokeLater(new Runnable() {										
+						public void run() {
+							try {
+								Gold window = new Gold();
+								window.getGold().setVisible(true);
+								silver.setVisible(false);
+								
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}
+					});
+				} else {
+					JOptionPane.showMessageDialog(null, "Silver Not OK");
+					
+					EventQueue.invokeLater(new Runnable() {										
+						public void run() {
+							try {
+								Gold window = new Gold();
+								window.getGold().setVisible(true);
+								silver.setVisible(false);
+								
+							} catch (Exception e) {
+								e.printStackTrace();
+							}
+						}
+					});
+				}
 			}
 		});
 		
@@ -283,6 +332,7 @@ public class Silver extends JFrame {
 				});
 			}
 		});
+		
 		btnVoltarMenuSilver.setFont(new Font("Arial", Font.BOLD, 15));
 		btnVoltarMenuSilver.setBounds(10, 520, 150, 30);
 		contentPane.add(btnVoltarMenuSilver);
@@ -347,9 +397,11 @@ public class Silver extends JFrame {
 		
 		textAreaSilver = new TextArea();
 		textAreaSilver.setForeground(Color.BLACK);
-		textAreaSilver.setFont(new Font("Arial", Font.PLAIN, 12));
+		textAreaSilver.setFont(new Font("Arial", Font.PLAIN, 12));https://github.com/DatatechOffice/datatech_api/upload/BranchSprint3
 		textAreaSilver.setBounds(624, 286, 150, 228);
 		contentPane.add(textAreaSilver);
+		
+		hideAll();
 	}
 	
 	public void hideAll() {
@@ -371,8 +423,6 @@ public class Silver extends JFrame {
 		chckbxNomeAudioSilver.setVisible(false);
 		chckbxTamanhoTextoSilver.setVisible(false);
 		chckbxNomeTextoSilver.setVisible(false);
-		btnAvacarSilver.setVisible(false);
-		btnVoltarMenuSilver.setVisible(false);
 		lbPdfSilver.setVisible(false);
 		lbJsonSilver.setVisible(false);
 		lbCsvSilver.setVisible(false);
@@ -435,9 +485,10 @@ public class Silver extends JFrame {
 		chckbxTamanhoTextoSilver.setVisible(true);
 		chckbxNomeTextoSilver.setVisible(true);
 	}
+
+
 	
-	
-	public void setSilver(JFrame silver) {
-		this.silver = silver;
+	public JFrame getSilver() {
+		return silver;
 	}
 }

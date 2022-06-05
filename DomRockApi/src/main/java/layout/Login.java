@@ -18,14 +18,15 @@ import java.awt.Color;
 import javax.swing.JPanel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JPasswordField;
 
 public class Login {
 
 	Usuario usuario;
 	public JFrame frmLogin;
 	private JTextField textField_Usuario;
-	private JTextField textFieldSenha;
 	private JButton btnNewButton;
+	private JPasswordField passwordFieldSenha;
 
 	/**
 	 * Launch the application.
@@ -85,25 +86,17 @@ public class Login {
 		lblSenha.setBounds(350, 265, 100, 30);
 		frmLogin.getContentPane().add(lblSenha);
 
-		textFieldSenha = new JTextField();
-		textFieldSenha.setBackground(SystemColor.menu);
-		textFieldSenha.setHorizontalAlignment(SwingConstants.CENTER);
-		textFieldSenha.setFont(new Font("Arial", Font.BOLD, 14));
-		textFieldSenha.setColumns(10);
-		textFieldSenha.setBounds(250, 305, 300, 30);
-		frmLogin.getContentPane().add(textFieldSenha);
-
 		btnNewButton = new JButton("Entrar");
 		btnNewButton.addActionListener(new ActionListener() {
 
-			// aÁ„o do bot„o entrar onde vamos verificar no banco o login e senha e passar
+			// a√ß√£o do bot√£o entrar onde vamos verificar no banco o login e senha e passar
 			// para tela menu
 			public void actionPerformed(ActionEvent e) {
 
 				Usuario usuario = new Usuario();
 
 				usuario.setvNome_Usuario(textField_Usuario.getText());
-				usuario.setvSenha_Usuario(textFieldSenha.getText());
+				usuario.setvSenha_Usuario(passwordFieldSenha.getText());
 
 				DaoUsuario daoExibirUsuario = new DaoUsuario();
 				daoExibirUsuario.buscarUsuarios(usuario);
@@ -111,12 +104,11 @@ public class Login {
 				
 				
 
-				// <------------------------------aÁ„o responsavel pelo transaÁ„o de tela de
+				// <------------------------------a√ß√£o responsavel pelo transa√ß√£o de tela de
 				// login para menu------------------------------>
-				Login window = new Login();
-				window.frmLogin.setVisible(false);
-				// <------------------------------fim da aÁ„o de
-				// transaÁ„o------------------------------>
+				frmLogin.setVisible(false);
+				// <------------------------------fim da a√ß√£o de
+				// transa√ß√£o------------------------------>
 
 			}
 
@@ -124,6 +116,10 @@ public class Login {
 		btnNewButton.setFont(new Font("Arial", Font.BOLD, 20));
 		btnNewButton.setBounds(325, 369, 169, 21);
 		frmLogin.getContentPane().add(btnNewButton);
+		
+		passwordFieldSenha = new JPasswordField();
+		passwordFieldSenha.setBounds(250, 329, 300, 29);
+		frmLogin.getContentPane().add(passwordFieldSenha);
 	}
 
 	public JFrame getFrmLogin() {

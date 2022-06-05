@@ -14,7 +14,9 @@ insert into tipo_dados (tipo_dados) values ('CSV')
 insert into tipo_dados (tipo_dados) values ('Planilhas')
 insert into tipo_dados (tipo_dados) values ('Tabelas')
 insert into tipo_dados (tipo_dados) values ('Audio')
-insert into tipo_dados (tipo_dados) values ('vDados_Texto')
+insert into tipo_dados (tipo_dados) values ('Texto')
 
 insert into usuario(nome_usuario, senha, email) values('admin', '!@Admin123', 'datatech01office@gmail.com')
-
+insert into usuario(nome_usuario, senha, email) values('user1', '!@User123456', 'datatech02office@gmail.com')
+insert into usuario(nome_usuario, senha, email) values('user2', '!@User654321', 'datatech03office@gmail.com')
+insert into usuario(nome_usuario, senha, email) values('user3', '!@User342516', 'datatech03office@gmail.com')

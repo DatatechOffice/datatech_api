@@ -35,12 +35,12 @@ create table tipo_dados(
 
 create table escolha(
 id_escolha bigint Identity,
-quantidade int,
+quantidade varchar(15),
 forma_envio varchar(50),
 prazo varchar(25),
 id_cliente bigint not null,
 cnpj varchar(20) not null,
-id_produto bigint,
+id_produto bigint not null,
 primary key(id_escolha),
 foreign key(id_produto) references produto(id_produto),
 foreign key (id_cliente, cnpj) references cliente (id_cliente, cnpj)

@@ -32,11 +32,16 @@ public class Bronze {
 	Cliente c1;
 	EscopoInsert vProList;
 	private JTextField textField_vQuantidade;
-	
-
+	Cliente p1;
+ 	Cliente p2;
+ 	Cliente p3;
+ 	Cliente p4;
+ 	Cliente p5;
+	Cliente p6;	
 	/**
 	 * Launch the application.
 	 */
+	
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -49,19 +54,29 @@ public class Bronze {
 			}
 		});
 	}
-
-	/**
-	 * Create the application.
-	 */
+	public Bronze(Cliente c1, Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6) {
+		this.c1=c1;
+		this.p1=p1;
+		this.p2=p2;
+		this.p3=p3;
+		this.p4=p4;
+		this.p5=p5;
+		this.p6=p6;
+		initialize();
+	}
 	public Bronze() {
 		initialize();
 	}
+	/*
+	/**
+	 * Create the application.
 	
 	public Bronze(Cliente c1) {
 		this.c1=c1;
 		initialize();
 	}
-
+*/
+	
 	/**
 	 * Initialize the contents of the frame.
 	 */
@@ -192,12 +207,7 @@ public class Bronze {
 			Dados e1 = new Dados();
 			Dados e2 = new Dados();
 			Dados e3 = new Dados();
-			Cliente p1 = new Cliente();
-			Cliente p2 = new Cliente();
-			Cliente p3 = new Cliente();
-			Cliente p4 = new Cliente();
-			Cliente p5 = new Cliente();
-			Cliente p6 = new Cliente();
+			
 			
 			public void actionPerformed(ActionEvent e) {
 				
@@ -267,24 +277,26 @@ public class Bronze {
 				if(vDadosList.size() != 0 &&
 						vEnviarList.size() !=0 &&
 						!textField_vQuantidade.getText().equals("") &&
-						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das opções>")
+						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das opﾃｧﾃｵes>")
 						) {
-					JOptionPane.showMessageDialog(null,"Concluido com Sucesso");
+					
 				}
-				//executando select do cliente para usa-lo na próxima etapa
+				System.out.println(c1.getvCNPJ_Cliente()+" "+c1.getvId_Solucao());
+				//executando select do cliente para usa-lo na prﾃｳxima etapa
 				DaoCliente daoExibirCliente = new DaoCliente();
 				daoExibirCliente.buscarClientes(c1);
 				
-				DaoEscolha daoCriarEscolha = new DaoEscolha(p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
-				daoCriarEscolha.criarEscolhaProduto(c1);
+				DaoEscolha daoCriarEscolha = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+				daoCriarEscolha.criarEscolhaProduto();
 				
 				// aqui setamos qual dela vai ser aberta
 				Silver window = new Silver();
 				// aqui setamos a nova tela como visivel
 				window.setVisible(true);
-				// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				// e para n�ｾ�ｽｧ�ｾゑｽｸ�ｾ��ｿｽ ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmBronze.setVisible(false);
 				
+				JOptionPane.showMessageDialog(null,"Concluido com Sucesso");
 			}
 		});
 		btnNewButton_Avancar.setFont(new Font("Arial", Font.BOLD, 15));
@@ -306,7 +318,7 @@ public class Bronze {
 							Menu window = new Menu();
 							//aqui setamos a nova tela como visivel
 							window.frmMenu.setVisible(true);
-							//e para nç¸Š ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+							//e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 							frmBronze.setVisible(false);
 							
 						} catch (Exception e) {

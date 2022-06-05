@@ -205,33 +205,57 @@ public class Consulta {
 				Dados e1 = new Dados();
 				Dados e2 = new Dados();
 				Dados e3 = new Dados();
-				
-
-				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
-
-				DaoCliente daoExibirCliente = new DaoCliente();
-				daoExibirCliente.buscarClientes(c1);
 
 				// cria o select com o c1 para armazenar os dados
-				textField_CNPJ.setText(c1.getvCNPJ_Cliente());
-				textField_Nome_Cliente.setText(c1.getvNome_Cliente());
-				textField_Razao_Social.setText(c1.getvSocial_Cliente());
-				textField_Setor.setText(c1.getvSetor_Cliente());
+				
+				if (textField_Solucao.getText().equals("NxtDemand")) {
+					c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+					c1.setvId_Solucao(1);
+					
+					DaoCliente daoExibirCliente = new DaoCliente();
+					daoExibirCliente.buscarClientes(c1);
+					
+					DaoEscolha daobuscarproduto = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+					daobuscarproduto.buscarEscolhaProduto(c1);
 
-				if (c1.getvId_Solucao() == 1) {
+					textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
+					// Trazer Tela limpa após deletar a tabela
+
+					textField_CNPJ.setText(c1.getvCNPJ_Cliente());
+					textField_Nome_Cliente.setText(c1.getvNome_Cliente());
+					textField_Razao_Social.setText(c1.getvSocial_Cliente());
+					textField_Setor.setText(c1.getvSetor_Cliente());
+					textArea_P.setText(c1.getvEntregaP_Cliente());
+					textArea_M.setText(c1.getvEntregaM_Cliente());
 					textField_Solucao.setText("NxtDemand");
-				}
-				if (c1.getvId_Solucao() == 2) {
-					textField_Solucao.setText("NxtOperations");
-				}
-				textArea_P.setText(c1.getvEntregaP_Cliente());
-				textArea_M.setText(c1.getvEntregaM_Cliente());
+				} else {
+					if (textField_Solucao.getText() .equals("NxtOperations")) {
+						c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+						c1.setvId_Solucao(2);
+						
+						DaoCliente daoExibirCliente = new DaoCliente();
+						daoExibirCliente.buscarClientes(c1);
+						
+						DaoEscolha daobuscarproduto = new DaoEscolha(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
+						daobuscarproduto.buscarEscolhaProduto(c1);
 
-				DaoEscolha daobuscarproduto = new DaoEscolha(p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
-				daobuscarproduto.buscarEscolhaProduto(c1);
+						textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
 
-				textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));
+						// Trazer Tela limpa após deletar a tabela
+
+						textField_CNPJ.setText(c1.getvCNPJ_Cliente());
+						textField_Nome_Cliente.setText(c1.getvNome_Cliente());
+						textField_Razao_Social.setText(c1.getvSocial_Cliente());
+						textField_Setor.setText(c1.getvSetor_Cliente());
+						textArea_P.setText(c1.getvEntregaP_Cliente());
+						textArea_M.setText(c1.getvEntregaM_Cliente());
+						textField_Solucao.setText("NxtOperations");
+					} else {
+						textField_Solucao.setText("NxtDemand ou NxtOperations");
+						JOptionPane.showMessageDialog(null, "Digite: NxtDemand ou Operations");
+					}			
 			}
+		}
 		});
 		// <------------------------------FINAL DO BOTﾃO PARA CONSULTAR CLIENTE NO
 		// BANCO------------------------------>
@@ -269,13 +293,12 @@ public class Consulta {
 					textField_Razao_Social.setText("");
 					textField_Setor.setText("");
 					textFieldProdutos.setText("");
-					textField_Solucao.setText("");
 					textArea_P.setText("");
 					textArea_M.setText("");
 					JOptionPane.showMessageDialog(null, "Alterado com Sucesso");
 
 				} else {
-					if (textField_Solucao.getText() .equals( "NxtOperations")) {
+					if (textField_Solucao.getText().equals("NxtOperations")) {
 						c1.setvId_Solucao(2);
 						DaoCliente daoAlteraCliente = new DaoCliente();
 						daoAlteraCliente.atualizarCl(c1);
@@ -286,14 +309,13 @@ public class Consulta {
 						textField_Razao_Social.setText("");
 						textField_Setor.setText("");
 						textFieldProdutos.setText("");
-						textField_Solucao.setText("");
 						textArea_P.setText("");
 						textArea_M.setText("");
 						JOptionPane.showMessageDialog(null, "Alterado com Sucesso");
 
 					} else {
 						textField_Solucao.setText("NxtDemand ou NxtOperations");
-						JOptionPane.showMessageDialog(null, "Digite novamente");
+						JOptionPane.showMessageDialog(null, "Digite: NxtDemand ou Operations");
 
 					}
 

@@ -20,20 +20,13 @@ public class DaoEscolha {
 	private Cliente p4;
 	private Cliente p5;
 	private Cliente p6;
-	private Cliente p7;
 	private Dados d1;
-	private Dados t1;
-	private Dados t2;
-	private Dados t3;
-	private Dados t4;
-	private Dados t5;
-	private Dados t6;
-	private Dados t7;
 	private Dados e1;
 	private Dados e2;
 	private Dados e3;
 	
-	public DaoEscolha(Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6, Dados e1, Dados e2, Dados e3, Dados d1) {
+	public DaoEscolha(Cliente c1, Cliente p1, Cliente p2, Cliente p3, Cliente p4, Cliente p5, Cliente p6, Dados e1, Dados e2, Dados e3, Dados d1) {
+		this.c1=c1;
 		this.p1 = p1;
 		this.p2 = p2;
 		this.p3 = p3;
@@ -45,20 +38,10 @@ public class DaoEscolha {
 		this.e3=e3;
 		this.d1=d1;
 	}
-	public DaoEscolha(Dados t1, Dados t2, Dados t3, Dados t4, Dados t5, Dados t6, Dados t7) {
-		this.t1=t1;
-		this.t2=t2;
-		this.t3=t3;
-		this.t4=t4;
-		this.t5=t5;
-		this.t6=t6;
-		this.t7=t7;
-	}
 	public DaoEscolha() {
 	}
 	
-	public void criarEscolhaProduto(Cliente c1) {
-		this.c1 = c1;
+	public void criarEscolhaProduto() {
 		Connection con = null;
 		try {
 			if(e1.getvEnvio() != d1.getvEnvio()) {
@@ -70,7 +53,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p1.getvId_Cliente());
+				pst.setObject(4, p1.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -83,7 +66,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p2.getvId_Cliente());
+				pst.setObject(4, p2.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -96,7 +79,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p3.getvId_Cliente());
+				pst.setObject(4, p3.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -109,7 +92,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p4.getvId_Cliente());
+				pst.setObject(4, p4.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -122,7 +105,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p5.getvId_Cliente());
+				pst.setObject(4, p5.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -135,7 +118,7 @@ public class DaoEscolha {
 				pst.setObject(1, d1.getvPrazo());
 				pst.setObject(2, d1.getvQuantidade());
 				pst.setObject(3, e1.getvEnvio());
-				pst.setObject(4, p6.getvId_Cliente());
+				pst.setObject(4, p6.getvId_Produto());
 				pst.setObject(5, c1.getvCNPJ_Cliente());
 				pst.setObject(6, c1.getvId_Cliente());
 				pst.executeUpdate();
@@ -150,7 +133,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p1.getvId_Cliente());
+					pst.setObject(4, p1.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -163,7 +146,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p2.getvId_Cliente());
+					pst.setObject(4, p2.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -176,7 +159,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p3.getvId_Cliente());
+					pst.setObject(4, p3.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -189,7 +172,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p4.getvId_Cliente());
+					pst.setObject(4, p4.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -202,7 +185,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p5.getvId_Cliente());
+					pst.setObject(4, p5.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -215,7 +198,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e2.getvEnvio());
-					pst.setObject(4, p6.getvId_Cliente());
+					pst.setObject(4, p6.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -230,7 +213,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p1.getvId_Cliente());
+					pst.setObject(4, p1.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -243,7 +226,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p2.getvId_Cliente());
+					pst.setObject(4, p2.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -256,7 +239,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p3.getvId_Cliente());
+					pst.setObject(4, p3.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -269,7 +252,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p4.getvId_Cliente());
+					pst.setObject(4, p4.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -282,7 +265,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p5.getvId_Cliente());
+					pst.setObject(4, p5.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();
@@ -295,7 +278,7 @@ public class DaoEscolha {
 					pst.setObject(1, d1.getvPrazo());
 					pst.setObject(2, d1.getvQuantidade());
 					pst.setObject(3, e3.getvEnvio());
-					pst.setObject(4, p6.getvId_Cliente());
+					pst.setObject(4, p6.getvId_Produto());
 					pst.setObject(5, c1.getvCNPJ_Cliente());
 					pst.setObject(6, c1.getvId_Cliente());
 					pst.executeUpdate();

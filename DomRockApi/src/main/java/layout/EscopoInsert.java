@@ -417,10 +417,10 @@ public class EscopoInsert {
 								// Aqui estou inputando os dados do cliente e da soluﾃｧﾃ｣o do cliente no banco
 
 								DaoCliente daoCriarCliente = new DaoCliente();
-								daoCriarCliente.criarCl(c1);																																								
+								daoCriarCliente.criarCl(c1);				
 								
 								// aqui setamos qual dela vai ser aberta
-								Bronze window = new Bronze(c1);
+								Bronze window = new Bronze(c1, p1, p2, p3, p4, p5, p6);
 								// aqui setamos a nova tela como visivel
 								window.frmBronze.setVisible(true);
 								// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel

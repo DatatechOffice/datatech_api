@@ -267,23 +267,25 @@ public class Consulta {
 
 				Cliente c1 = new Cliente();
 
-				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
-				DaoCliente daoExibirCliente = new DaoCliente();
-				daoExibirCliente.buscarClientes(c1);
+				
 
 				// CRIAR OS GET PARA MANDAR PRO BANCO OS CAMPOS
-
-				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
-				c1.setvNome_Cliente(textField_Nome_Cliente.getText());
-				c1.setvSocial_Cliente(textField_Razao_Social.getText());
-				c1.setvSetor_Cliente(textField_Setor.getText());
-				c1.setvSolucao_Cliente(textField_Solucao.getText());
-				c1.setvEntregaP_Cliente(textArea_P.getText());
-				c1.setvEntregaM_Cliente(textArea_M.getText());
 
 				if (textField_Solucao.getText().equals("NxtDemand")) {
 					
 					c1.setvId_Solucao(1);
+					c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+					
+					DaoCliente daoExibirCliente = new DaoCliente();
+					daoExibirCliente.buscarClientes(c1);
+					
+					c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+					c1.setvNome_Cliente(textField_Nome_Cliente.getText());
+					c1.setvSocial_Cliente(textField_Razao_Social.getText());
+					c1.setvSetor_Cliente(textField_Setor.getText());
+					c1.setvEntregaP_Cliente(textArea_P.getText());
+					c1.setvEntregaM_Cliente(textArea_M.getText());
+					
 					DaoCliente daoAlteraCliente = new DaoCliente();
 					daoAlteraCliente.atualizarCl(c1);
 
@@ -299,7 +301,20 @@ public class Consulta {
 
 				} else {
 					if (textField_Solucao.getText().equals("NxtOperations")) {
+						
 						c1.setvId_Solucao(2);
+						c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+						
+						DaoCliente daoExibirCliente = new DaoCliente();
+						daoExibirCliente.buscarClientes(c1);
+						
+						c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+						c1.setvNome_Cliente(textField_Nome_Cliente.getText());
+						c1.setvSocial_Cliente(textField_Razao_Social.getText());
+						c1.setvSetor_Cliente(textField_Setor.getText());
+						c1.setvEntregaP_Cliente(textArea_P.getText());
+						c1.setvEntregaM_Cliente(textArea_M.getText());
+						
 						DaoCliente daoAlteraCliente = new DaoCliente();
 						daoAlteraCliente.atualizarCl(c1);
 
@@ -332,31 +347,75 @@ public class Consulta {
 			public void actionPerformed(ActionEvent e) {
 
 				Cliente c1 = new Cliente();
+				
+				if (textField_Solucao.getText().equals("NxtDemand")) {
+					
+					c1.setvId_Solucao(1);
+					c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+					
+					DaoCliente daoExibirCliente = new DaoCliente();
+					daoExibirCliente.buscarClientes(c1);
+					
+					/*DaoEscolha_Dados daoDeleteEscolhaDados = new DaoEscolha_Dados();
+					daoDeleteEscolhaDados.*/
+					
+					DaoEscolha daoDeleteEscolha = new DaoEscolha();
+					daoDeleteEscolha.deletarEscolha(c1);
+					
+					DaoCliente daoDeleteCliente = new DaoCliente();
+					daoDeleteCliente.deletarCl(c1);
+					// Trazer Tela limpa após deletar a tabela
 
-				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
-				DaoCliente daoExibirCliente = new DaoCliente();
-				daoExibirCliente.buscarClientes(c1);
+					textField_CNPJ.setText("");
+					textField_Nome_Cliente.setText("");
+					textField_Razao_Social.setText("");
+					textField_Setor.setText("");
+					textFieldProdutos.setText("");
+					textField_Solucao.setText("");
+					textArea_P.setText("");
+					textArea_M.setText("");
+					JOptionPane.showMessageDialog(null, "Deletado com Sucesso");
 
-				DaoEscolha daoDeleteEscolha = new DaoEscolha();
-				daoDeleteEscolha.deletarEscolha(c1);
-				;
+				} else {
+					if (textField_Solucao.getText().equals("NxtOperations")) {
+						
+						c1.setvId_Solucao(2);
+						c1.setvCNPJ_Cliente(textField_CNPJ.getText());
+						
+						DaoCliente daoExibirCliente = new DaoCliente();
+						daoExibirCliente.buscarClientes(c1);
+						
+						/*DaoEscolha_Dados daoDeleteEscolhaDados = new DaoEscolha_Dados();
+						daoDeleteEscolhaDados.*/
 
-				DaoCliente daoDeleteCliente = new DaoCliente();
-				daoDeleteCliente.deletarCl(c1);
+						DaoEscolha daoDeleteEscolha = new DaoEscolha();
+						daoDeleteEscolha.deletarEscolha(c1);
+						
+						DaoCliente daoDeleteCliente = new DaoCliente();
+						daoDeleteCliente.deletarCl(c1);
 
+						// Trazer Tela limpa após deletar a tabela
+
+						textField_CNPJ.setText("");
+						textField_Nome_Cliente.setText("");
+						textField_Razao_Social.setText("");
+						textField_Setor.setText("");
+						textFieldProdutos.setText("");
+						textField_Solucao.setText("");
+						textArea_P.setText("");
+						textArea_M.setText("");
+						JOptionPane.showMessageDialog(null, "Deletado com Sucesso");
+
+					} else {
+						textField_Solucao.setText("NxtDemand ou NxtOperations");
+						JOptionPane.showMessageDialog(null, "Digite: NxtDemand ou Operations");
+
+					}
 				// Trazer Tela limpa após deletar a tabela
-				textField_CNPJ.setText("");
-				textField_Nome_Cliente.setText("");
-				textField_Razao_Social.setText("");
-				textField_Setor.setText("");
-				textFieldProdutos.setText("");
-				textField_Solucao.setText("");
-				textArea_P.setText("");
-				textArea_M.setText("");
-
+				
 				JOptionPane.showMessageDialog(null, "Deletado com Sucesso");
 
-			}
+			}}
 		});
 		// <------------------------------FINAL BOTﾃO PARA DELETAR O
 		// CLIENTE------------------------------>

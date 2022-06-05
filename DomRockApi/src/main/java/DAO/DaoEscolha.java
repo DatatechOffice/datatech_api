@@ -858,6 +858,36 @@ public class DaoEscolha {
         }        
         return clientes;
     }
+	public List<Cliente> buscarEscolhaProduto() {
+        List<Cliente> clientes = new ArrayList<Cliente>();
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String select_sql = "select * from escolha where cnpj = ? and id_cliente=?";// where cnpj = ?
+            PreparedStatement pst;
+            pst = con.prepareStatement(select_sql);
+            pst.setObject(1, c1.getvCNPJ_Cliente());
+            pst.setObject(2, c1.getvId_Cliente());
+            ResultSet rs = pst.executeQuery();
+            while(rs.next()) {
+            	c1.setvId_Escolha(rs.getInt("id_escolha"));
+            	c1.setvId_Produto(rs.getInt("id_produto"));
+            	clientes.add(c1);	
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao buscar tarefas!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexÃ£o", e);
+            }
+        }        
+        return clientes;
+    }
 	
 	public void deletarEscolha(Cliente c1) {
     	this.c1=c1;

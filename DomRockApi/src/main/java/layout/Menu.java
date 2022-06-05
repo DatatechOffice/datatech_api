@@ -44,7 +44,7 @@ public class Menu {
 		frmMenu.getContentPane().setBackground(SystemColor.windowBorder);
 		frmMenu.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Consultar");
+		JButton btnNewButton = new JButton("Consultar Escopo");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				Consulta window = new Consulta();
@@ -109,6 +109,18 @@ public class Menu {
 		btnNewButton_2.setFont(new Font("Arial", Font.BOLD, 15));
 		btnNewButton_2.setBounds(596, 10, 180, 30);
 		frmMenu.getContentPane().add(btnNewButton_2);
+		
+		JButton btnConsultarBronze = new JButton("Consultar Bronze");
+		btnConsultarBronze.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				ConsultaBronze frame = new ConsultaBronze();
+				frame.setVisible(true);
+				frmMenu.setVisible(false);
+			}
+		});
+		btnConsultarBronze.setFont(new Font("Arial", Font.BOLD, 15));
+		btnConsultarBronze.setBounds(300, 241, 180, 30);
+		frmMenu.getContentPane().add(btnConsultarBronze);
 		frmMenu.setTitle("Menu");
 		frmMenu.setBounds(100, 100, 800, 600);
 		frmMenu.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

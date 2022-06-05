@@ -466,8 +466,6 @@ public class Bronze {
 			}
 		});
 			
-		
-
   btnNewButton_Retornar_1.setFont(new Font("Arial", Font.BOLD, 15));
   btnNewButton_Retornar_1.setBounds(60, 480, 150, 30);
   frmBronze.getContentPane().add(btnNewButton_Retornar_1);

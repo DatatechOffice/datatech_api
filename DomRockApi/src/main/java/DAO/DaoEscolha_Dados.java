@@ -146,6 +146,32 @@ public class DaoEscolha_Dados {
         }        
         return clientes;
     }
+	
+	public void deletarCl(Cliente c1) {
+    	this.c1=c1;
+        Connection con = null;
+        try {
+            con = ConnectionManager.getConnection();
+            String insert_sql = "DELETE FROM escolha_dados WHERE id_escolha = ? and id_produto = ?";
+            PreparedStatement pst;
+            pst = con.prepareStatement(insert_sql);
+            pst.setString(1, c1.getvCNPJ_Cliente());
+            pst.setInt (2, c1.getvId_Cliente());
+            pst.executeUpdate();
+            
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Erro ao inserir os dados!", e);
+        } finally {
+            try {
+                if (con != null)
+                    con.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+                throw new RuntimeException("Erro ao fechar conexão", e);
+            }
+        }
+    }
 
 	/*
 	 * public void criarEscolhaCliente(Cliente c1) { Connection con = null; try {

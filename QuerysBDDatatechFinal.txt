@@ -1,0 +1,63 @@
+create table solucao(
+	id_solucao bigint Identity,
+	nome_solucao varchar(30),
+	primary key (id_solucao)	
+);
+
+
+create table cliente(
+	id_cliente bigint Identity,
+	cnpj varchar(20),
+	entrega_minimas varchar(1000),
+	entregas_possiveis varchar(1000),
+	nome_cliente varchar(500),
+	objetivo varchar(500),
+	setor varchar(15),
+	razao_social varchar(50),
+	id_solucao bigint not null,
+	primary key (id_cliente, cnpj),
+	foreign key(id_solucao) references solucao(id_solucao)
+	);
+
+	create table produto(
+	id_produto bigint Identity,
+	nome_produto varchar(30),
+	primary key(id_produto)
+);
+
+
+create table tipo_dados(
+	id_dados bigint Identity,
+	tipo_dados varchar(20),
+	primary key(id_dados)
+);
+
+
+create table escolha(
+id_escolha bigint Identity,
+quantidade varchar(15),
+forma_envio varchar(50),
+prazo varchar(25),
+id_cliente bigint not null,
+cnpj varchar(20) not null,
+id_produto bigint not null,
+primary key(id_escolha),
+foreign key(id_produto) references produto(id_produto),
+foreign key (id_cliente, cnpj) references cliente (id_cliente, cnpj)
+);
+
+create table escolha_dados(
+id_escolha bigint,
+id_dados bigint,
+primary key(id_escolha, id_dados),
+foreign key(id_escolha) references escolha(id_escolha),
+foreign key(id_dados) references tipo_dados(id_dados)
+);
+
+create table usuario(
+nome_usuario varchar(50),
+senha varchar(50),
+email varchar(50),
+primary key (nome_usuario)
+);
+

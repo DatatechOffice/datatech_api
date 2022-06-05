@@ -417,17 +417,7 @@ public class EscopoInsert {
 								// Aqui estou inputando os dados do cliente e da soluﾃｧﾃ｣o do cliente no banco
 
 								DaoCliente daoCriarCliente = new DaoCliente();
-								daoCriarCliente.criarCl(c1);
-
-								// Aqui estou buscando o cliente que eu acabei de criar para obter para obter o
-								// Id do mesmo
-								DaoCliente daoExibirCliente = new DaoCliente();
-								daoExibirCliente.buscarClientes(c1);																						
-								
-								// Inserindo os dados na tabela escolha que foram selecionados no escopo pelo
-								// cliente.
-								DaoEscolha daoCriarEscolha = new DaoEscolha(p1, p2, p3, p4, p5, p6);
-								daoCriarEscolha.criarEscolhaProduto(c1);				
+								daoCriarCliente.criarCl(c1);																																								
 								
 								// aqui setamos qual dela vai ser aberta
 								Bronze window = new Bronze(c1);

@@ -5,14 +5,14 @@ package controlador;
 public class Dados {
     //Atributos
     private String vTipo;
-    private int vQuantidade;
+    private String vQuantidade;
     private String vPrazo;
     private String vEnvio;
     private int vId_Dados;
 
 
     // Construtor
-    public Dados(String vTipo, int vQuantidade, String vTempo, String vEnvio) {
+    public Dados(String vTipo, String vQuantidade, String vTempo, String vEnvio) {
         this.vTipo = vTipo;
         this.vQuantidade = vQuantidade;
         this.vPrazo = vTempo;
@@ -29,10 +29,10 @@ public class Dados {
         this.vTipo = vTipo;
     }
 
-    public int getvQuantidade() {
+    public String getvQuantidade() {
         return vQuantidade;
     }
-    public void setvQuantidade(int vQuantidade) {
+    public void setvQuantidade(String vQuantidade) {
         this.vQuantidade = vQuantidade;
     }
 

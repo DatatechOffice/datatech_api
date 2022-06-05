@@ -9,6 +9,7 @@ import javax.swing.JTextField;
 import DAO.DaoCliente;
 import DAO.DaoEscolha;
 import controlador.Cliente;
+import controlador.Dados;
 
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -200,6 +201,11 @@ public class Consulta {
 				Cliente p4 = new Cliente();
 				Cliente p5 = new Cliente();
 				Cliente p6 = new Cliente();
+				Dados d1 = new Dados();
+				Dados e1 = new Dados();
+				Dados e2 = new Dados();
+				Dados e3 = new Dados();
+				
 
 				c1.setvCNPJ_Cliente(textField_CNPJ.getText());
 
@@ -221,7 +227,7 @@ public class Consulta {
 				textArea_P.setText(c1.getvEntregaP_Cliente());
 				textArea_M.setText(c1.getvEntregaM_Cliente());
 
-				DaoEscolha daobuscarproduto = new DaoEscolha(p1, p2, p3, p4, p5, p6);
+				DaoEscolha daobuscarproduto = new DaoEscolha(p1, p2, p3, p4, p5, p6, e1, e2, e3, d1);
 				daobuscarproduto.buscarEscolhaProduto(c1);
 
 				textFieldProdutos.setText(Integer.toString(c1.getvId_Produto()));

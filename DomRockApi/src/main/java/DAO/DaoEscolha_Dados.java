@@ -147,16 +147,14 @@ public class DaoEscolha_Dados {
         return clientes;
     }
 	
-	public void deletarCl(Cliente c1) {
-    	this.c1=c1;
+	public void deletarEsD() {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "DELETE FROM escolha_dados WHERE id_escolha = ? and id_produto = ?";
+            String insert_sql = "DELETE FROM escolha_dados WHERE id_escolha = ?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
-            pst.setString(1, c1.getvCNPJ_Cliente());
-            pst.setInt (2, c1.getvId_Cliente());
+            pst.setInt(1, c1.getvId_Escolha());
             pst.executeUpdate();
             
         } catch (SQLException e) {

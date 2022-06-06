@@ -871,7 +871,6 @@ public class DaoEscolha {
             ResultSet rs = pst.executeQuery();
             while(rs.next()) {
             	c1.setvId_Escolha(rs.getInt("id_escolha"));
-            	c1.setvId_Produto(rs.getInt("id_produto"));
             	clientes.add(c1);	
             }
         } catch (SQLException e) {
@@ -894,11 +893,11 @@ public class DaoEscolha {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "DELETE FROM escolha WHERE cnpj =? and id_cliente=?";
+            String insert_sql = "DELETE FROM escolha WHERE id_cliente=? and cnpj=?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
-            pst.setString(1, c1.getvCNPJ_Cliente());
-            pst.setInt(2, c1.getvId_Cliente());
+            pst.setObject(1, c1.getvId_Cliente());
+            pst.setObject(2, c1.getvCNPJ_Cliente());
             pst.executeUpdate();
             
         } catch (SQLException e) {

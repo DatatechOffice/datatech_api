@@ -54,6 +54,7 @@ public class DaoCliente {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
+            
             String insert_sql = "DELETE FROM cliente WHERE cnpj =? and id_cliente=?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);

@@ -113,10 +113,15 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
          <td>Interface de Login com permissão pra tipo de usuários e Menu para a Ler, Alterar e Deletar tabelas do banco de acordo com a necessidade</td>
     </tr>
 </table>
-    
 
-- [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
-- [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)
+- [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Escopo.png)
+- [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Bronze.png)
+- [Wireframe Silver](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Silver.png)
+- [Wireframe Login](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Login.png)
+- [Wireframe Cadastro](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Cadastro.png)
+- [Wireframe Menu](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Menu.png)
+- [Wireframe Consulta](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/EscopoWireframe.png)
+- [Wireframe Consulta_Bronze](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BronzeWireframe.png)
 - [DER Banco](https://github.com/DatatechOffice/datatech_api/blob/main/Modelagem_Banco/DerDatatechFinal.png)
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)
 - [BurndownChart Sprint 2](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png)     

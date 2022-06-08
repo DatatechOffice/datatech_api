@@ -43,7 +43,7 @@ public class DaoCliente {
                     con.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-                throw new RuntimeException("Erro ao fechar conexão", e);
+                throw new RuntimeException("Erro ao fechar conexﾃ｣o", e);
             }
         }
     }
@@ -71,7 +71,7 @@ public class DaoCliente {
                     con.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-                throw new RuntimeException("Erro ao fechar conexão", e);
+                throw new RuntimeException("Erro ao fechar conexﾃ｣o", e);
             }
         }
     }
@@ -110,7 +110,7 @@ public class DaoCliente {
                     con.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-                throw new RuntimeException("Erro ao fechar conexão", e);
+                throw new RuntimeException("Erro ao fechar conexﾃ｣o", e);
             }
         }
 	}
@@ -125,7 +125,7 @@ public class DaoCliente {
 	 * } catch (SQLException e) { e.printStackTrace(); throw new
 	 * RuntimeException("Erro ao inserir os dados!", e); } finally { try { if (con
 	 * != null) con.close(); } catch (SQLException e) { e.printStackTrace(); throw
-	 * new RuntimeException("Erro ao fechar conexão", e); } } }
+	 * new RuntimeException("Erro ao fechar conexﾃ｣o", e); } } }
 	 */
 	
     public List<Cliente> buscarClientes(Cliente c1) {
@@ -135,7 +135,6 @@ public class DaoCliente {
         
         try {
             con = ConnectionManager.getConnection();
-            if(c1.getvId_Solucao()==1) {
         	select_sql = "select * from cliente where cnpj = ? and id_solucao=?";// where cnpj = ?
             pst = con.prepareStatement(select_sql);
             pst.setString(1, c1.getvCNPJ_Cliente());
@@ -160,40 +159,7 @@ public class DaoCliente {
 				  c1.getvEntregaP_Cliente() + " Nome= " + c1.getvNome_Cliente() + " Objetivo= "
 				  + c1.getvObjetivo_Cliente() + " Setor= " + c1.getvSetor_Cliente() +
 				  " Razao_Social= " + c1.getvSocial_Cliente());
-            }
-            if(c1.getvId_Solucao()==2) {
-                String select_sql = "select * from cliente where cnpj = ? and id_solucao = ?";// where cnpj = ?
-                PreparedStatement pst;
-                pst = con.prepareStatement(select_sql);
-                pst.setString(1, c1.getvCNPJ_Cliente());
-                pst.setObject(2, c1.getvId_Solucao());
-                ResultSet res = pst.executeQuery();
-                while(res.next()) {
-                	
-                	c1.setvId_Cliente(res.getInt("id_cliente"));
-                	c1.setvId_Solucao(res.getInt("id_solucao"));
-                	c1.setvCNPJ_Cliente(res.getString("cnpj"));
-                	c1.setvEntregaM_Cliente(res.getString("entrega_minimas"));
-                	c1.setvEntregaP_Cliente(res.getString("entregas_possiveis"));
-                	c1.setvNome_Cliente(res.getString("nome_cliente"));
-                	c1.setvObjetivo_Cliente(res.getString("objetivo"));
-                	c1.setvSetor_Cliente(res.getString("setor"));
-                	c1.setvSocial_Cliente(res.getString("razao_social"));
-                	clientes.add(c1);
-                	
-    				
-    				  System.out.print("Id_Cliente= " + c1.getvId_Cliente() +" Id_Solucao= "+c1.getvId_Solucao()+" CNPJ= " + c1.getvCNPJ_Cliente() +
-    				  " Entrega_minima= " + c1.getvEntregaM_Cliente() +" Entrega_possivel= " +
-    				  c1.getvEntregaP_Cliente() + " Nome= " + c1.getvNome_Cliente() + " Objetivo= "
-    				  + c1.getvObjetivo_Cliente() + " Setor= " + c1.getvSetor_Cliente() +
-    				  " Razao_Social= " + c1.getvSocial_Cliente());
-                }
-				 
-            	 
-          	
-            	
-            	
-            }
+            
         }
             } catch (SQLException e) {
             e.printStackTrace();
@@ -204,7 +170,7 @@ public class DaoCliente {
                     con.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-                throw new RuntimeException("Erro ao fechar conexão", e);
+                throw new RuntimeException("Erro ao fechar conexﾃ｣o", e);
             }
         }        
         return clientes;

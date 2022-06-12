@@ -16,7 +16,9 @@ insert into tipo_dados (tipo_dados) values ('Tabelas')
 insert into tipo_dados (tipo_dados) values ('Audio')
 insert into tipo_dados (tipo_dados) values ('Texto')
 
-insert into usuario(nome_usuario, senha, email) values('admin', '!@Admin123', 'datatech01office@gmail.com')
-insert into usuario(nome_usuario, senha, email) values('user1', '!@User123456', 'datatech02office@gmail.com')
-insert into usuario(nome_usuario, senha, email) values('user2', '!@User654321', 'datatech03office@gmail.com')
-insert into usuario(nome_usuario, senha, email) values('user3', '!@User342516', 'datatech03office@gmail.com')
+insert into gold (nome_gold) values ('Matching')
+insert into gold (nome_gold) values ('Join')
+insert into gold (nome_gold) values ('Agregacao')
+insert into gold (nome_gold) values ('SerieTemporal')
+
+insert into usuario(nome_usuario, senha, email) values('admin', '123', 'datatech01office@gmail.com')

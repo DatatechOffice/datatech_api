@@ -2,6 +2,8 @@ package layout;
 
 import java.awt.EventQueue;
 
+import controlador.Cliente;
+
 import javax.swing.JOptionPane;
 
 import javax.swing.JFrame;
@@ -48,6 +50,7 @@ public class Silver extends JFrame {
 	private JCheckBox chckbxNomeAudioSilver;
 	private JCheckBox chckbxTamanhoTextoSilver;
 	private JCheckBox chckbxNomeTextoSilver;
+	private JButton btnSelecionarCliente;
 	private JButton btnAvacarSilver;
 	private JButton btnVoltarMenuSilver;
 	private JLabel lbPdfSilver;
@@ -62,7 +65,7 @@ public class Silver extends JFrame {
 	private JLabel lbSoluoSilver;
 	private TextArea textAreaSilver;
 	private JTextField textFieldCnpjSilver;
-	
+
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -75,9 +78,11 @@ public class Silver extends JFrame {
 				}
 			}
 		});
+		
 	}
 
 	public Silver() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -235,7 +240,7 @@ public class Silver extends JFrame {
 		
 		comboBoxSolucaoSilver = new JComboBox(Solucoes);
 		comboBoxSolucaoSilver.setFont(new Font("Arial", Font.BOLD, 20));
-		comboBoxSolucaoSilver.setBounds(453, 14, 321, 28);
+		comboBoxSolucaoSilver.setBounds(424, 14, 173, 28);
 		contentPane.add(comboBoxSolucaoSilver);
 		
 		
@@ -274,7 +279,23 @@ public class Silver extends JFrame {
 			}
 		});
 		contentPane.add(comboBoxTipoArquivoSilver);
-
+		
+		
+		btnSelecionarCliente = new JButton("Selecionar Cliente");
+		btnSelecionarCliente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				Cliente c1 = new Cliente();
+				
+				if(comboBoxSolucaoSilver.getSelectedItem() == "Nxt.Demand") {
+					c1.setvSolucao_Cliente("1");
+				} else {
+					c1.setvSolucao_Cliente("2");
+				}
+			}
+		});
+		btnSelecionarCliente.setFont(new Font("Arial", Font.BOLD, 15));
+		btnSelecionarCliente.setBounds(607, 12, 167, 30);
+		contentPane.add(btnSelecionarCliente);
 		
 		btnAvacarSilver = new JButton("Avançar");
 		btnAvacarSilver.addActionListener(new ActionListener() {
@@ -417,8 +438,8 @@ public class Silver extends JFrame {
 		contentPane.add(textAreaSilver);
 		
 		textFieldCnpjSilver = new JTextField();
-		textFieldCnpjSilver.setFont(new Font("Arial", Font.BOLD, 25));
-		textFieldCnpjSilver.setBounds(94, 14, 225, 26);
+		textFieldCnpjSilver.setFont(new Font("Arial", Font.BOLD, 20));
+		textFieldCnpjSilver.setBounds(94, 14, 206, 26);
 		contentPane.add(textFieldCnpjSilver);
 		textFieldCnpjSilver.setColumns(10);
 		
@@ -431,9 +452,9 @@ public class Silver extends JFrame {
 		lbSoluoSilver = new JLabel("Solução:");
 		lbSoluoSilver.setForeground(Color.WHITE);
 		lbSoluoSilver.setFont(new Font("Arial", Font.BOLD, 25));
-		lbSoluoSilver.setBounds(339, 14, 104, 26);
+		lbSoluoSilver.setBounds(310, 14, 104, 26);
 		contentPane.add(lbSoluoSilver);
-
+		
 		
 		hideAll();
 	}

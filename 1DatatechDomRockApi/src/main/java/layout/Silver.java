@@ -63,12 +63,28 @@ public class Silver extends JFrame {
 	private JLabel lbTabelasSilver;
 	private JLabel lbAudioSilver;
 	private JLabel lbTextoSilver;
-	private JLabel lbComentarioSilver;
 	private JLabel lbCnpjSilver;
 	private JLabel lbSoluoSilver;
-	private TextArea textAreaSilver;
 	private JTextField textFieldCnpjSilver;
 	private int contador;
+	Cliente c1 = new Cliente();
+	Cliente p1 = new Cliente();
+	Cliente p2 = new Cliente();
+	Cliente p3 = new Cliente();
+	Cliente p4 = new Cliente();
+	Cliente p5 = new Cliente();
+	Cliente p6 = new Cliente();
+	Dados d1 = new Dados();
+	Dados e1 = new Dados();
+	Dados e2 = new Dados();
+	Dados e3 = new Dados();
+	Dados t1 = new Dados();
+	Dados t2 = new Dados();
+	Dados t3 = new Dados();
+	Dados t4 = new Dados();
+	Dados t5 = new Dados();
+	Dados t6 = new Dados();
+	Dados t7 = new Dados();
 
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -300,6 +316,8 @@ public class Silver extends JFrame {
 								&& chckbxTamanhoAudioSilver.isSelected() && chckbxNomeAudioSilver.isSelected()
 						|| comboBoxTipoArquivoSilver.getSelectedItem() == "Texto"
 								&& chckbxTamanhoTextoSilver.isSelected() && chckbxNomeTextoSilver.isSelected()) {
+
+					//
 					JOptionPane.showMessageDialog(null, "Silver OK");
 
 					EventQueue.invokeLater(new Runnable() {
@@ -409,19 +427,6 @@ public class Silver extends JFrame {
 		lbTextoSilver.setBounds(415, 231, 150, 30);
 		contentPane.add(lbTextoSilver);
 
-		lbComentarioSilver = new JLabel("Comentario");
-		lbComentarioSilver.setForeground(Color.WHITE);
-		lbComentarioSilver.setHorizontalAlignment(SwingConstants.CENTER);
-		lbComentarioSilver.setFont(new Font("Arial", Font.BOLD, 25));
-		lbComentarioSilver.setBounds(624, 231, 150, 30);
-		contentPane.add(lbComentarioSilver);
-
-		textAreaSilver = new TextArea();
-		textAreaSilver.setForeground(Color.BLACK);
-		textAreaSilver.setFont(new Font("Arial", Font.PLAIN, 12));
-		textAreaSilver.setBounds(624, 268, 150, 246);
-		contentPane.add(textAreaSilver);
-
 		textFieldCnpjSilver = new JTextField();
 		textFieldCnpjSilver.setFont(new Font("Arial", Font.BOLD, 25));
 		textFieldCnpjSilver.setBounds(94, 14, 225, 26);
@@ -439,34 +444,18 @@ public class Silver extends JFrame {
 		lbSoluoSilver.setFont(new Font("Arial", Font.BOLD, 25));
 		lbSoluoSilver.setBounds(339, 14, 104, 26);
 		contentPane.add(lbSoluoSilver);
+		
+		
 
 		JButton btnSelecionarCliente = new JButton("Selecionar Cliente");
 		btnSelecionarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				Cliente c1 = new Cliente();
-				Cliente p1 = new Cliente();
-				Cliente p2 = new Cliente();
-				Cliente p3 = new Cliente();
-				Cliente p4 = new Cliente();
-				Cliente p5 = new Cliente();
-				Cliente p6 = new Cliente();
-				Dados d1 = new Dados();
-				Dados e1 = new Dados();
-				Dados e2 = new Dados();
-				Dados e3 = new Dados();
-				Dados t1 = new Dados();
-				Dados t2 = new Dados();
-				Dados t3 = new Dados();
-				Dados t4 = new Dados();
-				Dados t5 = new Dados();
-				Dados t6 = new Dados();
-				Dados t7 = new Dados();
-			
 
 				c1.setvCNPJ_Cliente(textFieldCnpjSilver.getText());
 
 				if (comboBoxSolucaoSilver.getSelectedItem() == "Nxt.Demand") {
 					c1.setvId_Solucao(1);
+					c1.setvSolucao_Cliente("Nxt.Demand");
 
 					DaoCliente daoExibirCliente = new DaoCliente();
 					daoExibirCliente.buscarClientes(c1);
@@ -474,18 +463,14 @@ public class Silver extends JFrame {
 					DaoSilver buscarSilverProduto = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
 							t3, t4, t5, t6, t7, contador);
 					buscarSilverProduto.buscarSilverProduto();
-					
-					for(int contador = 0; contador<8; contador++) {
-					DaoSilver buscarSilverDados = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2, t3,
-							t4, t5, t6, t7,contador);
-					buscarSilverDados.buscarSilverDados1();
-				
-					}
 
+					JOptionPane.showMessageDialog(null,
+							"Cliente Selecionado: " + c1.getvCNPJ_Cliente() + " " + c1.getvSolucao_Cliente());
 					System.out.println("Rolou");
 
 				} else {
 					c1.setvId_Solucao(2);
+					c1.setvSolucao_Cliente("Nxt.Operations");
 
 					DaoCliente daoExibirCliente = new DaoCliente();
 					daoExibirCliente.buscarClientes(c1);
@@ -494,17 +479,53 @@ public class Silver extends JFrame {
 							t3, t4, t5, t6, t7, contador);
 					buscarSilverProduto.buscarSilverProduto();
 
-					DaoSilver buscarSilverDados = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2, t3,
-							t4, t5, t6, t7, contador);
-					buscarSilverDados.buscarSilverDados1();
-
 					System.out.println("Rolou2");
+					JOptionPane.showMessageDialog(null,
+							"Cliente Selecionado: " + c1.getvCNPJ_Cliente() + " " + c1.getvSolucao_Cliente());
 				}
 			}
 		});
 		btnSelecionarCliente.setFont(new Font("Arial", Font.BOLD, 13));
 		btnSelecionarCliente.setBounds(624, 14, 150, 30);
 		contentPane.add(btnSelecionarCliente);
+
+		JButton btnAvacarSilver_1 = new JButton("Tornar SilverOk");
+		btnAvacarSilver_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if (c1.getvId_Solucao() == 1) {
+					for (int contador = 0; contador < 8; contador++) {
+						DaoSilver buscarSilverDados = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						buscarSilverDados.buscarSilverDados1();
+
+						DaoSilver atualizarSOk = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						atualizarSOk.atualizarSOk();
+					}
+				}
+				if (c1.getvId_Solucao() == 2) {
+				
+					for (int contador = 0; contador < 8; contador++) {
+						DaoSilver buscarSilverDados = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						buscarSilverDados.buscarSilverDados1();
+						
+						DaoSilver atualizarSOk = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						atualizarSOk.atualizarSOk();
+					}
+				
+				/*
+				 * else { JOptionPane.showMessageDialog(null,
+				 * "Selecione um Cliente pelo CNPJ e pela Solução!"); }
+				 */
+			}
+				}
+		});
+		btnAvacarSilver_1.setFont(new Font("Arial", Font.BOLD, 15));
+		btnAvacarSilver_1.setBounds(624, 414, 150, 30);
+		contentPane.add(btnAvacarSilver_1);
 
 		hideAll();
 	}

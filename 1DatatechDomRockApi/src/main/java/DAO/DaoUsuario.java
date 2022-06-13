@@ -156,7 +156,7 @@ public class DaoUsuario {
     							// aqui setamos a nova tela como visivel
     							window1.getFrmMenu().setVisible(true);
     							// e para não ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-    							window.frmLogin.setVisible(false);
+    							window.getFrmLogin().setVisible(false);
 
     						} catch (Exception e) {
     							e.printStackTrace();

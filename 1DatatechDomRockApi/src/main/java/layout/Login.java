@@ -106,7 +106,6 @@ public class Login {
 
 				// <------------------------------ação responsavel pelo transação de tela de
 				// login para menu------------------------------>
-				frmLogin.setVisible(false);
 				// <------------------------------fim da ação de
 				// transação------------------------------>
 

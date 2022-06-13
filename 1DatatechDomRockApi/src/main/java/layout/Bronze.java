@@ -39,8 +39,6 @@ public class Bronze {
  	Cliente p4;
  	Cliente p5;
 	Cliente p6;	
-	private JTextField textFieldCnpj;
-	private JTextField textFieldSolucao;
 	/**
 	 * Launch the application.
 	 */
@@ -92,94 +90,94 @@ public class Bronze {
 		JLabel lblNewLabel = new JLabel("Tipos de Dados:");
 		lblNewLabel.setForeground(Color.WHITE);
 		lblNewLabel.setFont(new Font("Arial", Font.BOLD, 20));
-		lblNewLabel.setBounds(10, 106, 200, 31);
+		lblNewLabel.setBounds(10, 11, 200, 31);
 		frmBronze.getContentPane().add(lblNewLabel);
 		
 		JCheckBox vDados_PDF = new JCheckBox("PDF");
 		vDados_PDF.setForeground(Color.WHITE);
 		vDados_PDF.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_PDF.setBackground(SystemColor.windowBorder);
-		vDados_PDF.setBounds(10, 144, 150, 31);
+		vDados_PDF.setBounds(10, 49, 150, 31);
 		frmBronze.getContentPane().add(vDados_PDF);
 		
 		JCheckBox vDados_JSON = new JCheckBox("JSON");
 		vDados_JSON.setForeground(Color.WHITE);
 		vDados_JSON.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_JSON.setBackground(SystemColor.windowBorder);
-		vDados_JSON.setBounds(162, 144, 150, 31);
+		vDados_JSON.setBounds(152, 49, 150, 31);
 		frmBronze.getContentPane().add(vDados_JSON);
 		
 		JCheckBox vDados_CSV = new JCheckBox("CSV");
 		vDados_CSV.setForeground(Color.WHITE);
 		vDados_CSV.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_CSV.setBackground(SystemColor.windowBorder);
-		vDados_CSV.setBounds(314, 144, 150, 31);
+		vDados_CSV.setBounds(304, 49, 150, 31);
 		frmBronze.getContentPane().add(vDados_CSV);
 		
 		JCheckBox vDados_Planilhas = new JCheckBox("Planilhas");
 		vDados_Planilhas.setForeground(Color.WHITE);
 		vDados_Planilhas.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_Planilhas.setBackground(SystemColor.windowBorder);
-		vDados_Planilhas.setBounds(466, 144, 150, 31);
+		vDados_Planilhas.setBounds(456, 49, 150, 31);
 		frmBronze.getContentPane().add(vDados_Planilhas);
 		
 		JCheckBox vDados_Tabelas = new JCheckBox("Tabelas");
 		vDados_Tabelas.setForeground(Color.WHITE);
 		vDados_Tabelas.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_Tabelas.setBackground(SystemColor.windowBorder);
-		vDados_Tabelas.setBounds(10, 178, 150, 31);
+		vDados_Tabelas.setBounds(10, 83, 150, 31);
 		frmBronze.getContentPane().add(vDados_Tabelas);
 		
 		JCheckBox vDados_Audio = new JCheckBox("Audio");
 		vDados_Audio.setForeground(Color.WHITE);
 		vDados_Audio.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_Audio.setBackground(SystemColor.windowBorder);
-		vDados_Audio.setBounds(162, 178, 150, 31);
+		vDados_Audio.setBounds(152, 83, 150, 31);
 		frmBronze.getContentPane().add(vDados_Audio);
 		
 		JCheckBox vDados_Texto = new JCheckBox("Texto");
 		vDados_Texto.setForeground(Color.WHITE);
 		vDados_Texto.setFont(new Font("Arial", Font.BOLD, 15));
 		vDados_Texto.setBackground(SystemColor.windowBorder);
-		vDados_Texto.setBounds(314, 178, 150, 31);
+		vDados_Texto.setBounds(304, 83, 150, 31);
 		frmBronze.getContentPane().add(vDados_Texto);
 		
 		JLabel lblFormasDeEnvio = new JLabel("Formas de Envio:");
 		lblFormasDeEnvio.setForeground(Color.WHITE);
 		lblFormasDeEnvio.setFont(new Font("Arial", Font.BOLD, 20));
-		lblFormasDeEnvio.setBounds(10, 216, 200, 31);
+		lblFormasDeEnvio.setBounds(10, 135, 200, 31);
 		frmBronze.getContentPane().add(lblFormasDeEnvio);
 		
 		JCheckBox vEnvio_API = new JCheckBox("API");
 		vEnvio_API.setForeground(Color.WHITE);
 		vEnvio_API.setFont(new Font("Arial", Font.BOLD, 15));
 		vEnvio_API.setBackground(SystemColor.windowBorder);
-		vEnvio_API.setBounds(10, 254, 150, 31);
+		vEnvio_API.setBounds(10, 173, 150, 31);
 		frmBronze.getContentPane().add(vEnvio_API);
 		
 		JCheckBox vEnvio_SFTP = new JCheckBox("SFTP");
 		vEnvio_SFTP.setForeground(Color.WHITE);
 		vEnvio_SFTP.setFont(new Font("Arial", Font.BOLD, 15));
 		vEnvio_SFTP.setBackground(SystemColor.windowBorder);
-		vEnvio_SFTP.setBounds(162, 254, 150, 31);
+		vEnvio_SFTP.setBounds(152, 173, 150, 31);
 		frmBronze.getContentPane().add(vEnvio_SFTP);
 		
 		JCheckBox vEnvio_Upload = new JCheckBox("Upload");
 		vEnvio_Upload.setForeground(Color.WHITE);
 		vEnvio_Upload.setFont(new Font("Arial", Font.BOLD, 15));
 		vEnvio_Upload.setBackground(SystemColor.windowBorder);
-		vEnvio_Upload.setBounds(314, 254, 150, 31);
+		vEnvio_Upload.setBounds(304, 173, 150, 31);
 		frmBronze.getContentPane().add(vEnvio_Upload);
 		
-		JLabel lblPrazoDeDados = new JLabel("Prazo de Dados Recebidos");
+		JLabel lblPrazoDeDados = new JLabel("Prazo de Dados Recebidos:");
 		lblPrazoDeDados.setForeground(Color.WHITE);
 		lblPrazoDeDados.setFont(new Font("Arial", Font.BOLD, 20));
-		lblPrazoDeDados.setBounds(10, 292, 292, 31);
+		lblPrazoDeDados.setBounds(10, 217, 292, 31);
 		frmBronze.getContentPane().add(lblPrazoDeDados);
 		
 		JSpinner vContagem = new JSpinner();
 		vContagem.setFont(new Font("Arial", Font.BOLD, 15));
-		vContagem.setBounds(10, 334, 40, 31);
+		vContagem.setBounds(10, 259, 40, 31);
 		frmBronze.getContentPane().add(vContagem);
 		
 		JComboBox comboBox_vPazo = new JComboBox();
@@ -187,13 +185,13 @@ public class Bronze {
 		comboBox_vPazo.setFont(new Font("Arial", Font.BOLD, 15));
 		comboBox_vPazo.setBackground(SystemColor.windowBorder);
 		comboBox_vPazo.setModel(new DefaultComboBoxModel(new String[] {"Dias", "Semanas", "Meses"}));
-		comboBox_vPazo.setBounds(60, 334, 252, 31);
+		comboBox_vPazo.setBounds(60, 259, 252, 31);
 		frmBronze.getContentPane().add(comboBox_vPazo);
 		
-		JLabel lblQuantidadeRecebida = new JLabel("Quantidade Recebida");
+		JLabel lblQuantidadeRecebida = new JLabel("Quantidade Recebida:");
 		lblQuantidadeRecebida.setForeground(Color.WHITE);
 		lblQuantidadeRecebida.setFont(new Font("Arial", Font.BOLD, 20));
-		lblQuantidadeRecebida.setBounds(10, 376, 292, 31);
+		lblQuantidadeRecebida.setBounds(10, 315, 292, 31);
 		frmBronze.getContentPane().add(lblQuantidadeRecebida);
 		
 		JButton btnNewButton_Avancar = new JButton("Avan\u00E7ar");
@@ -288,7 +286,7 @@ public class Bronze {
 				DaoCliente daoExibirCliente = new DaoCliente();
 				daoExibirCliente.buscarClientes(c1);
 				
-				int contador = (Integer) null;
+				int contador = 0;
 				//inserindo todos os dados na tabla escolha
 				DaoSilver daoCriarEscolha = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7, contador);
 				daoCriarEscolha.criarSilverProduto();
@@ -444,7 +442,7 @@ public class Bronze {
 		frmBronze.getContentPane().add(btnNewButton_Avancar);
 		
 		textField_vQuantidade = new JTextField();
-		textField_vQuantidade.setBounds(10, 418, 302, 31);
+		textField_vQuantidade.setBounds(10, 357, 302, 31);
 		frmBronze.getContentPane().add(textField_vQuantidade);
 		textField_vQuantidade.setColumns(10);
 		
@@ -472,16 +470,6 @@ public class Bronze {
   btnNewButton_Retornar_1.setFont(new Font("Arial", Font.BOLD, 15));
   btnNewButton_Retornar_1.setBounds(60, 480, 150, 30);
   frmBronze.getContentPane().add(btnNewButton_Retornar_1);
-  
-  textFieldCnpj = new JTextField();
-  textFieldCnpj.setColumns(10);
-  textFieldCnpj.setBounds(10, 53, 302, 31);
-  frmBronze.getContentPane().add(textFieldCnpj);
-  
-  textFieldSolucao = new JTextField();
-  textFieldSolucao.setColumns(10);
-  textFieldSolucao.setBounds(393, 53, 302, 31);
-  frmBronze.getContentPane().add(textFieldSolucao);
   frmBronze.setBounds(100, 100, 800, 600);
   frmBronze.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  

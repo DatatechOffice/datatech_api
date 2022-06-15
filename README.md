@@ -117,6 +117,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Escopo.png)
 - [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Bronze.png)
 - [Wireframe Silver](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Silver.png)
+- [Wireframe Gold](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Silver.png)
 - [Wireframe Login](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Login.png)
 - [Wireframe Cadastro](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Cadastro.png)
 - [Wireframe Menu](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Menu.png)
@@ -131,7 +132,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
     Basta instalar o Java e o JRE em sua ultima versão na maquina que for utilizar, fazendo o download e instalação de acordo com o seu sistema operacional(link para instalação nas Tecnologias usadas).
     
    Baixe o executável e abra na sua maquina:
-- [Programa.exe](https://github.com/DatatechOffice/datatech_api/blob/main/DatatechS3DomRockApp.jar?raw=true) 
+- [Programa.exe](https://github.com/DatatechOffice/datatech_api/blob/main/DatatechS3GoldDomRockApp.jar?raw=true) 
    
    Ao abrir o programa insira os dados do cliente e na segunda tela(bronze), haverá um botão para extrair as informações colocadas, a partir disso passe essas informações onde achar melhor, seja num arquivo txt, ou de qualquer outra forma. 
     

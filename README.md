@@ -115,13 +115,13 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 </table>
 
 - [Wireframe Escopo](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Escopo.png)
-- [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Bronze.png)
-- [Wireframe Silver](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Silver.png)
-- [Wireframe Gold](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Silver.png)
+- [Wireframe Bronze](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/WireframeBronze.png)
+- [Wireframe Silver](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/WireframeSilver.png)
+- [Wireframe Gold](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/WireframeGold.png)
 - [Wireframe Login](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Login.png)
 - [Wireframe Cadastro](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Cadastro.png)
-- [Wireframe Menu](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Menu.png)
-- [Wireframe Consulta](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Consulta.png)
+- [Wireframe Menu](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/WireframeMenu.png)
+- [Wireframe Consulta](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/WireframeConsulta.png)
 - [DER Banco](https://github.com/DatatechOffice/datatech_api/blob/main/Modelagem_Banco/DerDatatechGold.png)
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)
 - [BurndownChart Sprint 2](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png)

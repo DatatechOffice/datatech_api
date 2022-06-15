@@ -55,12 +55,10 @@ primary key (id_gold)
 create table silver_gold(
 cnpj varchar(20),
 id_cliente bigint,
-id_dados bigint,
 id_gold bigint,
 primary key(id_gold, id_cliente),
 foreign key(id_cliente, cnpj) references cliente(id_cliente, cnpj),
 foreign key(id_gold) references gold(id_gold),
-foreign key(id_dados) references tipo_dados(id_dados)
 );
 
 

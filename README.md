@@ -122,7 +122,7 @@ Criação de interfaces para cada etapa do programa visando facilitar a ativaç�
 - [Wireframe Menu](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Menu.png)
 - [Wireframe Consulta](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/Consulta.png)
 - [Wireframe Consulta_Bronze](https://github.com/DatatechOffice/datatech_api/blob/main/Wireframes/ConsultaBronze.png)
-- [DER Banco](https://github.com/DatatechOffice/datatech_api/blob/main/Modelagem_Banco/DerDatatechFinal.png)
+- [DER Banco](https://github.com/DatatechOffice/datatech_api/blob/main/Modelagem_Banco/DerDatatechGold.png)
 - [BurndownChart Sprint 1](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint1/IMG/BurndownChartSprint11.png)
 - [BurndownChart Sprint 2](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint2/IMG/BurndownChartPrint.png)
 - [BurndownChart Sprint 3](https://github.com/DatatechOffice/datatech_api/blob/BranchSprint3/IMG/BurndownChartS3.png)     

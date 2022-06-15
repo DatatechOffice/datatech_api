@@ -11,6 +11,7 @@ import DAO.DaoSilver;
 import DAO.DaoSilver_Gold;
 import controlador.Cliente;
 import controlador.Dados;
+import controlador.GoldCon;
 
 import java.awt.Font;
 import javax.swing.JLabel;
@@ -119,35 +120,35 @@ public class Consulta {
 		JLabel lblCpfcnpj_1_3 = new JLabel("Solu\u00E7\u00E3o:");
 		lblCpfcnpj_1_3.setForeground(Color.WHITE);
 		lblCpfcnpj_1_3.setFont(new Font("Arial", Font.BOLD, 20));
-		lblCpfcnpj_1_3.setBounds(10, 250, 200, 20);
+		lblCpfcnpj_1_3.setBounds(10, 260, 200, 20);
 		frmConsulta.getContentPane().add(lblCpfcnpj_1_3);
 
 		textField_Solucao = new JTextField();
 		textField_Solucao.setFont(new Font("Arial", Font.BOLD, 15));
 		textField_Solucao.setColumns(10);
-		textField_Solucao.setBounds(10, 270, 300, 30);
+		textField_Solucao.setBounds(10, 291, 300, 30);
 		frmConsulta.getContentPane().add(textField_Solucao);
 
 		JLabel lblCpfcnpj_1_3_1 = new JLabel("Entregas Possiveis:");
 		lblCpfcnpj_1_3_1.setForeground(Color.WHITE);
 		lblCpfcnpj_1_3_1.setFont(new Font("Arial", Font.BOLD, 20));
-		lblCpfcnpj_1_3_1.setBounds(110, 310, 200, 20);
+		lblCpfcnpj_1_3_1.setBounds(486, 33, 200, 20);
 		frmConsulta.getContentPane().add(lblCpfcnpj_1_3_1);
 
 		JLabel lblCpfcnpj_1_3_2 = new JLabel("Entregas Minimas:");
 		lblCpfcnpj_1_3_2.setForeground(Color.WHITE);
 		lblCpfcnpj_1_3_2.setFont(new Font("Arial", Font.BOLD, 20));
-		lblCpfcnpj_1_3_2.setBounds(486, 310, 200, 20);
+		lblCpfcnpj_1_3_2.setBounds(486, 190, 200, 20);
 		frmConsulta.getContentPane().add(lblCpfcnpj_1_3_2);
 
 		JTextArea textArea_P = new JTextArea();
 		textArea_P.setFont(new Font("Arial", Font.BOLD, 15));
-		textArea_P.setBounds(110, 340, 200, 100);
+		textArea_P.setBounds(486, 64, 200, 100);
 		frmConsulta.getContentPane().add(textArea_P);
 
 		JTextArea textArea_M = new JTextArea();
 		textArea_M.setFont(new Font("Arial", Font.BOLD, 15));
-		textArea_M.setBounds(486, 340, 200, 100);
+		textArea_M.setBounds(486, 221, 200, 100);
 		frmConsulta.getContentPane().add(textArea_M);
 
 		JButton btn_Alterar = new JButton("Alterar");
@@ -159,69 +160,6 @@ public class Consulta {
 		btn_Deletar.setFont(new Font("Arial", Font.BOLD, 15));
 		btn_Deletar.setBounds(624, 451, 150, 30);
 		frmConsulta.getContentPane().add(btn_Deletar);
-		
-		JCheckBox vEnvio_API = new JCheckBox("API");
-		vEnvio_API.setForeground(Color.WHITE);
-		vEnvio_API.setFont(new Font("Arial", Font.BOLD, 15));
-		vEnvio_API.setBackground(SystemColor.windowBorder);
-		vEnvio_API.setBounds(584, 113, 150, 31);
-		frmConsulta.getContentPane().add(vEnvio_API);
-		
-		JCheckBox vEnvio_SFTP = new JCheckBox("SFTP");
-		vEnvio_SFTP.setForeground(Color.WHITE);
-		vEnvio_SFTP.setFont(new Font("Arial", Font.BOLD, 15));
-		vEnvio_SFTP.setBackground(SystemColor.windowBorder);
-		vEnvio_SFTP.setBounds(584, 90, 150, 31);
-		frmConsulta.getContentPane().add(vEnvio_SFTP);
-		
-		JCheckBox vEnvio_Upload = new JCheckBox("Upload");
-		vEnvio_Upload.setForeground(Color.WHITE);
-		vEnvio_Upload.setFont(new Font("Arial", Font.BOLD, 15));
-		vEnvio_Upload.setBackground(SystemColor.windowBorder);
-		vEnvio_Upload.setBounds(584, 67, 150, 31);
-		frmConsulta.getContentPane().add(vEnvio_Upload);
-		
-		JCheckBox vProduto_Vox = new JCheckBox("Nxt.Demand Vox");
-		vProduto_Vox.setForeground(SystemColor.text);
-		vProduto_Vox.setBackground(SystemColor.windowBorder);
-		vProduto_Vox.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Vox.setBounds(329, 67, 175, 30);
-		frmConsulta.getContentPane().add(vProduto_Vox);
-
-		JCheckBox vProduto_Optimization = new JCheckBox("Nxt.Operations Optimization");
-		vProduto_Optimization.setForeground(SystemColor.text);
-		vProduto_Optimization.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Optimization.setBackground(SystemColor.windowBorder);
-		vProduto_Optimization.setBounds(331, 190, 240, 30);
-		frmConsulta.getContentPane().add(vProduto_Optimization);
-
-		JCheckBox vProduto_Matching = new JCheckBox("Nxt.Operations Matching");
-		vProduto_Matching.setForeground(Color.WHITE);
-		vProduto_Matching.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Matching.setBackground(SystemColor.windowBorder);
-		vProduto_Matching.setBounds(331, 224, 222, 30);
-		frmConsulta.getContentPane().add(vProduto_Matching);
-
-		JCheckBox vProduto_Sales = new JCheckBox("Nxt.Demand Sales");
-		vProduto_Sales.setForeground(Color.WHITE);
-		vProduto_Sales.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Sales.setBackground(SystemColor.windowBorder);
-		vProduto_Sales.setBounds(329, 96, 175, 30);
-		frmConsulta.getContentPane().add(vProduto_Sales);
-
-		JCheckBox vProduto_Marketing = new JCheckBox("Nxt.Demand Marketing");
-		vProduto_Marketing.setForeground(Color.WHITE);
-		vProduto_Marketing.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Marketing.setBackground(SystemColor.windowBorder);
-		vProduto_Marketing.setBounds(331, 161, 200, 30);
-		frmConsulta.getContentPane().add(vProduto_Marketing);
-
-		JCheckBox vProduto_Pricing = new JCheckBox("Nxt.Demand Pricing");
-		vProduto_Pricing.setForeground(Color.WHITE);
-		vProduto_Pricing.setFont(new Font("Arial", Font.BOLD, 15));
-		vProduto_Pricing.setBackground(SystemColor.windowBorder);
-		vProduto_Pricing.setBounds(329, 127, 175, 30);
-		frmConsulta.getContentPane().add(vProduto_Pricing);
 
 		JButton btn_Retornar = new JButton("Retornar");
 		btn_Retornar.addActionListener(new ActionListener() {
@@ -230,7 +168,7 @@ public class Consulta {
 				Menu window = new Menu();
 				// aqui setamos a nova tela como visivel
 				window.frmMenu.setVisible(true);
-				// e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar
+				// e para n�ｾ�ｽｧ�ｾゑｽｸ�ｾ��ｿｽ ficar com duas telas abertas, ordenamos a atual a ficar
 				// invisivel
 				frmConsulta.setVisible(false);
 			}
@@ -238,23 +176,11 @@ public class Consulta {
 		btn_Retornar.setFont(new Font("Arial", Font.BOLD, 15));
 		btn_Retornar.setBounds(10, 451, 150, 30);
 		frmConsulta.getContentPane().add(btn_Retornar);
-		
-		JLabel lblFormaenvio = new JLabel("Formas_Envio:");
-		lblFormaenvio.setForeground(Color.WHITE);
-		lblFormaenvio.setFont(new Font("Arial", Font.BOLD, 20));
-		lblFormaenvio.setBounds(584, 33, 200, 27);
-		frmConsulta.getContentPane().add(lblFormaenvio);
-		
-		JLabel lblProdutos = new JLabel("Produtos:");
-		lblProdutos.setForeground(Color.WHITE);
-		lblProdutos.setFont(new Font("Arial", Font.BOLD, 20));
-		lblProdutos.setBounds(331, 33, 200, 20);
-		frmConsulta.getContentPane().add(lblProdutos);
 		frmConsulta.setTitle("Consulta");
 		frmConsulta.setBounds(100, 100, 800, 600);
 		frmConsulta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		// <------------------------------BOTﾃO PARA CONSULTAR CLIENTE NO
+		// <------------------------------BOT�ｾグ PARA CONSULTAR CLIENTE NO
 		// BANCO------------------------------>
 		btn_Consultar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -276,7 +202,7 @@ public class Consulta {
 				Dados t5= new Dados();
 				Dados t6= new Dados();
 				Dados t7= new Dados();
-				int contador = (Integer) null;
+				int contador = 0;
 
 				// cria o select com o c1 para armazenar os dados
 				
@@ -292,7 +218,7 @@ public class Consulta {
 					daobuscarproduto.buscarSilverProduto();
 
 					
-					// Trazer Tela limpa após deletar a tabela
+					// Trazer Tela limpa apﾃｳs deletar a tabela
 
 					textField_CNPJ.setText(c1.getvCNPJ_Cliente());
 					textField_Nome_Cliente.setText(c1.getvNome_Cliente());
@@ -314,7 +240,7 @@ public class Consulta {
 
 					
 
-						// Trazer Tela limpa após deletar a tabela
+						// Trazer Tela limpa apﾃｳs deletar a tabela
 
 						textField_CNPJ.setText(c1.getvCNPJ_Cliente());
 						textField_Nome_Cliente.setText(c1.getvNome_Cliente());
@@ -330,10 +256,10 @@ public class Consulta {
 			}
 		}
 		});
-		// <------------------------------FINAL DO BOTﾃO PARA CONSULTAR CLIENTE NO
+		// <------------------------------FINAL DO BOT�ｾグ PARA CONSULTAR CLIENTE NO
 		// BANCO------------------------------>
 
-		// <------------------------------BOTﾃO PARA ALTERAR OS CAMPOS DE
+		// <------------------------------BOT�ｾグ PARA ALTERAR OS CAMPOS DE
 		// CONSULTA------------------------------>
 		btn_Alterar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -362,7 +288,7 @@ public class Consulta {
 					DaoCliente daoAlteraCliente = new DaoCliente();
 					daoAlteraCliente.atualizarCl(c1);
 
-					// Trazer Tela limpa após deletar a tabela
+					// Trazer Tela limpa apﾃｳs deletar a tabela
 
 					textField_Nome_Cliente.setText("");
 					textField_Razao_Social.setText("");
@@ -391,7 +317,7 @@ public class Consulta {
 						DaoCliente daoAlteraCliente = new DaoCliente();
 						daoAlteraCliente.atualizarCl(c1);
 
-						// Trazer Tela limpa após deletar a tabela
+						// Trazer Tela limpa apﾃｳs deletar a tabela
 
 						textField_Nome_Cliente.setText("");
 						textField_Razao_Social.setText("");
@@ -411,17 +337,18 @@ public class Consulta {
 
 			}
 		});
-		// <------------------------------FINAL BOTﾃO PARA ALTERAR OS CAMPOS DE
+		// <------------------------------FINAL BOT�ｾグ PARA ALTERAR OS CAMPOS DE
 		// CONSULTA------------------------------>
 
-		// <------------------------------BOTﾃO PARA DELETAR UM
+		// <------------------------------BOT�ｾグ PARA DELETAR UM
 		// CLIENTE------------------------------>
 		btn_Deletar.addActionListener(new ActionListener() {
+
 			public void actionPerformed(ActionEvent e) {
 				
 				
 				
-
+				GoldCon g1 = new GoldCon();
 				Cliente c1 = new Cliente();
 				Cliente p1 = new Cliente();
 				Cliente p2 = new Cliente();
@@ -440,39 +367,7 @@ public class Consulta {
 				Dados e1 = new Dados();
 				Dados e2 = new Dados();
 				Dados e3 = new Dados();
-				int contador;
-				
-				if(vEnvio_API.isSelected()) {
-					e1.setvEnvio("API");
-				}
-				
-				if(vEnvio_SFTP.isSelected()) {
-					e2.setvEnvio("SFTP");
-				}
-				if(vEnvio_Upload.isSelected()) {
-					e3.setvEnvio("Upload");
-				}
-				
-				if (vProduto_Optimization.isSelected()) {
-					p6.setvId_Produto(6);
-				}
-
-				if (vProduto_Matching.isSelected()) {
-					p5.setvId_Produto(5);
-				}
-
-				if (vProduto_Vox.isSelected()) {
-					p1.setvId_Produto(1);
-				}
-				if (vProduto_Sales.isSelected()) {
-					p3.setvId_Produto(3);
-				}
-				if (vProduto_Pricing.isSelected()) {
-					p4.setvId_Produto(4);
-				}
-				if (vProduto_Marketing.isSelected()) {
-					p2.setvId_Produto(2);
-				}
+				int contador = 0;
 				
 				if (textField_Solucao.getText().equals("NxtDemand")) {
 					
@@ -482,113 +377,13 @@ public class Consulta {
 					DaoCliente daoExibirCliente = new DaoCliente();
 					daoExibirCliente.buscarClientes(c1);
 					
-					
-					
-					
-					
-					// Trazer Tela limpa após deletar a tabela
-					if(e1.getvEnvio()!=d1.getvEnvio()) { 
-						  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
-					
-							  
-							  
-							DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7, contador);
-							  daoExibirEscolha1.buscarSilverDados1() ;
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-								
-								
-						  }
-						  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
-							  
+					  DaoSilver_Gold daoDeleteSilverGold = new DaoSilver_Gold(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador, g1);
+						daoDeleteSilverGold.deletarEsSG();
 						
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE4(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE7(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE10(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD(); 
-							  }
-					
-					  }  
-					  if(e2.getvEnvio()!=d1.getvEnvio()){
-						  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE2(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-						  }
-						  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE5(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE8(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE11(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-
-					  }
-					  if(e3.getvEnvio()!=d1.getvEnvio()) { 
-						  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE3(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-						  }
-						  if(p2.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE6(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p3.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE9(); 
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-						  if(p4.getvId_Produto()!=c1.getvId_Produto()) {
-							  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-							  daoExibirEscolha1.buscarEscolhaProdutoE12();
-							  
-							  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-								daoDeleteEscolhaDados.deletarEsD();
-							  }
-
-					  }
-					  DaoSilver daoDeleteEscolha = new DaoSilver();
-						daoDeleteEscolha.deletarEscolha(c1);
+						DaoSilver daoDeleteSilver = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						daoDeleteSilver.deleteS();
 					  
 					  DaoCliente daoDeleteCliente = new DaoCliente();
 						daoDeleteCliente.deletarCl(c1);
@@ -612,73 +407,22 @@ public class Consulta {
 						DaoCliente daoExibirCliente = new DaoCliente();
 						daoExibirCliente.buscarClientes(c1);
 						
-						DaoSilver daoExbirEscolha = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-						daoExbirEscolha.buscarSilverProduto();
-						
-						if(e1.getvEnvio()!=d1.getvEnvio()) { 
-							  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE13(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD();
-								  }
-							  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE16(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD();
-								  }
-						  }  
-						  if(e2.getvEnvio()!=d1.getvEnvio()){
-							  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE14(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD();
-								  }
-							  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE17(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD();
-								  }
-						  }
-						  if(e3.getvEnvio()!=d1.getvEnvio()) { 
-							  if(p5.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE15(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD(); 
-								  }
-							  if(p6.getvId_Produto()!=c1.getvId_Produto()) {
-								  DaoSilver daoExibirEscolha1 = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2 ,t3, t4, t5, t6, t7);
-								  daoExibirEscolha1.buscarEscolhaProdutoE18(); 
-								  
-								  DaoSilver_Gold daoDeleteEscolhaDados = new DaoSilver_Gold(c1, d1, t1, t2, t3, t4, t5, t6, t7);
-									daoDeleteEscolhaDados.deletarEsD(); 
-								  }
-						  }
-						  
-						  
-						  DaoSilver daoDeleteEscolha = new DaoSilver();
-							daoDeleteEscolha.deletarEscolha(c1);
+						 DaoSilver_Gold daoDeleteSilverGold = new DaoSilver_Gold(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+									t3, t4, t5, t6, t7, contador, g1);
+							daoDeleteSilverGold.deletarEsSG();
+							
+							DaoSilver daoDeleteSilver = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+									t3, t4, t5, t6, t7, contador);
+							daoDeleteSilver.deleteS();
 						  
 						  DaoCliente daoDeleteCliente = new DaoCliente();
 							daoDeleteCliente.deletarCl(c1);
-							
-							
-						// Trazer Tela limpa após deletar a tabela
 
 						textField_CNPJ.setText("");
 						textField_Nome_Cliente.setText("");
 						textField_Razao_Social.setText("");
 						textField_Setor.setText("");
-				
+					
 						textField_Solucao.setText("");
 						textArea_P.setText("");
 						textArea_M.setText("");
@@ -689,12 +433,12 @@ public class Consulta {
 						JOptionPane.showMessageDialog(null, "Digite: NxtDemand ou Operations");
 
 					}
-				// Trazer Tela limpa após deletar a tabela
+				// Trazer Tela limpa apﾃｳs deletar a tabela
 			
 
 			}}
 		});
-		// <------------------------------FINAL BOTﾃO PARA DELETAR O
+		// <------------------------------FINAL BOT�ｾグ PARA DELETAR O
 		// CLIENTE------------------------------>
 
 	}

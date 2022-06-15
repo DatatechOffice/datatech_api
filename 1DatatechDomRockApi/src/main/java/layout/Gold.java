@@ -96,7 +96,7 @@ public class Gold extends JFrame {
 		contentPane.add(textFieldCnpJGold);
 		textFieldCnpJGold.setColumns(10);
 
-		lbSolucao = new JLabel("Solução:");
+		lbSolucao = new JLabel("Solu\u00E7\u00E3o:");
 		lbSolucao.setHorizontalAlignment(SwingConstants.CENTER);
 		lbSolucao.setForeground(Color.WHITE);
 		lbSolucao.setFont(new Font("Arial", Font.BOLD, 16));

@@ -278,11 +278,11 @@ public class Bronze {
 				if(vDadosList.size() != 0 &&
 						vEnviarList.size() !=0 &&
 						!textField_vQuantidade.getText().equals("") &&
-						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das opﾃｧﾃｵes>")
+						!comboBox_vPazo.getSelectedItem().equals("<Selecione uma das op�ｾ�ｽｧ�ｾ�ｽｵes>")
 						) {
 					
 				}
-				//executando select do cliente para usa-lo na prﾃｳxima etapa
+				//executando select do cliente para usa-lo na pr�ｾ�ｽｳxima etapa
 				DaoCliente daoExibirCliente = new DaoCliente();
 				daoExibirCliente.buscarClientes(c1);
 				
@@ -292,7 +292,7 @@ public class Bronze {
 				daoCriarEscolha.criarSilverProduto();
 				
 				//select ta tabela escolha que acabamos de criar para conseguir inputar os
-				//dados na tabela escolha_dados(para cada id escolha terá uma combinação de id_produto e forma_envio)
+				//dados na tabela escolha_dados(para cada id escolha terﾃ｡ uma combinaﾃｧﾃ｣o de id_produto e forma_envio)
 				
 				 /* if(e1.getvEnvio()!=d1.getvEnvio()) { 
 					  if(p1.getvId_Produto()!=c1.getvId_Produto()) {
@@ -431,7 +431,7 @@ public class Bronze {
 				Silver window = new Silver();
 				// aqui setamos a nova tela como visivel
 				window.setVisible(true);
-				// e para n�ｾ�ｽｧ�ｾゑｽｸ�ｾ��ｿｽ ficar com duas telas abertas, ordenamos a atual a ficar invisivel
+				// e para n�ｿｽ�ｽｾ�ｿｽ�ｽｽ�ｽｧ�ｿｽ�ｽｾ繧托ｽｽ�ｽｸ�ｿｽ�ｽｾ�ｿｽ�ｿｽ�ｽｿ�ｽｽ ficar com duas telas abertas, ordenamos a atual a ficar invisivel
 				frmBronze.setVisible(false);
 				
 				JOptionPane.showMessageDialog(null,"Concluido com Sucesso");
@@ -445,31 +445,6 @@ public class Bronze {
 		textField_vQuantidade.setBounds(10, 357, 302, 31);
 		frmBronze.getContentPane().add(textField_vQuantidade);
 		textField_vQuantidade.setColumns(10);
-		
-		JButton btnNewButton_Retornar_1 = new JButton("Menu");
-		btnNewButton_Retornar_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				EventQueue.invokeLater(new Runnable() {										
-					public void run() {		
-						try {
-							//aqui setamos qual dela vai ser aberta
-							Menu window = new Menu();
-							//aqui setamos a nova tela como visivel
-							window.frmMenu.setVisible(true);
-							//e para nﾃｧﾂｸﾅ� ficar com duas telas abertas, ordenamos a atual a ficar invisivel
-							frmBronze.setVisible(false);
-							
-						} catch (Exception e) {
-							e.printStackTrace();
-						}
-					}
-				});
-			}
-		});
-			
-  btnNewButton_Retornar_1.setFont(new Font("Arial", Font.BOLD, 15));
-  btnNewButton_Retornar_1.setBounds(60, 480, 150, 30);
-  frmBronze.getContentPane().add(btnNewButton_Retornar_1);
   frmBronze.setBounds(100, 100, 800, 600);
   frmBronze.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
  

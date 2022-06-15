@@ -125,14 +125,15 @@ public class DaoSilver_Gold {
         return clientes;
     }
 	
-	public void deletarEsD() {
+	public void deletarEsSG() {
         Connection con = null;
         try {
             con = ConnectionManager.getConnection();
-            String insert_sql = "DELETE FROM escolha_dados WHERE id_escolha = ?";
+            String insert_sql = "DELETE FROM silver_gold WHERE id_cliente = ? and cnpj=?";
             PreparedStatement pst;
             pst = con.prepareStatement(insert_sql);
-            pst.setInt(1, c1.getvId_Escolha());
+            pst.setInt(1, c1.getvId_Cliente());
+            pst.setObject(2, c1.getvCNPJ_Cliente());
             pst.executeUpdate();
             
         } catch (SQLException e) {

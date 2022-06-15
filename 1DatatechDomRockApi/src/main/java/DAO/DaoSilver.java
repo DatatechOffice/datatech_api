@@ -2146,12 +2146,11 @@ public class DaoSilver {
 		}
 	}
 
-	public void deletarEscolha(Cliente c1) {
-		this.c1 = c1;
+	public void deleteS() {
 		Connection con = null;
 		try {
 			con = ConnectionManager.getConnection();
-			String insert_sql = "DELETE FROM escolha WHERE id_cliente=? and cnpj=?";
+			String insert_sql = "DELETE FROM silver WHERE id_cliente=? and cnpj=?";
 			PreparedStatement pst;
 			pst = con.prepareStatement(insert_sql);
 			pst.setObject(1, c1.getvId_Cliente());

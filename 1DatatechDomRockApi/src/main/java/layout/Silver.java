@@ -116,7 +116,7 @@ public class Silver extends JFrame {
 		chckbxExtensaoPdfSilver.setBounds(10, 115, 150, 23);
 		contentPane.add(chckbxExtensaoPdfSilver);
 
-		chckbxTamanhoPdfSilver = new JCheckBox("atÈ 10 mb");
+		chckbxTamanhoPdfSilver = new JCheckBox("at√© 10 mb");
 		chckbxTamanhoPdfSilver.setForeground(Color.WHITE);
 		chckbxTamanhoPdfSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoPdfSilver.setBackground(Color.GRAY);
@@ -140,7 +140,7 @@ public class Silver extends JFrame {
 		chckbxExtensaoJsonSilver.setBounds(195, 115, 150, 23);
 		contentPane.add(chckbxExtensaoJsonSilver);
 
-		chckbxTamanhoJsonSilver = new JCheckBox("atÈ 20 mb");
+		chckbxTamanhoJsonSilver = new JCheckBox("at√© 20 mb");
 		chckbxTamanhoJsonSilver.setForeground(Color.WHITE);
 		chckbxTamanhoJsonSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoJsonSilver.setBackground(Color.GRAY);
@@ -164,7 +164,7 @@ public class Silver extends JFrame {
 		chckbxExtensaoCsvSilver.setBounds(415, 115, 150, 23);
 		contentPane.add(chckbxExtensaoCsvSilver);
 
-		chckbxTamanhoCsvSilver = new JCheckBox("atÈ 1 mb");
+		chckbxTamanhoCsvSilver = new JCheckBox("at√© 1 mb");
 		chckbxTamanhoCsvSilver.setForeground(Color.WHITE);
 		chckbxTamanhoCsvSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoCsvSilver.setBackground(Color.GRAY);
@@ -172,7 +172,7 @@ public class Silver extends JFrame {
 		chckbxTamanhoCsvSilver.setBounds(415, 141, 150, 23);
 		contentPane.add(chckbxTamanhoCsvSilver);
 
-		chckbxLimiteLinhasCsvSilver = new JCheckBox("atÈ 1000 linhas");
+		chckbxLimiteLinhasCsvSilver = new JCheckBox("at√© 1000 linhas");
 		chckbxLimiteLinhasCsvSilver.setForeground(Color.WHITE);
 		chckbxLimiteLinhasCsvSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxLimiteLinhasCsvSilver.setBackground(Color.GRAY);
@@ -196,7 +196,7 @@ public class Silver extends JFrame {
 		chckbxNomePlanilhasSilver.setBounds(624, 141, 150, 23);
 		contentPane.add(chckbxNomePlanilhasSilver);
 
-		chckbxTamanhoPlanilhasSilver = new JCheckBox("atÈ 10 mb");
+		chckbxTamanhoPlanilhasSilver = new JCheckBox("at√© 10 mb");
 		chckbxTamanhoPlanilhasSilver.setForeground(Color.WHITE);
 		chckbxTamanhoPlanilhasSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoPlanilhasSilver.setBackground(Color.GRAY);
@@ -204,7 +204,7 @@ public class Silver extends JFrame {
 		chckbxTamanhoPlanilhasSilver.setBounds(624, 115, 150, 23);
 		contentPane.add(chckbxTamanhoPlanilhasSilver);
 
-		chckbxTamanhoTabelasSilver = new JCheckBox("atÈ 10 mb");
+		chckbxTamanhoTabelasSilver = new JCheckBox("atÔøΩ 10 mb");
 		chckbxTamanhoTabelasSilver.setForeground(Color.WHITE);
 		chckbxTamanhoTabelasSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoTabelasSilver.setBackground(Color.GRAY);
@@ -220,7 +220,7 @@ public class Silver extends JFrame {
 		chckbxNomeTabelasSilver.setBounds(10, 294, 150, 23);
 		contentPane.add(chckbxNomeTabelasSilver);
 
-		chckbxTamanhoAudioSilver = new JCheckBox("atÈ 10 mb");
+		chckbxTamanhoAudioSilver = new JCheckBox("at√© 10 mb");
 		chckbxTamanhoAudioSilver.setForeground(Color.WHITE);
 		chckbxTamanhoAudioSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoAudioSilver.setBackground(Color.GRAY);
@@ -236,7 +236,7 @@ public class Silver extends JFrame {
 		chckbxNomeAudioSilver.setBounds(195, 294, 150, 23);
 		contentPane.add(chckbxNomeAudioSilver);
 
-		chckbxTamanhoTextoSilver = new JCheckBox("atÈ 10 mb");
+		chckbxTamanhoTextoSilver = new JCheckBox("at√© 10 mb");
 		chckbxTamanhoTextoSilver.setForeground(Color.WHITE);
 		chckbxTamanhoTextoSilver.setFont(new Font("Arial", Font.BOLD, 13));
 		chckbxTamanhoTextoSilver.setBackground(Color.GRAY);
@@ -260,7 +260,7 @@ public class Silver extends JFrame {
 		comboBoxSolucaoSilver.setBounds(453, 14, 159, 28);
 		contentPane.add(comboBoxSolucaoSilver);
 
-		String[] tiposArquivo = { "Selecione uma OpÁ„o", "PDF", "JSON", "CSV", "Planilhas", "Tabelas", "Audio",
+		String[] tiposArquivo = { "Selecione uma Op√ß√£o", "PDF", "JSON", "CSV", "Planilhas", "Tabelas", "Audio",
 				"Texto" };
 		contentPane.setLayout(null);
 
@@ -269,7 +269,7 @@ public class Silver extends JFrame {
 		comboBoxTipoArquivoSilver.setBounds(10, 51, 764, 20);
 		comboBoxTipoArquivoSilver.addItemListener(new ItemListener() {
 			public void itemStateChanged(ItemEvent e) {
-				if (comboBoxTipoArquivoSilver.getSelectedItem() == "Selecione uma OpÁ„o") {
+				if (comboBoxTipoArquivoSilver.getSelectedItem() == "Selecione uma Op√ß√£o") {
 					hideAll();
 				}
 				if (comboBoxTipoArquivoSilver.getSelectedItem() == "PDF") {
@@ -297,34 +297,16 @@ public class Silver extends JFrame {
 		});
 		contentPane.add(comboBoxTipoArquivoSilver);
 
-		btnAvacarSilver = new JButton("AvanÁar");
+		btnAvacarSilver = new JButton("Avan√ßar");
 		btnAvacarSilver.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				if (comboBoxTipoArquivoSilver.getSelectedItem() == "PDF" && chckbxExtensaoPdfSilver.isSelected()
-						&& chckbxTamanhoPdfSilver.isSelected() && chckbxNomePdfSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "JSON"
-								&& chckbxExtensaoJsonSilver.isSelected() && chckbxTamanhoJsonSilver.isSelected()
-								&& chckbxNomeJsonSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "CSV" && chckbxExtensaoCsvSilver.isSelected()
-								&& chckbxLimiteLinhasCsvSilver.isSelected() && chckbxTamanhoCsvSilver.isSelected()
-								&& chckbxNomeCsvSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "Planilhas"
-								&& chckbxTamanhoPlanilhasSilver.isSelected() && chckbxNomePlanilhasSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "Tabelas"
-								&& chckbxTamanhoTabelasSilver.isSelected() && chckbxNomeTabelasSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "Audio"
-								&& chckbxTamanhoAudioSilver.isSelected() && chckbxNomeAudioSilver.isSelected()
-						|| comboBoxTipoArquivoSilver.getSelectedItem() == "Texto"
-								&& chckbxTamanhoTextoSilver.isSelected() && chckbxNomeTextoSilver.isSelected()) {
-
 					//
-					JOptionPane.showMessageDialog(null, "Silver OK");
 
 					EventQueue.invokeLater(new Runnable() {
 						public void run() {
 							try {
-								Gold window = new Gold();
-								window.getGold().setVisible(true);
+								Gold gold = new Gold();
+								gold.setVisible(true);
 								silver.setVisible(false);
 
 							} catch (Exception e) {
@@ -332,23 +314,6 @@ public class Silver extends JFrame {
 							}
 						}
 					});
-				} else {
-					JOptionPane.showMessageDialog(null, "Silver Not OK");
-
-					EventQueue.invokeLater(new Runnable() {
-						public void run() {
-							try {
-								Gold window = new Gold();
-								window.getGold().setVisible(true);
-								silver.setVisible(false);
-
-							} catch (Exception e) {
-								e.printStackTrace();
-							}
-						}
-					});
-				}
-
 			}
 		});
 
@@ -439,7 +404,7 @@ public class Silver extends JFrame {
 		lbCnpjSilver.setBounds(10, 14, 74, 26);
 		contentPane.add(lbCnpjSilver);
 
-		lbSoluoSilver = new JLabel("SoluÁ„o:");
+		lbSoluoSilver = new JLabel("Solu√ß√£o:");
 		lbSoluoSilver.setForeground(Color.WHITE);
 		lbSoluoSilver.setFont(new Font("Arial", Font.BOLD, 25));
 		lbSoluoSilver.setBounds(339, 14, 104, 26);
@@ -459,6 +424,7 @@ public class Silver extends JFrame {
 
 					DaoCliente daoExibirCliente = new DaoCliente();
 					daoExibirCliente.buscarClientes(c1);
+					if(c1.getvId_Solucao() == 1) {		
 
 					DaoSilver buscarSilverProduto = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
 							t3, t4, t5, t6, t7, contador);
@@ -467,21 +433,31 @@ public class Silver extends JFrame {
 					JOptionPane.showMessageDialog(null,
 							"Cliente Selecionado: " + c1.getvCNPJ_Cliente() + " " + c1.getvSolucao_Cliente());
 					System.out.println("Rolou");
-
+					}else {
+						if((c1.getvId_Solucao() != 1) || (c1.getvId_Solucao() != 2)) {
+							JOptionPane.showMessageDialog(null, "Cliente n√£o possui essa Solu√ß√£o!");
+						}
+					}
 				} else {
 					c1.setvId_Solucao(2);
 					c1.setvSolucao_Cliente("Nxt.Operations");
 
 					DaoCliente daoExibirCliente = new DaoCliente();
 					daoExibirCliente.buscarClientes(c1);
+					if(c1.getvId_Solucao() == 2) {		
 
-					DaoSilver buscarSilverProduto = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
-							t3, t4, t5, t6, t7, contador);
-					buscarSilverProduto.buscarSilverProduto();
+						DaoSilver buscarSilverProduto = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
+								t3, t4, t5, t6, t7, contador);
+						buscarSilverProduto.buscarSilverProduto();
 
-					System.out.println("Rolou2");
-					JOptionPane.showMessageDialog(null,
-							"Cliente Selecionado: " + c1.getvCNPJ_Cliente() + " " + c1.getvSolucao_Cliente());
+						JOptionPane.showMessageDialog(null,
+								"Cliente Selecionado: " + c1.getvCNPJ_Cliente() + " " + c1.getvSolucao_Cliente());
+						System.out.println("Rolou");
+						}else {
+							if((c1.getvId_Solucao() != 1) || (c1.getvId_Solucao() != 2)) {
+								JOptionPane.showMessageDialog(null, "Cliente n√£o possui essa Solu√ß√£o!");
+							}
+						}
 				}
 			}
 		});
@@ -501,29 +477,20 @@ public class Silver extends JFrame {
 
 						DaoSilver atualizarSOk = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
 								t3, t4, t5, t6, t7, contador);
-						atualizarSOk.atualizarSOk();
-				
-					}
+						atualizarSOk.atualizarSOk();}
 				}
 				if (c1.getvId_Solucao() == 2) {
-				
+
 					for (int contador = 0; contador < 8; contador++) {
 						DaoSilver buscarSilverDados = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
 								t3, t4, t5, t6, t7, contador);
 						buscarSilverDados.buscarSilverDados1();
-						
+
 						DaoSilver atualizarSOk = new DaoSilver(c1, p1, p2, p3, p4, p5, p6, e1, e2, e3, d1, t1, t2,
 								t3, t4, t5, t6, t7, contador);
-						atualizarSOk.atualizarSOk();
-						
-						
-					}
-					JOptionPane.showMessageDialog(null, "Silvers atualizados para OK");
-				/*
-				 * else { JOptionPane.showMessageDialog(null,
-				 * "Selecione um Cliente pelo CNPJ e pela SoluÁ„o!"); }
-				 */
-			}
+						atualizarSOk.atualizarSOk();}
+				}
+				JOptionPane.showMessageDialog(null, "Silvers atualizados para SOK!");
 				}
 		});
 		btnAvacarSilver_1.setFont(new Font("Arial", Font.BOLD, 15));

@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import controlador.Cliente;
 import controlador.Usuario;
 import layout.Login;
@@ -165,6 +167,8 @@ public class DaoUsuario {
     				});
 				}
             	else {
+            		JOptionPane.showMessageDialog(null,
+							"Senha ou nome de usuario incorretos!");
             		System.out.print("Senha ou nome de usuario incorretos!");
             	}
             	
